@@ -1,5 +1,4 @@
-<h1 style="text-align: center">Team-Blueberries</h1>
-<h2 style="text-align: center">Absence request process for a watchmaking company</h2>
+<h1 style="text-align: center">Team-Blueberries</br>Absence request process for a watchmaking company</h1>
 
 <h2>Team members</h2>
 <!-- Surname, name and email from all team members and from our coach -->
