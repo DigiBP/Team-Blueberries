@@ -3,24 +3,24 @@
 ## Team members
 <table>
   <tr>
-    <td>Name</td>
-    <td>Email</td>
+    <td style="font-weight: bold;">Name</td>
+    <td style="font-weight: bold;">Email</td>
   </tr>
   <tr>
     <td>Caroline Rüdisühli</td>
-    <td>caroline.ruedisuehli@students.fhnw.ch</td>
+    <td><a href="mailto:caroline.ruedisuehli@students.fhnw.ch">caroline.ruedisuehli@students.fhnw.ch<a/></td>
   </tr>
   <tr>
     <td>Charline Unternährer</td>
-    <td>charline.unternaehrer@students.fhnw.ch</td>
+    <td><a href="mailto:charline.unternaehrer@students.fhnw.ch">charline.unternaehrer@students.fhnw.ch<a/></td>
   </tr>
   <tr>
     <td>Michael Vontobel</td>
-    <td>michael.vontobel@students.fhnw.ch</td>
+    <td><a href="mailto:michael.vontobel@students.fhnw.ch">michael.vontobel@students.fhnw.ch<a/></td>
   </tr>
   <tr>
     <td>Sabina Portmann</td>
-    <td>sabina.portmann@students.fhnw.ch</td>
+    <td><a href="mailto:sabina.portmann@students.fhnw.ch">sabina.portmann@students.fhnw.ch<a/></td>
   </tr>
 </table>
 </br>
@@ -28,12 +28,12 @@
 ## Coach
 <table>
   <tr>
-    <td>Name</td>
-    <td>Email</td>
+    <td style="font-weight: bold;">Name</td>
+    <td style="font-weight: bold;">Email</td>
   </tr>
   <tr>
     <td>Charuta Pande</td>
-    <td>charuta.pande@fhnw.ch</td>
+    <td><a href="mailto:charuta.pande@fhnw.ch">charuta.pande@fhnw.ch<a/></td>
   </tr>
 </table>
 </br></br>
