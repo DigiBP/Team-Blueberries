@@ -1,4 +1,4 @@
-<h1>Team-Blueberries - Absence request process for a watchmaking company</h1>
+<h1 style="text-align: center">Team-Blueberries</br>Absence request process for a watchmaking company</h1>
 
 <h2>Team members</h2>
 <!-- Surname, name and email from all team members and from our coach -->
@@ -45,10 +45,9 @@
 <h4><a href="#1.1 As-Is Business Process">1.1 As-Is Business Process</a></h4>
 <h3><a href="#2. Desired situation">2. Desired situation</a></h3>
 <h4><a href="#2.1 To-Be Business Process">2.1 To-Be Business Process</a></h4>
-
 </br></br>
-<!-- Contenct -->
 
+<!-- Contenct -->
 <h2 id="1. Current situation">1. Current situation</h2>
 Currently, when an employee wants to request a leave of absence, the process is time-consuming and almost entirely paper-based. The employee must first ask the secretary to print out a form that he can fill out and send to his manager. The manager can then validate the request, but does not have the possibility to consult the balance of available days or the attendance schedule of all employees in his team. If the manager refuses the request, he announces it to the employee, otherwise the request is forwarded to the HR team. The HR manager must also sign the form before passing it to an HR secretary. The HR secretary then verifies the presence of both signatures as well as the employee's available day balance (in the ERP). If everything is in order, the request is officially accepted.  
 
@@ -70,3 +69,4 @@ When the employee wants to request a leave of absence, he will be able to log in
 
 <h3 id="2.1 To-Be Business Process">2.1 To-Be Business Process</h3>
 // Text and pic
+</br></br>
