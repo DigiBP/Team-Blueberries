@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1i06x2f" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.8.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_1aqb4gf" name="Team-capacity-check">
+    <decisionTable id="DecisionTable_0gsmvil">
+      <input id="Input_1" label="Days left-over (days p.a.)" biodi:width="150">
+        <inputExpression id="InputExpression_1" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_115bldo" label="Team Capacity" biodi:width="150">
+        <inputExpression id="LiteralExpression_0ofqsz2" typeRef="string">
+          <text>more than 50% of people absent?</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0wf7pq6" label="type of absence" biodi:width="150">
+        <inputExpression id="LiteralExpression_0o9ecnr" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Validation" typeRef="string" biodi:width="150">
+        <outputValues id="UnaryTests_1cgpddd">
+          <text>"approved","prov-approved","rejected"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1o2uibb">
+        <inputEntry id="UnaryTests_0kx016s">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tf1u6y">
+          <text>&gt;50%</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_118xoef">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gmza8p">
+          <text>"rejected"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1egkqwt">
+        <inputEntry id="UnaryTests_08wqrei">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yy2wd1">
+          <text>&lt;50%</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05l7ubb">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jp5of9">
+          <text>"approved"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13mb4gt">
+        <description>manager has to check project situation</description>
+        <inputEntry id="UnaryTests_11lc383">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0juvx47">
+          <text>&lt;50%</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vv9tql">
+          <text>"regular holiday","unpaid leave","overtime compensation","6th holiday","family leave"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1womnqa">
+          <text>"prov-approved"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fmtufd">
+        <inputEntry id="UnaryTests_13anhsx">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tj5btv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ulkmzc">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08ksue4">
+          <text>"rejected"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1aqb4gf">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
