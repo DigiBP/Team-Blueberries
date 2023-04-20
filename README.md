@@ -60,6 +60,8 @@ Currently, when an employee wants to request a leave of absence, the process is 
 
 <h3 id="1.1 As-Is Business Process">1.1 As-Is Business Process</h3>
 // Text and pic
+![AS-IS-Process](https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_AS_IS.png)
+
 </br></br>
 
 <h2 id="2. Desired situation">2. Desired situation</h2>
@@ -69,5 +71,7 @@ When the employee wants to request a leave of absence, he will be able to log in
 
 <h3 id="2.1 To-Be Business Process">2.1 To-Be Business Process</h3>
 // Text and pic
+
+![TO-BE-Process_v2](https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_2.png)
 
 </br></br>
