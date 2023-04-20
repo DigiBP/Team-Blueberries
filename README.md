@@ -59,7 +59,6 @@ Currently, when an employee wants to request a leave of absence, the process is 
 </br></br>
 
 <h3 id="1.1 As-Is Business Process">1.1 As-Is Business Process</h3>
-// Text and pic
 
 ![AS-IS-Process](https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_AS_IS.png)
 
@@ -71,7 +70,6 @@ Proposed improvement: The implementation of a system that communicates with the 
 When the employee wants to request a leave of absence, he will be able to log in to the system by fingerprint recognition. He will be able to check the number of vacation days still available, and if his balance is at 0, he will have the possibility to request an unpaid vacation. When the manager receives the request, he will be able to consult the planning of his team before making his choice. Finally, if the request is rejected, the employee will be informed, otherwise the HR team will be informed that a new absence request has been accepted. 
 
 <h3 id="2.1 To-Be Business Process">2.1 To-Be Business Process</h3>
-// Text and pic
 
 ![TO-BE-Process_v2](https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_2.png)
 
