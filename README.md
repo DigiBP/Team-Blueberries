@@ -76,3 +76,21 @@ When the employee wants to request a leave of absence, he will be able to log in
 ![TO-BE-Process_v2](https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_2.png)
 
 </br></br>
+
+
+<h2>Decision Tables</h2>
+
+<p>WIP
+This table is the first step in identifying which type of absence is requested by the employee.</p>
+
+![DMN type of absence](https://github.com/DigiBP/Team-Blueberries/blob/main/dmn./AbsenceRequest_type-of-absence_v1.png)
+
+
+<p>WIP
+This table is the second step to ensure that the capacity of the team is not reached when an emyployee wants to take time off. The current capacity is set to <50% of employees must be available.</p>
+
+![DMN team capacity check](https://github.com/DigiBP/Team-Blueberries/blob/main/dmn./AbsenceRequest_team-capacity_v1.png)
+
+
+<p> !! we still have to figure out how to set up the excel sheets as the database for this information <p>
+
