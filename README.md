@@ -45,6 +45,7 @@
 <h4><a href="#1.1 As-Is Business Process">1.1 As-Is Business Process</a></h4>
 <h3><a href="#2. Desired situation">2. Desired situation</a></h3>
 <h4><a href="#2.1 To-Be Business Process">2.1 To-Be Business Process</a></h4>
+<h3><a href="#3. Decision Tables">3. Decision Table</a></h3>
 </br></br>
 
 <!-- Contenct -->
@@ -76,7 +77,7 @@ When the employee wants to request a leave of absence, he will be able to log in
 </br></br>
 
 
-<h2>Decision Tables</h2>
+<h2 id="3. Decision Tables">3. Decision Tables</h2>
 
 <p>WIP
 This table is the first step in identifying which type of absence is requested by the employee.</p>
