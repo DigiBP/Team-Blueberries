@@ -17,7 +17,7 @@
         </inputValues>
       </input>
       <input id="InputClause_115bldo" label="Team Capacity" biodi:width="150">
-        <inputExpression id="LiteralExpression_0ofqsz2" typeRef="integer">
+        <inputExpression id="LiteralExpression_0ofqsz2" typeRef="integer" expressionLanguage="javascript">
           <text>teamcapacity</text>
         </inputExpression>
       </input>
@@ -31,7 +31,7 @@
           <text>"Administration"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0px89n3">
-          <text>[30..50]</text>
+          <text>[30..80]</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ucngaq">
           <text>"prov-approved"</text>
@@ -86,7 +86,7 @@
           <text>-</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0pexyuc">
-          <text>-</text>
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_07373b1">
           <text>"rejected"</text>
