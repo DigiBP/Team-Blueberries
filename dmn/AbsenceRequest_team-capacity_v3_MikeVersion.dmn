@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_1i06x2f" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.8.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_Absence_from_Capacity" name="Absence from Team Capacity">
+    <informationRequirement id="InformationRequirement_0lebbwa">
+      <requiredInput href="#InputData_04435ok" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0c8sv1j">
+      <requiredInput href="#InputData_12a0iha" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0gsmvil" hitPolicy="FIRST">
+      <input id="InputClause_1uxzqtm" label="Team department">
+        <inputExpression id="LiteralExpression_1mckvl8" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0say7ka">
+          <text>"Administration","Production"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_115bldo" label="Team Capacity" biodi:width="150">
+        <inputExpression id="LiteralExpression_0ofqsz2" typeRef="integer">
+          <text>teamcapacity</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Validation" typeRef="string" biodi:width="150">
+        <outputValues id="UnaryTests_1cgpddd">
+          <text>"prov-approved","rejected","auto-approved"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_0x09xus">
+        <inputEntry id="UnaryTests_1obqk9e">
+          <text>"Administration"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0px89n3">
+          <text>[30..50]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ucngaq">
+          <text>"prov-approved"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ekoxar">
+        <inputEntry id="UnaryTests_07xlnhx">
+          <text>"Administration"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s0mt9r">
+          <text>&gt;80</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1f4vn23">
+          <text>"rejected"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14z6r5p">
+        <inputEntry id="UnaryTests_0u2ktlu">
+          <text>"Production"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u14br4">
+          <text>[50..80]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19f78g5">
+          <text>"prov-approved"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03lz75m">
+        <inputEntry id="UnaryTests_1oh26ux">
+          <text>"Production"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z4ofof">
+          <text>&gt;80</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04kq3qw">
+          <text>"rejected"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12aw2rg">
+        <inputEntry id="UnaryTests_0ha40zm">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t6yfl3">
+          <text>&gt;80</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vrucsa">
+          <text>"auto-approved"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rh25xx">
+        <inputEntry id="UnaryTests_1lc1pt0">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pexyuc">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07373b1">
+          <text>"rejected"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_12a0iha" name="Team capacity" />
+  <inputData id="InputData_04435ok" name="Team department" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_Absence_from_Capacity">
+        <dc:Bounds height="80" width="180" x="250" y="70" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_005ssi8" dmnElementRef="InputData_12a0iha">
+        <dc:Bounds height="45" width="125" x="367" y="238" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1ewalaj" dmnElementRef="InputData_04435ok">
+        <dc:Bounds height="45" width="125" x="177" y="238" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0q6lqyd" dmnElementRef="InformationRequirement_0lebbwa">
+        <di:waypoint x="240" y="238" />
+        <di:waypoint x="310" y="170" />
+        <di:waypoint x="310" y="150" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_1bh40lg" dmnElementRef="InformationRequirement_0c8sv1j">
+        <di:waypoint x="430" y="238" />
+        <di:waypoint x="370" y="170" />
+        <di:waypoint x="370" y="150" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

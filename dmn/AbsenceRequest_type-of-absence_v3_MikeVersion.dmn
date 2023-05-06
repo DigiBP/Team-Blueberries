@@ -22,32 +22,38 @@
     <decisionTable id="DecisionTable_07yht4r" hitPolicy="FIRST" biodi:annotationsWidth="400">
       <input id="InputClause_1iluiim" label="Type of absence" biodi:width="150">
         <inputExpression id="LiteralExpression_0uoxq6s" typeRef="string">
-          <text></text>
+          <text>typeofabsence</text>
         </inputExpression>
+        <inputValues id="UnaryTests_0ierfe5">
+          <text>"regular holiday","6th holiday","unpaid leave","overtime compensation","medical visit","sickness","accident","move","wedding","maternity leave","paternity leave","family leave","funeral","military service","civil service","civil protection"</text>
+        </inputValues>
       </input>
       <input id="Input_1" label="Requested length of absence" biodi:width="150">
         <inputExpression id="InputExpression_1" typeRef="integer">
-          <text>How many days requested?</text>
+          <text>requesteddays</text>
         </inputExpression>
       </input>
       <input id="InputClause_0wep2n9" label="Justification provided">
         <inputExpression id="LiteralExpression_03dkhdh" typeRef="boolean">
-          <text></text>
+          <text>justification</text>
         </inputExpression>
       </input>
       <input id="InputClause_1511hmh" label="Gender" biodi:width="150">
         <inputExpression id="LiteralExpression_1balenv" typeRef="string">
-          <text></text>
+          <text>gender</text>
         </inputExpression>
+        <inputValues id="UnaryTests_1wnsbse">
+          <text>"female","male"</text>
+        </inputValues>
       </input>
       <input id="InputClause_1tqvpzq" label="Age" biodi:width="150">
         <inputExpression id="LiteralExpression_16ilyha" typeRef="integer">
-          <text></text>
+          <text>age</text>
         </inputExpression>
       </input>
       <input id="InputClause_1t78qw5" label="Day left-over">
         <inputExpression id="LiteralExpression_1rd69x5" typeRef="integer">
-          <text></text>
+          <text>dayleftover</text>
         </inputExpression>
       </input>
       <output id="Output_1" label="Validation" name="Output" typeRef="string" biodi:width="150">
@@ -55,37 +61,13 @@
           <text>"auto-approved","prov-approved","rejected"</text>
         </outputValues>
       </output>
-      <rule id="DecisionRule_07ge52x">
-        <description></description>
-        <inputEntry id="UnaryTests_05yeq35">
-          <text>"regular holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0cdxwk7">
-          <text>1</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1gdafqq">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_11nnh48">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1mus6ai">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_03i5pzn">
-          <text>&gt;= 1</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1en30pp">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1fwjfu3">
         <description></description>
         <inputEntry id="UnaryTests_0lk06o9">
           <text>"regular holiday"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0wlvar2">
-          <text>2</text>
+          <text>[1..5]</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1i2imte">
           <text></text>
@@ -97,101 +79,9 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0hv40di">
-          <text>&gt;= 2</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_094qaol">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1tgn9be">
-        <inputEntry id="UnaryTests_0g8co5v">
-          <text>"regular holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1rsh3rc">
-          <text>3</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_176kmbf">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0mhvk54">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_17r37zw">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0numpo6">
-          <text>&gt;= 3</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0oxn0lg">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_10m255u">
-        <inputEntry id="UnaryTests_1do9tvd">
-          <text>"regular holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ts3rfi">
-          <text>4</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1cvbtv8">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1nmbr40">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0f8cxv1">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0koccz0">
-          <text>&gt;= 4</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0icpvdx">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0i9c1ip">
-        <inputEntry id="UnaryTests_1071sjl">
-          <text>"regular holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0215o3q">
-          <text>5</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0fbmr6a">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_16qtwqq">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_10gbfqd">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0cs4017">
-          <text>&gt;= 5</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0rp2tac">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1b7mp2s">
-        <inputEntry id="UnaryTests_17pqd04">
-          <text>"6th holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0yvgca2">
-          <text>1</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1k15qcr">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1xviaut">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1jbqs3s">
-          <text>&gt;= 50</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_01vmbdi">
           <text>&gt;= 1</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0hi4c2s">
+        <outputEntry id="LiteralExpression_094qaol">
           <text>"prov-approved"</text>
         </outputEntry>
       </rule>
@@ -200,7 +90,7 @@
           <text>"6th holiday"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_08o24dz">
-          <text>2</text>
+          <text>[1..5]</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gmu0rh">
           <text></text>
@@ -212,84 +102,15 @@
           <text>&gt;= 50</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rcynl6">
-          <text>&gt;= 2</text>
+          <text>&gt;= 1</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_16pajd8">
           <text>"prov-approved"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0sy7osg">
-        <inputEntry id="UnaryTests_095gpoz">
-          <text>"6th holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0buwkb3">
-          <text>3</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0d2cnkj">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0tkcw2s">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_14cya0l">
-          <text>&gt;= 50</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_16i9690">
-          <text>&gt;= 3</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0vk2egl">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1k6xvtn">
-        <inputEntry id="UnaryTests_175czny">
-          <text>"6th holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_070os40">
-          <text>4</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_10r6zc0">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1t85vjz">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_095dnkd">
-          <text>&gt;= 50</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0imidbx">
-          <text>&gt;= 4</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0rlcelt">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0hkeuth">
-        <inputEntry id="UnaryTests_0yag2km">
-          <text>"6th holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_182e00d">
-          <text>5</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_10svn68">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0imlwzt">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0965g68">
-          <text>&gt;= 50</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1xbonx9">
-          <text>&gt;= 5</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1wy6d7h">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0ofc67w">
         <inputEntry id="UnaryTests_0dmujjm">
-          <text>"unpaid leave"</text>
+          <text>"unpaid leave","overtime compensation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1l3bnhg">
           <text>[1..5]</text>
@@ -310,33 +131,10 @@
           <text>"prov-approved"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_14mk244">
-        <inputEntry id="UnaryTests_11cexvx">
-          <text>"overtime compensation"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_17cvjtk">
-          <text>[1..5]</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_19my64d">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1v8o4ht">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_14tcmdl">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1azr6f2">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_079arbb">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1gfqcxt">
         <description>max total of 5 visits p.a.</description>
         <inputEntry id="UnaryTests_1hu1fw6">
-          <text>"medical visit"</text>
+          <text>"medical visit","move"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ycvjcj">
           <text>1</text>
@@ -355,75 +153,6 @@
         </inputEntry>
         <outputEntry id="LiteralExpression_07d6rw4">
           <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_08fd9c1">
-        <inputEntry id="UnaryTests_0rwcoie">
-          <text>"sickness"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_021ywy8">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0a1mfma">
-          <text>true</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1hz6faa">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0jcazj5">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_16u72ts">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0r1syqj">
-          <text>"auto-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0s3uuoz">
-        <inputEntry id="UnaryTests_1scz88m">
-          <text>"accident"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0hihyoa">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ewcxfz">
-          <text>true</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1g6agea">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0eyt133">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_11r1an1">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_083nhag">
-          <text>"auto-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0n5zxcc">
-        <inputEntry id="UnaryTests_1jl7qex">
-          <text>"move"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_162typ8">
-          <text>1</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_19vdj22">
-          <text>true</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1kpxy88">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1mdq1w2">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0qw2jhm">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0t9j6kc">
-          <text>"auto-approved"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_17ve6pk">
@@ -498,7 +227,7 @@
       </rule>
       <rule id="DecisionRule_0o3qpkz">
         <inputEntry id="UnaryTests_0x6chmv">
-          <text>"family leave"</text>
+          <text>"family leave","funeral"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0w91rky">
           <text>[1..3]</text>
@@ -519,33 +248,9 @@
           <text>"auto-approved"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_18e675e">
-        <description>depends on the parenthood (1-3 days)</description>
-        <inputEntry id="UnaryTests_0l0s59y">
-          <text>"funeral"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_17sfr1e">
-          <text>[1..3]</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_18oi6jw">
-          <text>true</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_08umjmi">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1sbcgso">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_19no9bl">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_11z6v3c">
-          <text>"auto-approved"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0959o8o">
         <inputEntry id="UnaryTests_18bih27">
-          <text>"military service"</text>
+          <text>"sickness","accident","military service","civil service","civil protection"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1pfdbb0">
           <text></text>
@@ -564,75 +269,6 @@
         </inputEntry>
         <outputEntry id="LiteralExpression_11qzksg">
           <text>"auto-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0qt7x3y">
-        <inputEntry id="UnaryTests_19bwuyk">
-          <text>"civil service"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0w68c2f">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1m4dxyq">
-          <text>true</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_09fz3fc">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0nomduw">
-          <text>&gt;= 18</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1mbm5fu">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_13c01k0">
-          <text>"auto-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1h4rgdv">
-        <inputEntry id="UnaryTests_1ks63y5">
-          <text>"civil protection"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_16eax40">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0vkh4ga">
-          <text>true</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1gb5rtb">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ncuypu">
-          <text>&gt;= 18</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_11qpt5i">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1gtkzz6">
-          <text>"auto-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1q9osrx">
-        <inputEntry id="UnaryTests_1dzdbyp">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1andvro">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1xyxx7p">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0zuitee">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_01x9msj">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0cwumyf">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_15r213k">
-          <text>"rejected"</text>
         </outputEntry>
       </rule>
     </decisionTable>
