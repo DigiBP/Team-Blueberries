@@ -93,3 +93,13 @@ This table is the second step to ensure that the capacity of the team is not rea
 
 <p> !! we still have to figure out how to set up the excel sheets as the database for this information <p>
 
+
+  
+  
+<h3>Updates 06.05.<h3>
+
+![New DMN Mike: Team capacity](https://github.com/DigiBP/Team-Blueberries/blob/main/dmn/AbsenceRequest_team-capacity_v3.dmn)
+
+  
+![New DMN Mike: Absence request](https://github.com/DigiBP/Team-Blueberries/blob/main/dmn/AbsenceRequest_type-of-absence_v3.dmn)
+
