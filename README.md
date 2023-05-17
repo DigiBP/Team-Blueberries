@@ -1,4 +1,4 @@
-<h1 style="text-align: center">Team-Blueberries</br>Absence request process for a watchmaking company</h1>
+<h1 style="text-align: center">🫐Team-Blueberries🫐</br>Absence request process for a watchmaking company</h1>
 
 <h2>Team members</h2>
 <!-- Surname, name and email from all team members and from our coach -->
@@ -42,7 +42,8 @@
 <!-- Table of content -->
 <h2>Table of content</h2>
 <h3><a href="#1. Current situation">1. Current situation</a></h3>
-<h4><a href="#1.1 As-Is Business Process">1.1 As-Is Business Process</a></h4>
+<h4><a href="#1.1 Pain Points">1.1 Pain Points</a></h4>
+<h4><a href="#1.2 As-Is Business Process">1.12 As-Is Business Process</a></h4>
 <h3><a href="#2. Desired situation">2. Desired situation</a></h3>
 <h4><a href="#2.1 To-Be Business Process">2.1 To-Be Business Process</a></h4>
 <h3><a href="#3. Decision Tables">3. Decision Table</a></h3>
@@ -51,15 +52,17 @@
 <!-- Contenct -->
 <h2 id="1. Current situation">1. Current situation</h2>
 Currently, when an employee wants to request a leave of absence, the process is time-consuming and almost entirely paper-based. The employee must first ask the secretary to print out a form that he can fill out and send to his manager. The manager can then validate the request, but does not have the possibility to consult the balance of available days or the attendance schedule of all employees in his team. If the manager refuses the request, he announces it to the employee, otherwise the request is forwarded to the HR team. The HR manager must also sign the form before passing it to an HR secretary. The HR secretary then verifies the presence of both signatures as well as the employee's available day balance (in the ERP). If everything is in order, the request is officially accepted.  
+</br></br>
 
-**Identified pain points**: 
+<h3 id="1.1 Pain Points">1.1 ⚡Pain Points⚡</h3>
+
 - Time-consuming and cascading process (several people involved) 
 - Paper-based process, not digitized 
 - The manager does not have the possibility to consult the planning of his team 
 - The manager does not have the possibility to consult the balance of available days of his employees 
 </br></br>
 
-<h3 id="1.1 As-Is Business Process">1.1 As-Is Business Process</h3>
+<h3 id="1.2 As-Is Business Process">1.2 As-Is Business Process</h3>
 
 ![AS-IS-Process](https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_AS_IS.png)
 
