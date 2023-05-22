@@ -125,10 +125,10 @@
       <bpmn:outgoing>Flow_0fx8j8z</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_190j8f5" />
     </bpmn:startEvent>
-    <bpmn:serviceTask id="Activity_1mpzt5q" name="Check the team schedule" camunda:type="external" camunda:topic="checkTeamSchedule">
+    <bpmn:userTask id="Activity_1mpzt5q" name="Check the team schedule">
       <bpmn:incoming>Flow_0rmfsud</bpmn:incoming>
       <bpmn:outgoing>Flow_1lpgkbi</bpmn:outgoing>
-    </bpmn:serviceTask>
+    </bpmn:userTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0un8bqy">
@@ -201,7 +201,7 @@
           <dc:Bounds x="226" y="375" width="88" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1189b4k_di" bpmnElement="Activity_1mpzt5q">
+      <bpmndi:BPMNShape id="Activity_11riw5j_di" bpmnElement="Activity_1mpzt5q">
         <dc:Bounds x="661" y="310" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1bybn21_di" bpmnElement="Flow_1bybn21">
@@ -228,7 +228,7 @@
         <di:waypoint x="580" y="530" />
         <di:waypoint x="1550" y="530" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="594" y="382" width="66" height="27" />
+          <dc:Bounds x="577" y="396" width="65" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0fx8j8z_di" bpmnElement="Flow_0fx8j8z">

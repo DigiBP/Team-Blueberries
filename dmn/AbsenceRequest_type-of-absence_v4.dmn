@@ -13,9 +13,6 @@
     <informationRequirement id="InformationRequirement_02f01py">
       <requiredInput href="#InputData_03q00mq" />
     </informationRequirement>
-    <informationRequirement id="InformationRequirement_0a3olzg">
-      <requiredInput href="#InputData_1ky1pgs" />
-    </informationRequirement>
     <informationRequirement id="InformationRequirement_1bvkcn9">
       <requiredInput href="#InputData_18za20w" />
     </informationRequirement>
@@ -65,7 +62,7 @@
           <text>"regular holiday"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0cdxwk7">
-          <text>1</text>
+          <text>[1..5]</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gdafqq">
           <text></text>
@@ -80,93 +77,12 @@
           <text>"prov-approved"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1fwjfu3">
-        <description></description>
-        <inputEntry id="UnaryTests_0lk06o9">
-          <text>"regular holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0wlvar2">
-          <text>2</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1i2imte">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0d6670l">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_13i907x">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_094qaol">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1tgn9be">
-        <inputEntry id="UnaryTests_0g8co5v">
-          <text>"regular holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1rsh3rc">
-          <text>3</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_176kmbf">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0mhvk54">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_17r37zw">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0oxn0lg">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_10m255u">
-        <inputEntry id="UnaryTests_1do9tvd">
-          <text>"regular holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ts3rfi">
-          <text>4</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1cvbtv8">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1nmbr40">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0f8cxv1">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0icpvdx">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0i9c1ip">
-        <inputEntry id="UnaryTests_1071sjl">
-          <text>"regular holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0215o3q">
-          <text>5</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0fbmr6a">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_16qtwqq">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_10gbfqd">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0rp2tac">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1b7mp2s">
         <inputEntry id="UnaryTests_17pqd04">
           <text>"6th holiday"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0yvgca2">
-          <text>1</text>
+          <text>[1..5]</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1k15qcr">
           <text></text>
@@ -178,86 +94,6 @@
           <text>&gt;= 50</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0hi4c2s">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1assupf">
-        <inputEntry id="UnaryTests_00m5xrx">
-          <text>"6th holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_08o24dz">
-          <text>2</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0gmu0rh">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_01l3g1v">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_11aqid4">
-          <text>&gt;= 50</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_16pajd8">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0sy7osg">
-        <inputEntry id="UnaryTests_095gpoz">
-          <text>"6th holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0buwkb3">
-          <text>3</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0d2cnkj">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0tkcw2s">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_14cya0l">
-          <text>&gt;= 50</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0vk2egl">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1k6xvtn">
-        <inputEntry id="UnaryTests_175czny">
-          <text>"6th holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_070os40">
-          <text>4</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_10r6zc0">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1t85vjz">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_095dnkd">
-          <text>&gt;= 50</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0rlcelt">
-          <text>"prov-approved"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0hkeuth">
-        <inputEntry id="UnaryTests_0yag2km">
-          <text>"6th holiday"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_182e00d">
-          <text>5</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_10svn68">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0imlwzt">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0965g68">
-          <text>&gt;= 50</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1wy6d7h">
           <text>"prov-approved"</text>
         </outputEntry>
       </rule>
@@ -590,7 +426,6 @@
   <inputData id="InputData_03q00mq" name="Requested lenght of absence" />
   <inputData id="InputData_0aoumhi" name="Gender" />
   <inputData id="InputData_1hsbm6l" name="Age" />
-  <inputData id="InputData_1ky1pgs" name="Day left-over" />
   <knowledgeSource id="KnowledgeSource_1g7f1hh" name="Request form">
     <authorityRequirement id="AuthorityRequirement_0a4heu8">
       <requiredInput href="#InputData_0yc51av" />
@@ -609,9 +444,6 @@
     </authorityRequirement>
     <authorityRequirement id="AuthorityRequirement_1svu8ks">
       <requiredInput href="#InputData_1hsbm6l" />
-    </authorityRequirement>
-    <authorityRequirement id="AuthorityRequirement_1qzry4v">
-      <requiredInput href="#InputData_1ky1pgs" />
     </authorityRequirement>
   </knowledgeSource>
   <dmndi:DMNDI>
@@ -633,31 +465,23 @@
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_0s2yxqi" dmnElementRef="InformationRequirement_10i4glo">
         <di:waypoint x="280" y="207" />
-        <di:waypoint x="426" y="200" />
-        <di:waypoint x="426" y="180" />
+        <di:waypoint x="430" y="200" />
+        <di:waypoint x="430" y="180" />
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="DMNEdge_11zi0fp" dmnElementRef="InformationRequirement_0pmeoz0">
         <di:waypoint x="600" y="347" />
-        <di:waypoint x="503" y="200" />
-        <di:waypoint x="503" y="180" />
+        <di:waypoint x="520" y="200" />
+        <di:waypoint x="520" y="180" />
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="DMNEdge_19ff216" dmnElementRef="InformationRequirement_10bu4ee">
         <di:waypoint x="660" y="277" />
-        <di:waypoint x="529" y="200" />
-        <di:waypoint x="529" y="180" />
+        <di:waypoint x="550" y="200" />
+        <di:waypoint x="550" y="180" />
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="DMNEdge_0fqjjws" dmnElementRef="InformationRequirement_02f01py">
         <di:waypoint x="350" y="277" />
-        <di:waypoint x="451" y="200" />
-        <di:waypoint x="451" y="180" />
-      </dmndi:DMNEdge>
-      <dmndi:DMNShape id="DMNShape_00cxo0v" dmnElementRef="InputData_1ky1pgs">
-        <dc:Bounds height="45" width="125" x="647" y="207" />
-      </dmndi:DMNShape>
-      <dmndi:DMNEdge id="DMNEdge_0ypivhu" dmnElementRef="InformationRequirement_0a3olzg">
-        <di:waypoint x="710" y="207" />
-        <di:waypoint x="554" y="200" />
-        <di:waypoint x="554" y="180" />
+        <di:waypoint x="460" y="200" />
+        <di:waypoint x="460" y="180" />
       </dmndi:DMNEdge>
       <dmndi:DMNShape id="DMNShape_0xccxbn" dmnElementRef="KnowledgeSource_1g7f1hh">
         <dc:Bounds height="63" width="100" x="130" y="338" />
@@ -675,8 +499,8 @@
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_15mh8bx" dmnElementRef="InformationRequirement_1bvkcn9">
         <di:waypoint x="420" y="347" />
-        <di:waypoint x="477" y="200" />
-        <di:waypoint x="477" y="180" />
+        <di:waypoint x="490" y="200" />
+        <di:waypoint x="490" y="180" />
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="DMNEdge_0ywhrxp" dmnElementRef="AuthorityRequirement_0gnjogt">
         <di:waypoint x="357" y="370" />
@@ -691,10 +515,6 @@
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="DMNEdge_0epypti" dmnElementRef="AuthorityRequirement_1svu8ks">
         <di:waypoint x="722" y="302" />
-        <di:waypoint x="760" y="370" />
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="DMNEdge_1mag7oi" dmnElementRef="AuthorityRequirement_1qzry4v">
-        <di:waypoint x="736" y="252" />
         <di:waypoint x="760" y="370" />
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
