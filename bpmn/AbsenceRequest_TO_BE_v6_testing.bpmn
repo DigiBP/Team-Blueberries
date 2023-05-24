@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0gzybd5" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.8.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <bpmn:collaboration id="Group_assignment_DigiBP_23">
+    <bpmn:participant id="Participant_1o8gema" name="Absence request" processRef="Process_0qarcbf" />
+    <bpmn:participant id="Participant_employee" name="Employee" />
+    <bpmn:messageFlow id="Flow_1qsd4mg" sourceRef="Participant_employee" targetRef="StartEvent_requestForLeave" />
+    <bpmn:messageFlow id="Flow_00wufhy" sourceRef="Activity_informEmployee" targetRef="Participant_employee" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0qarcbf" isExecutable="true">
+    <bpmn:laneSet id="LaneSet_0p6kvau">
+      <bpmn:lane id="Lane_0pyzh9j" name="Human resource" />
+      <bpmn:lane id="Lane_1nc75pd" name="Manager">
+        <bpmn:flowNodeRef>StartEvent_requestForLeave</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0utyc4j</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_typeOfAbsence</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0h0mtmm</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_requestApprBySys</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0clknic</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_085p3rb</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0fgwwf4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_informEmployee</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0lbvgb0</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_teamCapacity</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0b5n1g1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0klgvaa</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_requestForLeave" name="New request for a leave" camunda:formKey="">
+      <bpmn:extensionElements />
+      <bpmn:outgoing>Flow_1vlep4r</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1b7qjwm" messageRef="Message_00560vd" />
+    </bpmn:startEvent>
+    <bpmn:userTask id="Activity_0utyc4j" name="Input Google Forms">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="employeeNR" label="EmployeeNR" type="string" />
+          <camunda:formField id="department" label="Department" type="string" />
+          <camunda:formField id="age" label="Age" type="string" />
+          <camunda:formField id="gender" label="Gender" type="string" />
+          <camunda:formField id="absence" label="Absence" type="string" />
+          <camunda:formField id="startDate" label="StartDate" type="string" />
+          <camunda:formField id="endDate" label="EndDate" type="string" />
+          <camunda:formField id="daysTotal" label="DaysTotal" type="string" />
+          <camunda:formField id="halfOrFullDay" label="HalfOrFullDay" type="string" />
+          <camunda:formField id="provDoc" label="ProvDoc" type="string" />
+          <camunda:formField id="email" label="Email" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1vlep4r</bpmn:incoming>
+      <bpmn:outgoing>Flow_1agn3jf</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:businessRuleTask id="Activity_typeOfAbsence" name="Check the type and rule of absence" camunda:resultVariable="Output_absenceFromType" camunda:decisionRef="Decision_Absence_from_Type" camunda:mapDecisionResult="singleEntry">
+      <bpmn:incoming>Flow_1agn3jf</bpmn:incoming>
+      <bpmn:outgoing>Flow_1cjrrta</bpmn:outgoing>
+    </bpmn:businessRuleTask>
+    <bpmn:userTask id="Activity_0h0mtmm" name="Output rejected">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Output_absenceFromType" label="Output" type="string">
+            <camunda:properties />
+            <camunda:validation />
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_rejected</bpmn:incoming>
+      <bpmn:outgoing>Flow_03vmps4</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_requestApprBySys" name="Request approved by the system?">
+      <bpmn:incoming>Flow_1cjrrta</bpmn:incoming>
+      <bpmn:outgoing>Flow_rejected</bpmn:outgoing>
+      <bpmn:outgoing>Flow_moreInfo</bpmn:outgoing>
+      <bpmn:outgoing>Flow_autoApproved</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1vlep4r" sourceRef="StartEvent_requestForLeave" targetRef="Activity_0utyc4j" />
+    <bpmn:sequenceFlow id="Flow_1agn3jf" sourceRef="Activity_0utyc4j" targetRef="Activity_typeOfAbsence" />
+    <bpmn:sequenceFlow id="Flow_1cjrrta" sourceRef="Activity_typeOfAbsence" targetRef="Gateway_requestApprBySys" />
+    <bpmn:sequenceFlow id="Flow_rejected" name="Rejected" sourceRef="Gateway_requestApprBySys" targetRef="Activity_0h0mtmm">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Output_absenceFromType=="rejected"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:userTask id="Activity_0clknic" name="Output need more info">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Output_absenceFromType" label="Output" type="string">
+            <camunda:properties />
+            <camunda:validation />
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_moreInfo</bpmn:incoming>
+      <bpmn:outgoing>Flow_177y6a2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_moreInfo" name="Need more information" sourceRef="Gateway_requestApprBySys" targetRef="Activity_0clknic">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Output_absenceFromType=="prov-approved"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:userTask id="Activity_085p3rb" name="Output automatically approved">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Output_absenceFromType" label="Output" type="string">
+            <camunda:properties />
+            <camunda:validation />
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_autoApproved</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ha99fu</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_0fgwwf4">
+      <bpmn:incoming>Flow_1ha99fu</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1ha99fu" sourceRef="Activity_085p3rb" targetRef="Event_0fgwwf4" />
+    <bpmn:sequenceFlow id="Flow_autoApproved" name="Automatically approved" sourceRef="Gateway_requestApprBySys" targetRef="Activity_085p3rb">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Output_absenceFromType=="auto-approved"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_03vmps4" sourceRef="Activity_0h0mtmm" targetRef="Activity_informEmployee" />
+    <bpmn:serviceTask id="Activity_informEmployee" name="Inform the employee" camunda:type="external" camunda:topic="informEmployee">
+      <bpmn:incoming>Flow_03vmps4</bpmn:incoming>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_177y6a2" sourceRef="Activity_0clknic" targetRef="Activity_0lbvgb0" />
+    <bpmn:userTask id="Activity_0lbvgb0" name="Check team schedule" camunda:candidateGroups="Manager">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Output_checkTeamSchedule" label="Team Capacity" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_177y6a2</bpmn:incoming>
+      <bpmn:outgoing>Flow_1281qdr</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:businessRuleTask id="Activity_teamCapacity" name="Verify the team capacity" camunda:resultVariable="Output_absenceFromTeamCapacity" camunda:decisionRef="Decision_Absence_from_Capacity" camunda:mapDecisionResult="singleEntry">
+      <bpmn:extensionElements />
+      <bpmn:incoming>Flow_1281qdr</bpmn:incoming>
+      <bpmn:outgoing>Flow_0bwbmu8</bpmn:outgoing>
+    </bpmn:businessRuleTask>
+    <bpmn:sequenceFlow id="Flow_0bwbmu8" sourceRef="Activity_teamCapacity" targetRef="Activity_0b5n1g1" />
+    <bpmn:sequenceFlow id="Flow_1281qdr" sourceRef="Activity_0lbvgb0" targetRef="Activity_teamCapacity" />
+    <bpmn:userTask id="Activity_0b5n1g1" name="Output team capacity">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Output_absenceFromTeamCapacity" label="Team Capacity" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0bwbmu8</bpmn:incoming>
+      <bpmn:outgoing>Flow_0o4znie</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_0klgvaa">
+      <bpmn:incoming>Flow_0o4znie</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0o4znie" sourceRef="Activity_0b5n1g1" targetRef="Event_0klgvaa" />
+    <bpmn:textAnnotation id="TextAnnotation_1q0h3xb">
+      <bpmn:text>Recieves with a google forms</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0gxt34e" sourceRef="StartEvent_requestForLeave" targetRef="TextAnnotation_1q0h3xb" />
+  </bpmn:process>
+  <bpmn:message id="Message_00560vd" name="msg_startProcessNow" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Group_assignment_DigiBP_23">
+      <bpmndi:BPMNShape id="Participant_1o8gema_di" bpmnElement="Participant_1o8gema" isHorizontal="true">
+        <dc:Bounds x="158" y="200" width="1712" height="580" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1nc75pd_di" bpmnElement="Lane_1nc75pd" isHorizontal="true">
+        <dc:Bounds x="188" y="200" width="1682" height="460" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0pyzh9j_di" bpmnElement="Lane_0pyzh9j" isHorizontal="true">
+        <dc:Bounds x="188" y="660" width="1682" height="120" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0bgyvc8_di" bpmnElement="StartEvent_requestForLeave">
+        <dc:Bounds x="242" y="440" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="217" y="483" width="87" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0j5v4z4_di" bpmnElement="Activity_0utyc4j">
+        <dc:Bounds x="330" y="418" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0xckgaq_di" bpmnElement="Activity_typeOfAbsence">
+        <dc:Bounds x="490" y="418" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_117uwxj_di" bpmnElement="Activity_0h0mtmm">
+        <dc:Bounds x="830" y="300" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1azk291_di" bpmnElement="Gateway_requestApprBySys" isMarkerVisible="true">
+        <dc:Bounds x="655" y="433" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="635" y="483" width="90" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_160ss96" bpmnElement="Activity_0clknic">
+        <dc:Bounds x="830" y="418" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1u4t331" bpmnElement="Activity_085p3rb">
+        <dc:Bounds x="830" y="530" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0fgwwf4_di" bpmnElement="Event_0fgwwf4">
+        <dc:Bounds x="982" y="552" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1ctmij0_di" bpmnElement="Activity_informEmployee">
+        <dc:Bounds x="990" y="300" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1q0h3xb_di" bpmnElement="TextAnnotation_1q0h3xb">
+        <dc:Bounds x="280" y="360" width="100" height="41" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1too3og_di" bpmnElement="Activity_0lbvgb0">
+        <dc:Bounds x="970" y="418" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_18e3sh6" bpmnElement="Activity_teamCapacity">
+        <dc:Bounds x="1100" y="418" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_15et4ei" bpmnElement="Activity_0b5n1g1">
+        <dc:Bounds x="1220" y="418" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0klgvaa_di" bpmnElement="Event_0klgvaa">
+        <dc:Bounds x="1342" y="440" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1vlep4r_di" bpmnElement="Flow_1vlep4r">
+        <di:waypoint x="278" y="458" />
+        <di:waypoint x="330" y="458" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1agn3jf_di" bpmnElement="Flow_1agn3jf">
+        <di:waypoint x="430" y="458" />
+        <di:waypoint x="490" y="458" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1cjrrta_di" bpmnElement="Flow_1cjrrta">
+        <di:waypoint x="590" y="458" />
+        <di:waypoint x="655" y="458" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0eo5j5b_di" bpmnElement="Flow_rejected">
+        <di:waypoint x="680" y="433" />
+        <di:waypoint x="680" y="340" />
+        <di:waypoint x="830" y="340" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="688" y="384" width="44" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_173u273_di" bpmnElement="Flow_moreInfo">
+        <di:waypoint x="705" y="458" />
+        <di:waypoint x="830" y="458" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="732" y="426" width="55" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ha99fu_di" bpmnElement="Flow_1ha99fu">
+        <di:waypoint x="930" y="570" />
+        <di:waypoint x="982" y="570" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1q2a08z_di" bpmnElement="Flow_autoApproved">
+        <di:waypoint x="680" y="483" />
+        <di:waypoint x="680" y="570" />
+        <di:waypoint x="830" y="570" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="697" y="536" width="65" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03vmps4_di" bpmnElement="Flow_03vmps4">
+        <di:waypoint x="930" y="340" />
+        <di:waypoint x="990" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0gxt34e_di" bpmnElement="Association_0gxt34e">
+        <di:waypoint x="272" y="444" />
+        <di:waypoint x="308" y="401" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_177y6a2_di" bpmnElement="Flow_177y6a2">
+        <di:waypoint x="930" y="458" />
+        <di:waypoint x="970" y="458" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_1pmbfok" bpmnElement="Flow_0bwbmu8">
+        <di:waypoint x="1200" y="458" />
+        <di:waypoint x="1220" y="458" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1281qdr_di" bpmnElement="Flow_1281qdr">
+        <di:waypoint x="1070" y="458" />
+        <di:waypoint x="1100" y="458" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0o4znie_di" bpmnElement="Flow_0o4znie">
+        <di:waypoint x="1320" y="458" />
+        <di:waypoint x="1342" y="458" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Participant_1xhy36k_di" bpmnElement="Participant_employee" isHorizontal="true">
+        <dc:Bounds x="158" y="80" width="1712" height="60" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1qsd4mg_di" bpmnElement="Flow_1qsd4mg">
+        <di:waypoint x="260" y="140" />
+        <di:waypoint x="260" y="440" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_00wufhy_di" bpmnElement="Flow_00wufhy">
+        <di:waypoint x="1040" y="300" />
+        <di:waypoint x="1040" y="140" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
