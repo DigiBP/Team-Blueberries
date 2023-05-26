@@ -133,7 +133,7 @@ To fulfill our tasks, we used several languages:
 
 <!-- Use Case -->
 <h2 id="2. Introduction of our Use Case">2. Introduction of our Use Case</h2>
-&#129488;// Charline
+&#129488;// Charline, please describe a short introduction about our use case - thx!! (which company and so on)
 </br></br>
 <!-- Ending Use Case -->
 
@@ -201,7 +201,8 @@ To fulfill our tasks, we used several languages:
 </br>
 
 <h3 id="4.3 Improvements">4.3 Improvements</h3>
-&#129488;// describe the improvements
+<p>In the As-Is business process, there were a lot of manual subtasks that had to be paper-based and sent to other departments or processed internally by other people.</p>
+<p>In the To-Be Business Process, the overall process is streamlined and simplified, and involves fewer departments and people. The main improvement, however, is digitization and automation, because there are no more paper-based forms and many sub-process steps are now triggered automatically.</p>
 </br></br>
 <!-- Ending Desired situation -->
 
