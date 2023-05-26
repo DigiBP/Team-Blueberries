@@ -299,8 +299,8 @@ To fulfill our tasks, we used several languages:
 
 <!-- Retrospective -->
 <h2 id="8. Retrospective">8. Retrospective</h2>
-<p>Mit dem Modellieren der BPMN und DMN im Camunda Modeler ging es zu Beginn gut voran, wobei uns die vielen IDs und sonstigen Felder, die man potenziell ausfüllen hätte können, manchmal irritierten. Was uns aber wirklich grosse Mühe machte, waren die Zusammenhänge mit Camunda Modeler und Make zu verstehen. Dank erfolgreichem Coaching und den guten "Hands-on" Torturials auf GitHub hatten wir's dann aber immer besser verstanden und konnten unsere Gruppenarbeit erfolgreich beenden.</p>
-<p>Es war ein sehr interessantes und lehrreiches Modul, wo wir viele DevOps und sonstige Programme näher kennenlernen durften. Auch denken wir, dass wir die Thematik "Digitalisierung und Automatisierung" nochmals ein grosses Stück besser verstanden haben. Da es ein topaktuelles Thema in der heutigen Zeit wiederspiegelt, werden wir nun bestens für allfällige Berührungspunkte in unseren jeweiligen Unternehmen gewappnet sein.</p>
+<p>Modeling the BPMN and DMN in Camunda Modeler went well at the beginning, although we were sometimes irritated by the many IDs and other fields that could potentially have been filled in. But what really caused us a lot of trouble was to understand the correlations with Camunda Modeler and Make. Thanks to successful coaching and the good "hands-on" torturials on GitHub, we understood it better and better and were able to finish our group work successfully.</p>
+<p>It was a very interesting and instructive module, where we were able to get to know many DevOps and other programs in more detail. We also think that we understood the topic of "digitalization and automation" a lot better. As this is a very topical subject in today's world, we will now be optimally prepared for possible points of contact in our respective companies.</p>
 <p>&#129488;// Review it later on.</p>
 <!-- Ending Retrospective -->
 <!-- Ending Content -->
