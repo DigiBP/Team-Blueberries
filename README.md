@@ -211,32 +211,36 @@ To fulfill our tasks, we used several languages:
 
 <!-- Digitalization and Automation -->
 <h2 id="5. Digitalization and Automation">5. Digitalization and Automation</h2>
-&#129488;// describe what we have done
-</br></br>
+<p>The first step was to model the As-Is Business Process in the tool "Camunda Modeler". This quickly made it clear which departments or individuals were involved in the overall process at all and were interdependent. This allowed us to discuss how to proceed, what could be automated and what would remain a manual task. Ultimately, it gave us the basis for the To-Be Business Process and the certainty that paper-based forms could be dispensed with for the time being.</p>
+<p>In the To-Be Business Process, we defined in a second step which departments or individuals were still needed in the overall process, which dependencies were still there or were new, and how we could possibly streamline the overall process. The results can be found in the previous chapter.</p>
+<p>The following subsections show our results, which we have worked out with the Make tool in order to automate the To-Be business process..</p>
+</br>
 
 <h3 id="5.1 Make scenario Google Forms process trigger">5.1 Make scenario "Google Forms process trigger"</h3>
-&#129488;// Description and pic
-</br></br>
+<p>The trigger of the overall process is indirectly a Google Form. As soon as the employee fills it out and sends it, the request is saved in a new row of the associated Google Sheet, which ultimately triggers the overall process.</p>
+<p>As a second step, we defined a business key that generates a random number and is unique throughout the process. Since there were some problems with variables from the Google Sheet regarding typing, we forced some of them to become strings with the method "toString()", so that they would be recognized as strings later on.</p>
+<p>The last step saves the received variables of the Google Sheet and sends them to our BPMN model in Camunda. This way the data can be further used in the following process steps.</p>
+</br>
 
 <h3 id="5.2 Make scenario Inform the employee">5.2 Make scenario "Inform the employee"</h3>
 &#129488;// Description and pic
-</br></br>
+</br>
 
 <h3 id="5.3 Make scenario Inform the manager">5.3 Make scenario "Inform the manager"</h3>
 &#129488;// Description and pic
-</br></br>
+</br>
 
 <h3 id="5.4 Make scenario Confirm and sign HR">5.4 Make scenario "Confirm and sign HR"</h3>
 &#129488;// Description and pic
-</br></br>
+</br>
 
 <h3 id="5.5 Make scenario Send Confirmation to HR and Employee">5.5 Make scenario "Send Confirmation to HR and Employee"</h3>
 &#129488;// Description and pic
-</br></br>
+</br>
 
 <h3 id="5.6 Make scenario Send data to team schedule">5.6 Make scenario "Send data to team schedule"</h3>
 &#129488;// Description and pic
-</br></br>
+</br>
 <!-- Ending Digitalization and Automation -->
 
 
