@@ -180,12 +180,15 @@ To fulfill our tasks, we used several languages:
 <p>To keep the modeling process as lean as possible, we used two decision tables (DMN).</p>
 <p>In the first DMN it is first checked which type of absence is desired. This can be seen in the first line.</p>
 <p>After that, there are a number of additional specifications that must be met in order for the test to be approved either automatically or provisionally. If a requirement is not met, the request is rejected.</p>
+<p>In the following subsections, the DRD model and the corresponding DMN model can be viewed.</p>
 </br></br>
 
 <h4 id="4.2.1 Decision Table Absence from type">4.2.1 Decision Table Absence from type</h4>
-This table is the first step in identifying which type of absence is requested by the employee.
-
-&#129488;// Pic from our final Decision Table Absence from type
+<p>In the DRD model, the dependencies on the DMN model are evident:</p>
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DRD_DMNModel.png" alt="DRD model from first DMN">
+</br>
+<p>If you click on the blue square in the top box "Absence from Type", you will get to the DMN model:</p>
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DMNModel.png" alt="First DMN model">
 </br></br>
 
 <h4 id="4.2.2 Decision Table Absence from team capacity">4.2.2 Decision Table Absence from team capacity</h4>
