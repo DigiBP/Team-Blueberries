@@ -272,7 +272,7 @@ To fulfill our tasks, we used several languages:
 
 <h3 id="6.1.1 Google Sheet Employee Absence Request Form (responses)">6.1.1 Google Sheet "Employee Absence Request Form (responses)"</h3>
 <p>This Google Sheet ist der direkte Auslöser des Gesamtprozesses. Sobald eine angestellte Person das im vorherigen Kapitel beschriebenen Google Forms ausfüllt und absendet, werden die eingegebenen Daten in Form einer neuen Zeile in dieses Google Sheet abgespeichert:</p>
-<img src="" alt="Google Sheet Employee Absence Request Form (responses)">
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Sheet%20Employee%20Absence%20Request%20Form%20(responses)_few%20examples.png" alt="Google Sheet Employee Absence Request Form (responses)">
 </br>
 
 <h3 id="6.2 Google Sheet Team schedule">6.2 Google Sheet "Team schedule"</h3>
