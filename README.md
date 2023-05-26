@@ -83,6 +83,8 @@
 
 <h3><a href="#7. Conclusion">7. Conclusion</a></h3>
 
+<h3><a href="#8. Retrospective">8. Retrospective</a></h3>
+
 </br></br>
 <!-- Ending Table of content -->
 
@@ -287,7 +289,18 @@ To fulfill our tasks, we used several languages:
 
 <!-- Conclusion -->
 <h2 id="7. Conclusion">7. Conclusion</h2>
-<p>&#129488;// describe it</p>
+<p></p>
+<p>&#129488;// describe it.</p>
 </br></br>
 <!-- Ending Conclusion -->
+
+
+
+
+<!-- Retrospective -->
+<h2 id="8. Retrospective">8. Retrospective</h2>
+<p>Mit dem Modellieren der BPMN und DMN im Camunda Modeler ging es zu Beginn gut voran, wobei uns die vielen IDs und sonstigen Felder, die man potenziell ausfüllen hätte können, manchmal irritierten. Was uns aber wirklich grosse Mühe machte, waren die Zusammenhänge mit Camunda Modeler und Make zu verstehen. Dank erfolgreichem Coaching und den guten "Hands-on" Torturials auf GitHub hatten wir's dann aber immer besser verstanden und konnten unsere Gruppenarbeit erfolgreich beenden.</p>
+<p>Es war ein sehr interessantes und lehrreiches Modul, wo wir viele DevOps und sonstige Programme näher kennenlernen durften. Auch denken wir, dass wir die Thematik "Digitalisierung und Automatisierung" nochmals ein grosses Stück besser verstanden haben. Da es ein topaktuelles Thema in der heutigen Zeit wiederspiegelt, werden wir nun bestens für allfällige Berührungspunkte in unseren jeweiligen Unternehmen gewappnet sein.</p>
+<p>&#129488;// Review it later on.</p>
+<!-- Ending Retrospective -->
 <!-- Ending Content -->
