@@ -146,8 +146,7 @@ Currently, when an employee wants to request a leave of absence, the process is 
 </br></br>
 
 <h3 id="3.1 As-Is Business Process">3.1 As-Is Business Process</h3>
-
-![AS-IS-Process](https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_AS_IS.png)
+ <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_AS_IS.png" alt="AbsenceRequest_AS_IS"> 
 </br></br>
 
 <h3 id="3.2 Pain Points">3.2 ⚡Pain Points⚡</h3>
