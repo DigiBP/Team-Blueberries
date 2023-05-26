@@ -224,7 +224,12 @@ To fulfill our tasks, we used several languages:
 </br>
 
 <h3 id="5.2 Make scenario Inform the employee">5.2 Make scenario "Inform the employee"</h3>
-&#129488;// Description and pic
+<p>After the first Make scenario was triggered with the main trigger, the entered data went through the first DMN as variables. As described above, the input is checked against predefined rules/criteria and then a decision is made as to whether the request is accepted or rejected automatically or provisionally.</p>
+<p>In case of a rejection, which is what the trigger represents, this Make scenario is triggered. Again, since we were struggling with a variable, we forced it to be a string with the method "toString()". Finally, the system automatically sends the employee an email telling him or her that his or her request has been rejected.</p>
+<p>The following image sets up the make process:</p>
+<img src="" alt="Inform the employee">
+<p>This is an example of the automatically send mail:</p>
+<img src="" alt="Mail example to employee">
 </br>
 
 <h3 id="5.3 Make scenario Inform the manager">5.3 Make scenario "Inform the manager"</h3>
