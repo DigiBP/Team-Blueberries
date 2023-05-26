@@ -219,7 +219,8 @@ To fulfill our tasks, we used several languages:
 <h3 id="5.1 Make scenario Google Forms process trigger">5.1 Make scenario "Google Forms process trigger"</h3>
 <p>The trigger of the overall process is indirectly a Google Form. As soon as the employee fills it out and sends it, the request is saved in a new row of the associated Google Sheet, which ultimately triggers the overall process.</p>
 <p>As a second step, we defined a business key that generates a random number and is unique throughout the process. Since there were some problems with variables from the Google Sheet regarding typing, we forced some of them to become strings with the method "toString()", so that they would be recognized as strings later on.</p>
-<p>The last step saves the received variables of the Google Sheet and sends them to our BPMN model in Camunda. This way the data can be further used in the following process steps.</p>
+<p>The last step saves the received variables of the Google Sheet and sends them to our BPMN model in Camunda. This way the data can be further used in the following process steps. The following image sets up the make process:</p>
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_01_Google%20Forms%20process%20trigger.png" alt="Google Forms process trigger">
 </br>
 
 <h3 id="5.2 Make scenario Inform the employee">5.2 Make scenario "Inform the employee"</h3>
