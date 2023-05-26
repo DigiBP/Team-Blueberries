@@ -189,15 +189,16 @@ To fulfill our tasks, we used several languages:
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DRD_DMNModel.png" alt="DRD model from first DMN">
 </br>
 <p>If you click on the blue square in the top box "Absence from Type", you will get to the DMN:</p>
-<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DMNModel.png" alt="First DMN model">
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DMNModel.png" alt="First DMN">
 </br>
 
 <h4 id="4.2.2 Decision Table Absence from team capacity">4.2.2 Decision Table "Absence from team capacity"</h4>
 <p>In the DRD model, the dependencies on the DMN are evident:</p>
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DRD_DMNModel2.png" alt="DRD model from second DMN">
 </br>
 <p>If you click on the blue square in the top box "Absence from Type", you will get to the DMN:</p>
-
-
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DMNModel2.png" alt="Second DMN">
+</br>
 
 <h3 id="4.3 Improvements">4.3 Improvements</h3>
 &#129488;// describe the improvements
