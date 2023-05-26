@@ -272,7 +272,7 @@ To fulfill our tasks, we used several languages:
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Forms_part%203.png" alt="Employee Absence Request Form_Part 3">
 </br>
 
-<h3 id="6.1.1 Google Sheet Employee Absence Request Form (responses)">6.1.1 Google Sheet "Employee Absence Request Form (responses)"</h3>
+<h4 id="6.1.1 Google Sheet Employee Absence Request Form (responses)">6.1.1 Google Sheet "Employee Absence Request Form (responses)"</h4>
 <p>This Google Sheet is the direct trigger of the overall process. As soon as an employee fills in and submits the Google Forms described in the previous chapter, the data entered is saved in the form of a new row in this Google Sheet:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Sheet%20Employee%20Absence%20Request%20Form%20(responses)_few%20examples.png" alt="Google Sheet Employee Absence Request Form (responses)">
 </br>
