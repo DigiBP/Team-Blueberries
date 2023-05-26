@@ -78,8 +78,8 @@
 
 <h3><a href="#6. Other artefacts">6. Other artefacts</a></h3>
 <h4><a href="#6.1 Google Forms">6.1 Google Forms</a></h4>
-<h4><a href="#6.2 Google Sheet Employee Absence Request Form (responses)">6.2 Google Sheet "Employee Absence Request Form (responses)"</a></h4>
-<h4><a href="#6.3 Google Sheet Team schedule">6.3 Google Sheet "Team schedule"</a></h4>
+<h5><a href="#6.1.1 Google Sheet Employee Absence Request Form (responses)">6.1.1 Google Sheet "Employee Absence Request Form (responses)"</a></h5>
+<h4><a href="#6.2 Google Sheet Team schedule">6.2 Google Sheet "Team schedule"</a></h4>
 
 <h3><a href="#7. Conclusion">7. Conclusion</a></h3>
 
@@ -270,11 +270,12 @@ To fulfill our tasks, we used several languages:
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Forms_part%203.png" alt="Employee Absence Request Form_Part 3">
 </br>
 
-<h3 id="6.2 Google Sheet Employee Absence Request Form (responses)">6.2 Google Sheet "Employee Absence Request Form (responses)"</h3>
-<p>&#129488;// Description and pic</p>
+<h3 id="6.1.1 Google Sheet Employee Absence Request Form (responses)">6.1.1 Google Sheet "Employee Absence Request Form (responses)"</h3>
+<p>This Google Sheet ist der direkte Auslöser des Gesamtprozesses. Sobald eine angestellte Person das im vorherigen Kapitel beschriebenen Google Forms ausfüllt und absendet, werden die eingegebenen Daten in Form einer neuen Zeile in dieses Google Sheet abgespeichert:</p>
+<img src="" alt="Google Sheet Employee Absence Request Form (responses)">
 </br>
 
-<h3 id="6.3 Google Sheet Team schedule">6.3 Google Sheet "Team schedule"</h3>
+<h3 id="6.2 Google Sheet Team schedule">6.2 Google Sheet "Team schedule"</h3>
 <p>&#129488;// Description and pic</p>
 </br>
 <p>&#129488;// Are there more other artefacts?</p>
