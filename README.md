@@ -265,9 +265,9 @@ To fulfill our tasks, we used several languages:
 
 <h3 id="6.1 Google Forms">6.1 Google Forms</h3>
 <p>Das Google Forms repräsentiert indrekt den trigger für den Gesamtprozess. Die Angaben werden in einem dazugehörenden Excel Sheet abgespeichert, was schlussendlich den Gesamtprozess auslöst:</p>
-<img src="" alt="Employee Absence Request Form_Part 1">
-<img src="" alt="Employee Absence Request Form_Part 2">
-<img src="" alt="Employee Absence Request Form_Part 3">
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Forms_part%201.png" alt="Employee Absence Request Form_Part 1">
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Forms_part%202.png" alt="Employee Absence Request Form_Part 2">
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Forms_part%203.png" alt="Employee Absence Request Form_Part 3">
 </br>
 
 <h3 id="6.2 Google Sheet Employee Absence Request Form (responses)">6.2 Google Sheet "Employee Absence Request Form (responses)"</h3>
