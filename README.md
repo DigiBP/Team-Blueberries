@@ -63,8 +63,8 @@
 <h3><a href="#4. Desired situation">4. Desired situation</a></h3>
 <h4><a href="#4.1 To-Be Business Process">4.1 To-Be Business Process</a></h4>
 <h4><a href="#4.2 Decision Tables">4.2 Decision Tables</a></h4>
-<h5><a href="#4.2.1 Decision Table Absence from type">4.2.1 Decision Table Absence from type</a></h5>
-<h5><a href="#4.2.2 Decision Table Absence from team capacity">4.2.2 Decision Table Absence from team capacity</a></h5>
+<h5><a href="#4.2.1 Decision Table Absence from type">4.2.1 Decision Table "Absence from type"</a></h5>
+<h5><a href="#4.2.2 Decision Table Absence from team capacity">4.2.2 Decision Table "Absence from team capacity"</a></h5>
 <h4><a href="#4.3 Improvements">4.3 Improvements</a></h4>
 
 <h3><a href="#5. Digitalization and Automation">5. Digitalization and Automation</a></h3>
@@ -180,22 +180,24 @@ To fulfill our tasks, we used several languages:
 <p>To keep the modeling process as lean as possible, we used two decision tables (DMN).</p>
 <p>In the first DMN it is first checked which type of absence is desired. This can be seen in the first line.</p>
 <p>After that, there are a number of additional specifications that must be met in order for the test to be approved either automatically or provisionally. If a requirement is not met, the request is rejected.</p>
-<p>In the following subsections, the DRD model and the corresponding DMN model can be viewed.</p>
+<p>The second DMN represents the second step to ensure that the capacity of the team is not reached when an emyployee wants to take time off. The current capacity is set to &lt;50% of employees must be available.</p>
+<p>In the following subsections, the DRD models and the corresponding DMN models can be viewed.</p>
 </br>
 
-<h4 id="4.2.1 Decision Table Absence from type">4.2.1 Decision Table Absence from type</h4>
-<p>In the DRD model, the dependencies on the DMN model are evident:</p>
+<h4 id="4.2.1 Decision Table Absence from type">4.2.1 Decision Table "Absence from type"</h4>
+<p>In the DRD model, the dependencies on the DMN are evident:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DRD_DMNModel.png" alt="DRD model from first DMN">
 </br>
-<p>If you click on the blue square in the top box "Absence from Type", you will get to the DMN model:</p>
+<p>If you click on the blue square in the top box "Absence from Type", you will get to the DMN:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DMNModel.png" alt="First DMN model">
 </br>
 
-<h4 id="4.2.2 Decision Table Absence from team capacity">4.2.2 Decision Table Absence from team capacity</h4>
-<p>This table is the second step to ensure that the capacity of the team is not reached when an emyployee wants to take time off. The current capacity is set to &lt;50% of employees must be available.</p>
-
-&#129488;// Pic from our final Decision Table Absence from team capacity
+<h4 id="4.2.2 Decision Table Absence from team capacity">4.2.2 Decision Table "Absence from team capacity"</h4>
+<p>In the DRD model, the dependencies on the DMN are evident:</p>
 </br>
+<p>If you click on the blue square in the top box "Absence from Type", you will get to the DMN:</p>
+
+
 
 <h3 id="4.3 Improvements">4.3 Improvements</h3>
 &#129488;// describe the improvements
