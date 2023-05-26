@@ -216,7 +216,7 @@ To fulfill our tasks, we used several languages:
 <h2 id="5. Digitalization and Automation">5. Digitalization and Automation</h2>
 <p>The first step was to model the As-Is Business Process in the tool "Camunda Modeler". This quickly made it clear which departments or individuals were involved in the overall process at all and were interdependent. This allowed us to discuss how to proceed, what could be automated and what would remain a manual task. Ultimately, it gave us the basis for the To-Be Business Process and the certainty that paper-based forms could be dispensed with for the time being.</p>
 <p>In the To-Be Business Process, we defined in a second step which departments or individuals were still needed in the overall process, which dependencies were still there or were new, and how we could possibly streamline the overall process. The results can be found in the previous chapter.</p>
-<p>The following subsections show our results, which we have worked out with the Make tool in order to automate the To-Be business process..</p>
+<p>The following subsections show our results, which we have worked out with the Make tool in order to automate the To-Be business process.</p>
 </br>
 
 <h3 id="5.1 Make scenario Google Forms process trigger">5.1 Make scenario "Google Forms process trigger"</h3>
