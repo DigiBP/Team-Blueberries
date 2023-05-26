@@ -142,11 +142,12 @@ To fulfill our tasks, we used several languages:
 
 <!-- Current situation -->
 <h2 id="3. Current situation">3. Current situation</h2>
-Currently, when an employee wants to request a leave of absence, the process is time-consuming and almost entirely paper-based. The employee must first ask the secretary to print out a form that he can fill out and send to his manager. The manager can then validate the request, but does not have the possibility to consult the balance of available days or the attendance schedule of all employees in his team. If the manager refuses the request, he announces it to the employee, otherwise the request is forwarded to the HR team. The HR manager must also sign the form before passing it to an HR secretary. The HR secretary then verifies the presence of both signatures as well as the employee's available day balance (in the ERP). If everything is in order, the request is officially accepted.  
+<p>Currently, when an employee wants to request a leave of absence, the process is time-consuming and almost entirely paper-based. The employee must first ask the secretary to print out a form that he can fill out and send to his manager. The manager can then validate the request, but does not have the possibility to consult the balance of available days or the attendance schedule of all employees in his team. If the manager refuses the request, he announces it to the employee, otherwise the request is forwarded to the HR team. The HR manager must also sign the form before passing it to an HR secretary. The HR secretary then verifies the presence of both signatures as well as the employee's available day balance (in the ERP). If everything is in order, the request is officially accepted.</p>
 </br></br>
 
 <h3 id="3.1 As-Is Business Process">3.1 As-Is Business Process</h3>
- <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_AS_IS.png" alt="AbsenceRequest_AS_IS"> 
+<p>The As-Is Business Process looks like this:</p> 
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_AS_IS.png" alt="As-Is Business Process">
 </br></br>
 
 <h3 id="3.2 Pain Points">3.2 ⚡Pain Points⚡</h3>
@@ -164,17 +165,21 @@ Currently, when an employee wants to request a leave of absence, the process is 
 
 <!-- Desired situation -->
 <h2 id="4. Desired situation">4. Desired situation</h2>
-Proposed improvement: The implementation of a system that communicates with the ERP. This system is accessible to the HR team and all employees of the company, including managers. 
+<p>&#129488;// Please have a review @Charline. In the meantime, there have probably been some changes.</p>
+<p>Proposed improvement: The implementation of a system that communicates with the ERP. This system is accessible to the HR team and all employees of the company, including managers.</p>
 
-When the employee wants to request a leave of absence, he will be able to log in to the system by fingerprint recognition. He will be able to check the number of vacation days still available, and if his balance is at 0, he will have the possibility to request an unpaid vacation. When the manager receives the request, he will be able to consult the planning of his team before making his choice. Finally, if the request is rejected, the employee will be informed, otherwise the HR team will be informed that a new absence request has been accepted. 
+<p>When the employee wants to request a leave of absence, he will be able to log in to the system by fingerprint recognition. He will be able to check the number of vacation days still available, and if his balance is at 0, he will have the possibility to request an unpaid vacation. When the manager receives the request, he will be able to consult the planning of his team before making his choice. Finally, if the request is rejected, the employee will be informed, otherwise the HR team will be informed that a new absence request has been accepted.</p>
 </br></br>
 
 <h3 id="4.1 To-Be Business Process">4.1 To-Be Business Process</h3>
-&#129488;// Pic from our final to-be business process
+<p>The To-Be Business Process looks like this:</p>
+<p>&#129488;// Add pic from our final to-be business process</p>
 </br></br>
 
 <h3 id="4.2 Decision Tables">4.2 Decision Tables</h3>
-To keep the modeling process as lean as possible, we used two decision tables (DMN).
+<p>To keep the modeling process as lean as possible, we used two decision tables (DMN).</p>
+<p>In the first DMN it is first checked which type of absence is desired. This can be seen in the first line.</p>
+<p>After that, there are a number of additional specifications that must be met in order for the test to be approved either automatically or provisionally. If a requirement is not met, the request is rejected.</p>
 </br></br>
 
 <h4 id="4.2.1 Decision Table Absence from type">4.2.1 Decision Table Absence from type</h4>
@@ -184,7 +189,7 @@ This table is the first step in identifying which type of absence is requested b
 </br></br>
 
 <h4 id="4.2.2 Decision Table Absence from team capacity">4.2.2 Decision Table Absence from team capacity</h4>
-This table is the second step to ensure that the capacity of the team is not reached when an emyployee wants to take time off. The current capacity is set to &lt;50% of employees must be available.
+<p>This table is the second step to ensure that the capacity of the team is not reached when an emyployee wants to take time off. The current capacity is set to &lt;50% of employees must be available.</p>
 
 &#129488;// Pic from our final Decision Table Absence from team capacity
 </br></br>
