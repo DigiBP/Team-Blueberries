@@ -235,7 +235,7 @@ To fulfill our tasks, we used several languages:
 
 <h3 id="5.3 Make scenario Inform the manager">5.3 Make scenario "Inform the manager"</h3>
 <p>After the first Make scenario was triggered with the main trigger, the entered data went through the first DMN as variables. As described above, the input is checked against predefined rules/criteria and then a decision is made as to whether the request is accepted or rejected automatically or provisionally.</p>
-<p>In case of a provisional approval, 
+<p>&#129488; In case of a provisional approval, 
 </br>
 
 <h3 id="5.4 Make scenario ??">5.4 Make scenario "??"</h3>
@@ -260,11 +260,11 @@ To fulfill our tasks, we used several languages:
 
 <!-- Other artefacts -->
 <h2 id="6. Other artefacts">6. Other artefacts</h2>
-<p>Neben den BMPN und DMN Modellen und den Make scenarien erarbeiteten wir noch weitere artefacts, die wir für die Automatisierung benötigten. Sie bilden einen festen Bestandteil des Gesamtprozesses dar. In den folgenden Unterkapiteln werden sie kurz beschrieben und aufgezeigt.</p>
+<p>In addition to the BMPN and DMN models and the make scenarios, we also developed other artifacts that we needed for automation. They are an integral part of the overall process. They are briefly described and shown in the following subsections.</p>
 </br>
 
 <h3 id="6.1 Google Forms">6.1 Google Forms</h3>
-<p>Das Google Forms repräsentiert indrekt den trigger für den Gesamtprozess. Die Angaben werden in einem dazugehörenden Excel Sheet abgespeichert, was schlussendlich den Gesamtprozess auslöst:</p>
+<p>The Google Forms indirectly represents the trigger for the overall process. The information is stored in an associated Excel sheet, which ultimately triggers the overall process:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Forms_part%201.png" alt="Employee Absence Request Form_Part 1">
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Forms_part%202.png" alt="Employee Absence Request Form_Part 2">
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Forms_part%203.png" alt="Employee Absence Request Form_Part 3">
