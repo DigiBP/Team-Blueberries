@@ -71,9 +71,10 @@
 <h4><a href="#5.1 Make scenario Google Forms process trigger">5.1 Make scenario "Google Forms process trigger"</a></h4>
 <h4><a href="#5.2 Make scenario Inform the employee">5.2 Make scenario "Inform the employee"</a></h4>
 <h4><a href="#5.3 Make scenario Inform the manager">5.3 Make scenario "Inform the manager"</a></h4>
-<h4><a href="#5.4 Make scenario Confirm and sign HR">5.4 Make scenario "Confirm and sign HR"</a></h4>
-<h4><a href="#5.5 Make scenario Send Confirmation to HR and Employee">5.5 Make scenario "Send Confirmation to HR and Employee"</a></h4>
-<h4><a href="#5.6 Make scenario Send data to team schedule">5.6 Make scenario "Send data to team schedule"</a></h4>
+<h4><a href="#5.4 Make scenario ??">5.4 Make scenario "??"</a></h4>
+<h4><a href="#5.5 Make scenario Confirm and sign HR">5.5 Make scenario "Confirm and sign HR"</a></h4>
+<h4><a href="#5.6 Make scenario Send Confirmation to HR and Employee">5.6 Make scenario "Send Confirmation to HR and Employee"</a></h4>
+<h4><a href="#5.7 Make scenario Send data to team schedule">5.7 Make scenario "Send data to team schedule"</a></h4>
 
 <h3><a href="#6. Other artefacts">6. Other artefacts</a></h3>
 <h4><a href="#6.1 Google Forms">6.1 Google Forms</a></h4>
@@ -233,20 +234,25 @@ To fulfill our tasks, we used several languages:
 </br>
 
 <h3 id="5.3 Make scenario Inform the manager">5.3 Make scenario "Inform the manager"</h3>
-&#129488;// Description and pic
+<p>After the first Make scenario was triggered with the main trigger, the entered data went through the first DMN as variables. As described above, the input is checked against predefined rules/criteria and then a decision is made as to whether the request is accepted or rejected automatically or provisionally.</p>
+<p>In case of a provisional approval, 
 </br>
 
-<h3 id="5.4 Make scenario Confirm and sign HR">5.4 Make scenario "Confirm and sign HR"</h3>
-&#129488;// Description and pic
+<h3 id="5.4 Make scenario ??">5.4 Make scenario "??"</h3>
+<p>&#129488;// Description and pic about the auto-approved scenario!</p>
 </br>
 
-<h3 id="5.5 Make scenario Send Confirmation to HR and Employee">5.5 Make scenario "Send Confirmation to HR and Employee"</h3>
-&#129488;// Description and pic
+<h3 id="5.5 Make scenario Confirm and sign HR">5.5 Make scenario "Confirm and sign HR"</h3>
+<p>&#129488;// @Caroline: Description and pic</p>
 </br>
 
-<h3 id="5.6 Make scenario Send data to team schedule">5.6 Make scenario "Send data to team schedule"</h3>
-&#129488;// Description and pic
+<h3 id="5.6 Make scenario Send Confirmation to HR and Employee">5.6 Make scenario "Send Confirmation to HR and Employee"</h3>
+<p>&#129488;// @Caroline: Description and pic</p>
 </br>
+
+<h3 id="5.7 Make scenario Send data to team schedule">5.7 Make scenario "Send data to team schedule"</h3>
+<p>&#129488;// @Charline: Description and pic</p>
+</br></br>
 <!-- Ending Digitalization and Automation -->
 
 
@@ -254,19 +260,24 @@ To fulfill our tasks, we used several languages:
 
 <!-- Other artefacts -->
 <h2 id="6. Other artefacts">6. Other artefacts</h2>
-&#129488;// describe what we have done
-</br></br>
+<p>Neben den BMPN und DMN Modellen und den Make scenarien erarbeiteten wir noch weitere artefacts, die wir für die Automatisierung benötigten. Sie bilden einen festen Bestandteil des Gesamtprozesses dar. In den folgenden Unterkapiteln werden sie kurz beschrieben und aufgezeigt.</p>
+</br>
 
 <h3 id="6.1 Google Forms">6.1 Google Forms</h3>
-&#129488;// Description and pic
-</br></br>
+<p>Das Google Forms repräsentiert indrekt den trigger für den Gesamtprozess. Die Angaben werden in einem dazugehörenden Excel Sheet abgespeichert, was schlussendlich den Gesamtprozess auslöst:</p>
+<img src="" alt="Employee Absence Request Form_Part 1">
+<img src="" alt="Employee Absence Request Form_Part 2">
+<img src="" alt="Employee Absence Request Form_Part 3">
+</br>
 
 <h3 id="6.2 Google Sheet Employee Absence Request Form (responses)">6.2 Google Sheet "Employee Absence Request Form (responses)"</h3>
-&#129488;// Description and pic
-</br></br>
+<p>&#129488;// Description and pic</p>
+</br>
 
 <h3 id="6.3 Google Sheet Team schedule">6.3 Google Sheet "Team schedule"</h3>
-&#129488;// Description and pic
+<p>&#129488;// Description and pic</p>
+</br>
+<p>&#129488;// Are there more other artefacts?</p>
 </br></br>
 <!-- Ending Other artefacts -->
 
@@ -275,7 +286,7 @@ To fulfill our tasks, we used several languages:
 
 <!-- Conclusion -->
 <h2 id="7. Conclusion">7. Conclusion</h2>
-&#129488;// describe it
+<p>&#129488;// describe it</p>
 </br></br>
 <!-- Ending Conclusion -->
 <!-- Ending Content -->
