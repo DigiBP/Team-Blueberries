@@ -244,7 +244,7 @@ To fulfill our tasks, we used several languages:
 </br>
 
 <h3 id="5.4 Make scenario Send data to team schedule">5.4 Make scenario "Send data to team schedule"</h3>
-<p>&#129488; @Charline: Description and pic; In case of a provisional approval, ...
+<p>&#129488; @Charline: Description and pic; In case of a provisional approval, ....
 <p></p>
 </br>
 
