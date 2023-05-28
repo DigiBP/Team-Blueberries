@@ -71,10 +71,10 @@
 <h4><a href="#5.1 Make scenario Google Forms process trigger">5.1 Make scenario "Google Forms process trigger"</a></h4>
 <h4><a href="#5.2 Make scenario Inform the employee">5.2 Make scenario "Inform the employee"</a></h4>
 <h4><a href="#5.3 Make scenario Inform the manager">5.3 Make scenario "Inform the manager"</a></h4>
-<h4><a href="#5.4 Make scenario ??">5.4 Make scenario "??"</a></h4>
+<h4><a href="#5.4 Make scenario Send data to team schedule">5.4 Make scenario "Send data to team schedule"</a></h4>
 <h4><a href="#5.5 Make scenario Confirm and sign HR">5.5 Make scenario "Confirm and sign HR"</a></h4>
 <h4><a href="#5.6 Make scenario Send Confirmation to HR and Employee">5.6 Make scenario "Send Confirmation to HR and Employee"</a></h4>
-<h4><a href="#5.7 Make scenario Send data to team schedule">5.7 Make scenario "Send data to team schedule"</a></h4>
+
 
 <h3><a href="#6. Other artefacts">6. Other artefacts</a></h3>
 <h4><a href="#6.1 Google Forms">6.1 Google Forms</a></h4>
@@ -240,13 +240,12 @@ To fulfill our tasks, we used several languages:
 <p>The following image sets up the make process:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_03_Inform%20the%20manager.png" alt="Inform the manager">
 <p>This is an example of the automatically send mail:</p>
-<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_03_Inform%20the%20manager_mail%20example.png" alt="Mail example to manager">
-
-<p>&#129488; In case of a provisional approval, 
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_03_Inform%20the%20manager_mail%20example.png" alt="Mail example to manager"> 
 </br>
 
-<h3 id="5.4 Make scenario ??">5.4 Make scenario "??"</h3>
-<p>&#129488;// Description and pic about the auto-approved scenario!</p>
+<h3 id="5.4 Make scenario Send data to team schedule">5.4 Make scenario "Send data to team schedule"</h3>
+<p>&#129488; @Charline: Description and pic; In case of a provisional approval, ...
+<p></p>
 </br>
 
 <h3 id="5.5 Make scenario Confirm and sign HR">5.5 Make scenario "Confirm and sign HR"</h3>
@@ -255,10 +254,6 @@ To fulfill our tasks, we used several languages:
 
 <h3 id="5.6 Make scenario Send Confirmation to HR and Employee">5.6 Make scenario "Send Confirmation to HR and Employee"</h3>
 <p>&#129488;// @Caroline: Description and pic</p>
-</br>
-
-<h3 id="5.7 Make scenario Send data to team schedule">5.7 Make scenario "Send data to team schedule"</h3>
-<p>&#129488;// @Charline: Description and pic</p>
 </br></br>
 <!-- Ending Digitalization and Automation -->
 
