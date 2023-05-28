@@ -51,7 +51,15 @@
     <bpmn:sequenceFlow id="Flow_1f6rhus" name="Need more information" sourceRef="Gateway_requestApprBySys" targetRef="Activity_1114sro">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Output_absenceFromType=="prov-approved"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_0cifavy" sourceRef="Activity_1114sro" targetRef="Activity_informManager" />
+    <bpmn:sequenceFlow id="Flow_0cifavy" sourceRef="Activity_1114sro" targetRef="Activity_informManager">
+      <bpmn:extensionElements>
+        <camunda:executionListener delegateExpression="${notify}" event="take">
+          <camunda:field name="URL">
+            <camunda:string>https://hook.eu1.make.com/pmra67hac0wv3nfu58pke7m7oupzbymn</camunda:string>
+          </camunda:field>
+        </camunda:executionListener>
+      </bpmn:extensionElements>
+    </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_03773dt" name="Need more information" sourceRef="Gateway_1rsel9f" targetRef="Activity_05f6qvj">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Output_capacity=="prov-approved"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
@@ -65,20 +73,45 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Output_capacity=="auto-approved"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_rejected" name="Rejected" sourceRef="Gateway_requestApprBySys" targetRef="Activity_0h0mtmm">
+      <bpmn:extensionElements />
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Output_absenceFromType=="rejected"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1ivyuw3" name="Rejected" sourceRef="Gateway_1rsel9f" targetRef="Activity_0v5keh4">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Output_capacity=="rejected"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0vxdztc" sourceRef="Activity_informEmployee" targetRef="Event_0pov23p" />
-    <bpmn:sequenceFlow id="Flow_03vmps4" sourceRef="Activity_0h0mtmm" targetRef="Activity_informEmployee" />
-    <bpmn:sequenceFlow id="Flow_1kp3so8" sourceRef="Activity_0v5keh4" targetRef="Activity_informEmployee" />
+    <bpmn:sequenceFlow id="Flow_03vmps4" sourceRef="Activity_0h0mtmm" targetRef="Activity_informEmployee">
+      <bpmn:extensionElements>
+        <camunda:executionListener delegateExpression="${notify}" event="take">
+          <camunda:field name="URL">
+            <camunda:string>https://hook.eu1.make.com/wul7tfmi5st3oe1jzh4vrnn4rrbj2dgs</camunda:string>
+          </camunda:field>
+        </camunda:executionListener>
+      </bpmn:extensionElements>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1kp3so8" sourceRef="Activity_0v5keh4" targetRef="Activity_informEmployee">
+      <bpmn:extensionElements>
+        <camunda:executionListener delegateExpression="${notify}" event="take">
+          <camunda:field name="URL">
+            <camunda:string>https://hook.eu1.make.com/wul7tfmi5st3oe1jzh4vrnn4rrbj2dgs</camunda:string>
+          </camunda:field>
+        </camunda:executionListener>
+      </bpmn:extensionElements>
+    </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_15t32k0" name="approved" sourceRef="Gateway_1eh4053" targetRef="Activity_0knl9vu">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${requestApproved==true}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1fdxbfh" sourceRef="Activity_1l3663q" targetRef="Gateway_1eh4053" />
     <bpmn:sequenceFlow id="Flow_1qw6cf4" sourceRef="Activity_05f6qvj" targetRef="Activity_1l3663q" />
-    <bpmn:sequenceFlow id="Flow_15mj2fz" sourceRef="Activity_1du54s6" targetRef="Activity_informEmployee" />
+    <bpmn:sequenceFlow id="Flow_15mj2fz" sourceRef="Activity_1du54s6" targetRef="Activity_informEmployee">
+      <bpmn:extensionElements>
+        <camunda:executionListener delegateExpression="${notify}" event="take">
+          <camunda:field name="URL">
+            <camunda:string>https://hook.eu1.make.com/wul7tfmi5st3oe1jzh4vrnn4rrbj2dgs</camunda:string>
+          </camunda:field>
+        </camunda:executionListener>
+      </bpmn:extensionElements>
+    </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_rejected_3" name="rejected" sourceRef="Gateway_1eh4053" targetRef="Activity_1du54s6">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${requestApproved ==false}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
@@ -520,6 +553,9 @@
       <bpmndi:BPMNEdge id="Flow_03vmps4_di" bpmnElement="Flow_03vmps4">
         <di:waypoint x="940" y="290" />
         <di:waypoint x="1625" y="290" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1261" y="272" width="44" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1kp3so8_di" bpmnElement="Flow_1kp3so8">
         <di:waypoint x="1530" y="400" />
@@ -567,13 +603,13 @@
         <di:waypoint x="2650" y="790" />
         <di:waypoint x="2722" y="790" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_0gxt34e_di" bpmnElement="Association_0gxt34e">
-        <di:waypoint x="272" y="514" />
-        <di:waypoint x="308" y="471" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1ylwvek_di" bpmnElement="Flow_1ylwvek">
         <di:waypoint x="940" y="940" />
         <di:waypoint x="1462" y="940" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0gxt34e_di" bpmnElement="Association_0gxt34e">
+        <di:waypoint x="272" y="514" />
+        <di:waypoint x="308" y="471" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Participant_1xhy36k_di" bpmnElement="Participant_employee" isHorizontal="true">
         <dc:Bounds x="158" y="80" width="2912" height="60" />
