@@ -5,41 +5,40 @@
     <bpmn:participant id="Participant_employee" name="Employee" />
     <bpmn:messageFlow id="Flow_1qsd4mg" sourceRef="Participant_employee" targetRef="StartEvent_requestForLeave" />
     <bpmn:messageFlow id="Flow_00wufhy" sourceRef="Activity_informEmployee" targetRef="Participant_employee" />
-    <bpmn:messageFlow id="Flow_0bn1dsy" sourceRef="Activity_informEmployeeApproval" targetRef="Participant_employee" />
+    <bpmn:messageFlow id="Flow_17f5gx5" sourceRef="Activity_0z9iriq" targetRef="Participant_employee" />
   </bpmn:collaboration>
   <bpmn:process id="Process_0qarcbf" isExecutable="true">
     <bpmn:laneSet id="LaneSet_0p6kvau">
       <bpmn:lane id="Lane_0pyzh9j" name="Human resource">
         <bpmn:flowNodeRef>Activity_085p3rb</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Event_171z4zo</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0z9iriq</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1p36kz6</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_1nc75pd" name="System">
-        <bpmn:flowNodeRef>Activity_1du54s6</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_informEmployee</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Event_0pov23p</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_0v5keh4</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_0h0mtmm</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_02es3nq</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_verifyCapacity</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_typeOfAbsence</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Gateway_1rsel9f</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_05f6qvj</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_informManager</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_1114sro</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Gateway_requestApprBySys</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_0utyc4j</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>StartEvent_requestForLeave</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0utyc4j</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_requestApprBySys</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1114sro</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_informManager</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_05f6qvj</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1rsel9f</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_typeOfAbsence</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_verifyCapacity</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_02es3nq</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0h0mtmm</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0v5keh4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0pov23p</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_informEmployee</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1du54s6</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_0zkl1hz" name="Manager">
-        <bpmn:flowNodeRef>Activity_1l3663q</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Gateway_1eh4053</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_teamSchedule</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_createApprovalDocument</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_0knl9vu</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_signApprovalDocument</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0knl9vu</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_createApprovalDocument</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_teamSchedule</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1eh4053</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1l3663q</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_informEmployeeApproval</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Event_085pna3</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_checkEmails</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:sequenceFlow id="Flow_1utjiy3" sourceRef="Activity_createApprovalDocument" targetRef="Activity_signApprovalDocument" />
@@ -68,7 +67,6 @@
     <bpmn:sequenceFlow id="Flow_1agn3jf" sourceRef="Activity_0utyc4j" targetRef="Activity_typeOfAbsence" />
     <bpmn:sequenceFlow id="Flow_0072u9a" sourceRef="Activity_verifyCapacity" targetRef="Gateway_1rsel9f" />
     <bpmn:sequenceFlow id="Flow_0l7xjov" sourceRef="Activity_teamSchedule" targetRef="Activity_verifyCapacity" />
-    <bpmn:sequenceFlow id="Flow_1gr8iwk" sourceRef="Activity_02es3nq" targetRef="Event_171z4zo" />
     <bpmn:sequenceFlow id="Flow_0gjc155" name="Automatically approved" sourceRef="Gateway_1rsel9f" targetRef="Activity_02es3nq">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Output_capacity=="auto-approved"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
@@ -138,10 +136,6 @@
       <bpmn:incoming>Flow_1nzf08t</bpmn:incoming>
       <bpmn:outgoing>Flow_1utjiy3</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:endEvent id="Event_171z4zo">
-      <bpmn:incoming>Flow_1gr8iwk</bpmn:incoming>
-      <bpmn:incoming>Flow_1ylwvek</bpmn:incoming>
-    </bpmn:endEvent>
     <bpmn:userTask id="Activity_085p3rb" name="Output automatically approved">
       <bpmn:extensionElements>
         <camunda:formData>
@@ -152,7 +146,7 @@
         </camunda:formData>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_autoApproved</bpmn:incoming>
-      <bpmn:outgoing>Flow_1ylwvek</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1ng435e</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:startEvent id="StartEvent_requestForLeave" name="New request for a leave" camunda:formKey="">
       <bpmn:extensionElements />
@@ -237,7 +231,7 @@
         </camunda:formData>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0gjc155</bpmn:incoming>
-      <bpmn:outgoing>Flow_1gr8iwk</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1olw6rx</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:userTask id="Activity_0h0mtmm" name="Output rejected">
       <bpmn:extensionElements>
@@ -296,25 +290,23 @@
       <bpmn:outgoing>Flow_15mj2fz</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_1nw6tg3" sourceRef="Activity_signApprovalDocument" targetRef="Activity_informEmployeeApproval" />
-    <bpmn:serviceTask id="Activity_informEmployeeApproval" name="Inform the employee and HR of approval" camunda:type="external" camunda:topic="informEmployeeApproval">
-      <bpmn:incoming>Flow_1nw6tg3</bpmn:incoming>
-      <bpmn:outgoing>Flow_1jczj9t</bpmn:outgoing>
+    <bpmn:sequenceFlow id="Flow_1ng435e" sourceRef="Activity_085p3rb" targetRef="Activity_0z9iriq" />
+    <bpmn:sequenceFlow id="Flow_1olw6rx" sourceRef="Activity_02es3nq" targetRef="Activity_0z9iriq" />
+    <bpmn:sequenceFlow id="Flow_1klxv1q" sourceRef="Activity_informEmployeeApproval" targetRef="Activity_0z9iriq" />
+    <bpmn:sequenceFlow id="Flow_0liw632" sourceRef="Activity_0z9iriq" targetRef="Event_1p36kz6" />
+    <bpmn:serviceTask id="Activity_0z9iriq" name="Send data to team schedule and inform the employee" camunda:type="external" camunda:topic="sendDataTeamSchedule">
+      <bpmn:incoming>Flow_1ng435e</bpmn:incoming>
+      <bpmn:incoming>Flow_1olw6rx</bpmn:incoming>
+      <bpmn:incoming>Flow_1klxv1q</bpmn:incoming>
+      <bpmn:outgoing>Flow_0liw632</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:sequenceFlow id="Flow_1jczj9t" sourceRef="Activity_informEmployeeApproval" targetRef="Activity_checkEmails" />
-    <bpmn:endEvent id="Event_085pna3" name="Request approved">
-      <bpmn:incoming>Flow_18gl0mh</bpmn:incoming>
+    <bpmn:serviceTask id="Activity_informEmployeeApproval" name="And HR of approval" camunda:type="external" camunda:topic="informEmployeeApproval">
+      <bpmn:incoming>Flow_1nw6tg3</bpmn:incoming>
+      <bpmn:outgoing>Flow_1klxv1q</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_1p36kz6" name="Request approved and processed">
+      <bpmn:incoming>Flow_0liw632</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:sequenceFlow id="Flow_18gl0mh" sourceRef="Activity_checkEmails" targetRef="Event_085pna3" />
-    <bpmn:userTask id="Activity_checkEmails" name="check emails">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="check_email" label="approval email received?" type="boolean" />
-        </camunda:formData>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_1jczj9t</bpmn:incoming>
-      <bpmn:outgoing>Flow_18gl0mh</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:sequenceFlow id="Flow_1ylwvek" sourceRef="Activity_085p3rb" targetRef="Event_171z4zo" />
     <bpmn:textAnnotation id="TextAnnotation_1q0h3xb">
       <bpmn:text>Recieves with a google forms</bpmn:text>
     </bpmn:textAnnotation>
@@ -324,19 +316,19 @@
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Group_assignment_DigiBP_23">
       <bpmndi:BPMNShape id="Participant_1o8gema_di" bpmnElement="Participant_1o8gema" isHorizontal="true">
-        <dc:Bounds x="158" y="190" width="2912" height="830" />
+        <dc:Bounds x="158" y="190" width="2612" height="830" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_0zkl1hz_di" bpmnElement="Lane_0zkl1hz" isHorizontal="true">
-        <dc:Bounds x="188" y="730" width="2882" height="130" />
+        <dc:Bounds x="188" y="730" width="2582" height="130" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_1nc75pd_di" bpmnElement="Lane_1nc75pd" isHorizontal="true">
-        <dc:Bounds x="188" y="190" width="2882" height="540" />
+        <dc:Bounds x="188" y="190" width="2582" height="540" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_0pyzh9j_di" bpmnElement="Lane_0pyzh9j" isHorizontal="true">
-        <dc:Bounds x="188" y="860" width="2882" height="160" />
+        <dc:Bounds x="188" y="860" width="2582" height="160" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0tugpqc_di" bpmnElement="Activity_signApprovalDocument">
@@ -349,12 +341,6 @@
       <bpmndi:BPMNShape id="Activity_0hkr4yv_di" bpmnElement="Activity_createApprovalDocument">
         <dc:Bounds x="2110" y="750" width="100" height="80" />
         <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_171z4zo_di" bpmnElement="Event_171z4zo">
-        <dc:Bounds x="1462" y="922" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1445" y="935" width="70" height="27" />
-        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_1u4t331" bpmnElement="Activity_085p3rb">
         <dc:Bounds x="840" y="900" width="100" height="80" />
@@ -445,18 +431,19 @@
         <dc:Bounds x="2390" y="750" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_085pna3_di" bpmnElement="Event_085pna3">
-        <dc:Bounds x="2722" y="772" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="2695" y="815" width="90" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1r4q3o5_di" bpmnElement="Activity_checkEmails">
-        <dc:Bounds x="2550" y="750" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="TextAnnotation_1q0h3xb_di" bpmnElement="TextAnnotation_1q0h3xb">
         <dc:Bounds x="280" y="430" width="100" height="41" />
         <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1t8rege_di" bpmnElement="Activity_0z9iriq">
+        <dc:Bounds x="2520" y="900" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1p36kz6_di" bpmnElement="Event_1p36kz6">
+        <dc:Bounds x="2682" y="922" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2655" y="965" width="90" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1utjiy3_di" bpmnElement="Flow_1utjiy3">
         <di:waypoint x="2210" y="790" />
@@ -519,10 +506,6 @@
         <di:waypoint x="1260" y="790" />
         <di:waypoint x="1260" y="528" />
         <di:waypoint x="1280" y="528" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1gr8iwk_di" bpmnElement="Flow_1gr8iwk">
-        <di:waypoint x="1480" y="700" />
-        <di:waypoint x="1480" y="922" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0gjc155_di" bpmnElement="Flow_0gjc155">
         <di:waypoint x="1480" y="553" />
@@ -595,24 +578,30 @@
         <di:waypoint x="2350" y="790" />
         <di:waypoint x="2390" y="790" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1jczj9t_di" bpmnElement="Flow_1jczj9t">
-        <di:waypoint x="2490" y="790" />
-        <di:waypoint x="2550" y="790" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_18gl0mh_di" bpmnElement="Flow_18gl0mh">
-        <di:waypoint x="2650" y="790" />
-        <di:waypoint x="2722" y="790" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1ylwvek_di" bpmnElement="Flow_1ylwvek">
-        <di:waypoint x="940" y="940" />
-        <di:waypoint x="1462" y="940" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Association_0gxt34e_di" bpmnElement="Association_0gxt34e">
         <di:waypoint x="272" y="514" />
         <di:waypoint x="308" y="471" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ng435e_di" bpmnElement="Flow_1ng435e">
+        <di:waypoint x="940" y="960" />
+        <di:waypoint x="2520" y="960" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1olw6rx_di" bpmnElement="Flow_1olw6rx">
+        <di:waypoint x="1480" y="700" />
+        <di:waypoint x="1480" y="940" />
+        <di:waypoint x="2520" y="940" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1klxv1q_di" bpmnElement="Flow_1klxv1q">
+        <di:waypoint x="2440" y="830" />
+        <di:waypoint x="2440" y="920" />
+        <di:waypoint x="2520" y="920" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0liw632_di" bpmnElement="Flow_0liw632">
+        <di:waypoint x="2620" y="940" />
+        <di:waypoint x="2682" y="940" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Participant_1xhy36k_di" bpmnElement="Participant_employee" isHorizontal="true">
-        <dc:Bounds x="158" y="80" width="2912" height="60" />
+        <dc:Bounds x="158" y="80" width="2612" height="60" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1qsd4mg_di" bpmnElement="Flow_1qsd4mg">
@@ -623,9 +612,9 @@
         <di:waypoint x="1675" y="250" />
         <di:waypoint x="1675" y="140" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0bn1dsy_di" bpmnElement="Flow_0bn1dsy">
-        <di:waypoint x="2440" y="750" />
-        <di:waypoint x="2440" y="140" />
+      <bpmndi:BPMNEdge id="Flow_17f5gx5_di" bpmnElement="Flow_17f5gx5">
+        <di:waypoint x="2570" y="900" />
+        <di:waypoint x="2570" y="140" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
