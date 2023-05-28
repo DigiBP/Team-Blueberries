@@ -237,6 +237,11 @@ To fulfill our tasks, we used several languages:
 
 <h3 id="5.3 Make scenario Inform the manager">5.3 Make scenario "Inform the manager"</h3>
 <p>After the first Make scenario was triggered with the main trigger, the entered data went through the first DMN as variables. As described above, the input is checked against predefined rules/criteria and then a decision is made as to whether the request is accepted or rejected automatically or provisionally.</p>
+<p>The following image sets up the make process:</p>
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_03_Inform%20the%20manager.png" alt="Inform the manager">
+<p>This is an example of the automatically send mail:</p>
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_03_Inform%20the%20manager_mail%20example.png" alt="Mail example to manager">
+
 <p>&#129488; In case of a provisional approval, 
 </br>
 
