@@ -306,8 +306,6 @@ To fulfill our tasks, we used several languages:
 
 <!-- Ending Digitalization and Automation -->
 
-![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/d41c0621-8c28-4d7d-84a6-d2047e4eea40)
-
 
 
 <!-- Other artefacts -->
