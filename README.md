@@ -256,6 +256,7 @@ To fulfill our tasks, we used several languages:
 </br>
 
 <p>Because we require a signature from the manager to finalise the absence request approval, we created a make scenario that generates a document from a google docs template with the following information:</p>
+
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/3ff45f2c-858b-48c4-bae0-6c155d1fb658)
 
 </br>
