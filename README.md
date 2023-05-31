@@ -250,13 +250,42 @@ To fulfill our tasks, we used several languages:
 
 <h3 id="5.5 Make scenario Confirm and sign HR">5.5 Make scenario "Confirm and sign HR"</h3>
 <p>&#129488;// @Caroline: Description and pic</p>
+<p>After an absence request has been definitively approved, the trigger in a new make scenario will make an HTTP request to the camunda workflow. This scenario is the first step of two, which will continue in the following scenario named "Send Confirmation to HR and Employee".</p>
+  
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/901d4ef7-774d-4996-9a83-dc3714163af7)
+</br>
+<p>Because we require a signature from the manager to finalise the absence request approval, we created a make scenario that generates a document from a google docs template with the following information:</p>
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/3ff45f2c-858b-48c4-bae0-6c155d1fb658)
+</br>
+<p>This is a template that can take variables and generate a new document based on the data. All variables indicated as {{value}} can be replaced with data selected in the make scenario. After this document is created, the new document contains the information about the approved absence request and is automatically uploaded to a dropbox location.</p>
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/2d2c753f-09c1-4e63-b8f4-0ba5633af3ba)
+
+<p>After this document exists on dropbox, the manager has to sign it with an e-signature. For this, we make use of the signing feature of dropbox itself. To accomplish this, the manager has to open the respective pdf and click on "add signature" to sign it.</p>
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/84521cba-9166-4d8f-b43b-f1a7ef95edc8)
+</br>
+<p>The manager has the option to add a signature by drawing, typing or uploading a picture to the document</p>
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/f6fff8e0-8f6f-433e-aece-78450d39b9d1)
+</br>
+<p>Once added, the manager can place the signature on the indicated line. The document will be saved and have the suffix "[signiert]" added to the document title. </p>
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/39cf27dd-255f-4b32-b7c8-9e08ffd4bc29)
+</br>
+<p>The new signed document now has to be manually moved into a new folder named "Signed_Absence_Requests"</p>
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/fa3f6b02-e5ea-4a8d-b50e-4be5282a465d)
 </br>
 
 <h3 id="5.6 Make scenario Send Confirmation to HR and Employee">5.6 Make scenario "Send Confirmation to HR and Employee"</h3>
 <p>&#129488;// @Caroline: Description and pic</p>
-</br></br>
+<p> This scenario is triggered once a new PDF file has been moved to the "Signed_Absence_Request" folder on dropbox.</p>
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/30a13546-4980-4286-b68d-1eac8edc051a)
+</br> 
+<p> The scenario will then download the respective file and send out an email with the following message and the signed PDF file as an attachement:</p>
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/03a11bf7-bfbe-4ff6-9094-5e3dcd209d86)
+
+</br> 
+
 <!-- Ending Digitalization and Automation -->
 
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/d41c0621-8c28-4d7d-84a6-d2047e4eea40)
 
 
 
