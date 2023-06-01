@@ -341,6 +341,19 @@ To fulfill our tasks, we used several languages:
 <p></p>
 <p>&#129488;// describe it.</p>
 </br></br>
+
+<h3 id="7.1 Limitations and Improvements">7.1 Limitations and Improvements</h2>
+<p> While the AS-IS process is very manual and happens mostly on paper, we aimed to automate some steps completely, such as the auto-approve and auto-reject scenarios. Therefore, HR and managers must only handle absence requests that do not fulfil the formal requirements, e.g. taking too many days off or not being eligible for a specific type of absence. </p>
+</br></br>
+
+<p>The "check team schedule" step remains manual because the Excel sheet containing the yearly team schedule is built quite complex and unsuitable for looking up specific values. We would have had to write a custom query to specify the date range of the absence request, identify the employee number and check the capacity simultaneously. While this would have been a helpful automation step, we needed to gain the knowledge, skills or resources to write a successful query, and, therefore, we left this step up to be done by the manager as a user task.</p>
+</br></br>
+
+<p>Additionally, we could not add more custom webhooks to the scenarios, as the current Make plan did not allow us to exceed the limit of two webhooks. Otherwise, we recommend that all scenarios have one. </p>
+</br></br>
+
+<p>Finally, the solution to the step "send data to team schedule" is not quite elegant because a recipient receives the email about their approved absence request twice for a specific scenario. Suppose the employee has applied for an absence, which must be prov-approved and checked with the project schedule. In that case, they will receive an email with a signed approval document and an additional confirmation email separately. We realised that this could have been better, but due to the nature of the TO-BE process, we left this solution as it was with the notion that this would be an improvement step to be done in the future.</p>
+</br></br>
 <!-- Ending Conclusion -->
 
 
