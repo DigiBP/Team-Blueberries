@@ -136,7 +136,8 @@ To fulfill our tasks, we used several languages:
 
 <!-- Use Case -->
 <h2 id="2. Introduction of our Use Case">2. Introduction of our Use Case</h2>
-&#129488;// Charline, please describe a short introduction about our use case - thx!! (which company and so on)
+<p>Every company has a human resources department responsible for employee administration. Indeed, employees receive a salary, sometimes social or company benefits, and are sometimes absent for various reasons such as illness, accident or vacation requests. There are as many companies as there are HR processes, and the larger the company, the more varied and complex the processes are likely to be. 
+For our project, we based ourselves on a watchmaking company (whose name we'll keep anonymous) which currently employs over 600 people. This company has a traditional management style, with a strong hierarchy and heavy reliance on paper. However, the company is planning to digitize its processes, both in administration and production. This made it an ideal candidate for our project, and we chose to focus on absence request management.  </p>
 </br></br>
 <!-- Ending Use Case -->
 
