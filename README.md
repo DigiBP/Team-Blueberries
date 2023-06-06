@@ -250,10 +250,10 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 </br>
 
 <h3 id="5.5 Make scenario Confirm and sign HR">5.5 Make scenario "Confirm and sign HR"</h3>
-<p>&#129488;// @Caroline: Description and pic</p>
 <p>After an absence request has been definitively approved, the trigger in a new make scenario will make an HTTP request to the camunda workflow. This scenario is the first step of two, which will continue in the following scenario named "Send Confirmation to HR and Employee".</p>
   
-![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/901d4ef7-774d-4996-9a83-dc3714163af7)
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/725491a3-c3df-4f61-9783-898830ed5ad3)
+
 </br>
 
 <p>Because we require a signature from the manager to finalise the absence request approval, we created a make scenario that generates a document from a google docs template with the following information:</p>
@@ -293,10 +293,9 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 </br>
 
 <h3 id="5.6 Make scenario Send Confirmation to HR and Employee">5.6 Make scenario "Send Confirmation to HR and Employee"</h3>
-<p>&#129488;// @Caroline: Description and pic</p>
 <p> This scenario is triggered once a new PDF file has been moved to the "Signed_Absence_Request" folder on dropbox.</p>
 
-![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/30a13546-4980-4286-b68d-1eac8edc051a)
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/efa7f458-e7ce-4a19-808b-fdae2f5b62a4)
 
 </br> 
 
