@@ -230,6 +230,13 @@ Differents ways lead to an approved request. When this happens, a document is ge
 </br>
 <p>If you click on the blue square in the top box "Absence from Type", you will get to the DMN:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DMNModel.png" alt="First DMN">
+<p>Below are some explanations about the rules.</p>
+<ul>
+  <li>Types of absence 1-4 are about vacation; as this is a watchmaking company, all employees have fixed holidays in summer, it means they cannot take more than 5 following days during the rest of the year. There is a particularity: employees over the age of 50 are entitled to a 6th week's holiday.</li>
+  <li>Types of absence 5-7 are about sickness; if the employee has a medical appointment, I can take a full day, and when he's sick or in an accident situation, there is no limitation of days.</li>
+  <li>Types of absence 8-16 are regulated by law and the collective labour agreement.</li>
+  <li>Any other situation leads to a rejected request.</li>
+</ul>
 </br>
 
 <h4 id="4.3.2 Decision Table Absence from team capacity">4.3.2 Decision Table "Absence from team capacity"</h4>
