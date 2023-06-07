@@ -72,7 +72,7 @@
 <h4><a href="#5.1 Make scenario Google Forms process trigger">5.1 Make scenario "Google Forms process trigger"</a></h4>
 <h4><a href="#5.2 Make scenario Inform the employee">5.2 Make scenario "Inform the employee"</a></h4>
 <h4><a href="#5.3 Make scenario Inform the manager">5.3 Make scenario "Inform the manager"</a></h4>
-<h4><a href="#5.4 Make scenario Send data to team schedule">5.4 Make scenario "Send data to team schedule"</a></h4>
+<h4><a href="#5.4 Make scenario Send data to tracker">5.4 Make scenario "Send data to tracker"</a></h4>
 <h4><a href="#5.5 Make scenario Confirm and sign HR">5.5 Make scenario "Confirm and sign HR"</a></h4>
 <h4><a href="#5.6 Make scenario Send Confirmation to HR and Employee">5.6 Make scenario "Send Confirmation to HR and Employee"</a></h4>
 
@@ -272,7 +272,7 @@ When the request is automatically rejected, the employee is informed by e-mail o
 <p>In case of a rejection, which is what the trigger represents, this Make scenario is triggered. Again, since we were struggling with a variable, we forced it to be a string with the method "toString()". Finally, the system automatically sends the employee an email telling him or her that his or her request has been rejected.</p>
 <p>The following image sets up the make process:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_02_Inform%20the%20employee.png" alt="Inform the employee">
-<p>This is an example of the automatically send mail:</p>
+<p>This is an example of the automatically sent mail:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_02_Inform%20the%20employee_mail%20example.png" alt="Mail example to employee">
 </br>
 
@@ -280,13 +280,18 @@ When the request is automatically rejected, the employee is informed by e-mail o
 <p>After the first Make scenario was triggered with the main trigger, the entered data went through the first DMN as variables. As described above, the input is checked against predefined rules/criteria and then a decision is made as to whether the request is accepted or rejected automatically or provisionally.</p>
 <p>The following image sets up the make process:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_03_Inform%20the%20manager.png" alt="Inform the manager">
-<p>This is an example of the automatically send mail:</p>
+<p>This is an example of the automatically sent mail:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_03_Inform%20the%20manager_mail%20example.png" alt="Mail example to manager"> 
 </br>
 
-<h3 id="5.4 Make scenario Send data to team schedule">5.4 Make scenario "Send data to team schedule"</h3>
-<p>&#129488; @Charline: Description and pic; In case of a provisional approval, ....
-<p></p>
+<h3 id="5.4 Make scenario Send data to tracker">5.4 Make scenario "Send data to tracker"</h3>
+<p>When an absence request is finally approved, either automatically or by the manager, a new Make scenario is triggered. This one send the information to the Team Tracker file that allows HR to track all approved absences and to analyze them. Then, the employee receives an mail to inform him/her about the validation, and finally, the HR service is informed by mail as well.</p>
+<p>The following image sets up the make process:</p>
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_06_Send%20data%20to%20tracker.png" alt="Send data to tracker">
+<p>This is an example of the automatically sent mail to employee:</p>
+
+<p>This is an example of the automatically sent mail to HR:</p>
+
 </br>
 
 <h3 id="5.5 Make scenario Confirm and sign HR">5.5 Make scenario "Confirm and sign HR"</h3>
