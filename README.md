@@ -61,17 +61,18 @@
 <h4><a href="#3.2 Pain Points">3.2 Pain Points</a></h4>
 
 <h3><a href="#4. Desired situation">4. Desired situation</a></h3>
-<h4><a href="#4.1 To-Be Business Process">4.1 To-Be Business Process</a></h4>
-<h4><a href="#4.2 Decision Tables">4.2 Decision Tables</a></h4>
-<h5><a href="#4.2.1 Decision Table Absence from type">4.2.1 Decision Table "Absence from type"</a></h5>
-<h5><a href="#4.2.2 Decision Table Absence from team capacity">4.2.2 Decision Table "Absence from team capacity"</a></h5>
-<h4><a href="#4.3 Improvements">4.3 Improvements</a></h4>
+<h4><a href="#4.1 Objectives">4.1 Objectives</a></h4>
+<h4><a href="#4.2 To-Be Business Process">4.2 To-Be Business Process</a></h4>
+<h4><a href="#4.3 Decision Tables">4.3 Decision Tables</a></h4>
+<h5><a href="#4.3.1 Decision Table Absence from type">4.3.1 Decision Table "Absence from type"</a></h5>
+<h5><a href="#4.3.2 Decision Table Absence from team capacity">4.3.2 Decision Table "Absence from team capacity"</a></h5>
+<h4><a href="#4.4 Improvements">4.4 Improvements</a></h4>
 
 <h3><a href="#5. Digitalization and Automation">5. Digitalization and Automation</a></h3>
 <h4><a href="#5.1 Make scenario Google Forms process trigger">5.1 Make scenario "Google Forms process trigger"</a></h4>
 <h4><a href="#5.2 Make scenario Inform the employee">5.2 Make scenario "Inform the employee"</a></h4>
 <h4><a href="#5.3 Make scenario Inform the manager">5.3 Make scenario "Inform the manager"</a></h4>
-<h4><a href="#5.4 Make scenario Send data to team schedule">5.4 Make scenario "Send data to team schedule"</a></h4>
+<h4><a href="#5.4 Make scenario Send data to tracker">5.4 Make scenario "Send data to tracker"</a></h4>
 <h4><a href="#5.5 Make scenario Confirm and sign HR">5.5 Make scenario "Confirm and sign HR"</a></h4>
 <h4><a href="#5.6 Make scenario Send Confirmation to HR and Employee">5.6 Make scenario "Send Confirmation to HR and Employee"</a></h4>
 
@@ -159,7 +160,6 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
   <li>Time-consuming and cascading process (several people involved).</li>
   <li>Paper-based process, not digitized.</li>
   <li>The manager does not have the possibility to consult the planning of his team.</li>
-  <li>The manager does not have the possibility to consult the balance of available days of his employees.</li>
 </ul>
 </br></br>
 <!-- Ending Current situation -->
@@ -169,26 +169,66 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 
 <!-- Desired situation -->
 <h2 id="4. Desired situation">4. Desired situation</h2>
+
+<h3 id="4.1 Objectives">4.1 Objectives</h3>
+
+<p>In order to improve the process based on the identified pain points, the following objectives have been defined.</p>
+<ul>
+  <li>Process digitization.</li>
+  <li>Provide fully automated scenarios in the new process.</li>
+  <li>Reduce process execution time.</li>
+  <li>Allow managers to consult the team schedule of their employees.</li>
+</ul>
+</br></br>
+
+<!--
 <p>&#129488;// Please have a review @Charline. In the meantime, there have probably been some changes.</p>
 <p>Proposed improvement: The implementation of a system that communicates with the ERP. This system is accessible to the HR team and all employees of the company, including managers.</p>
 
 <p>When the employee wants to request a leave of absence, he will be able to log in to the system by fingerprint recognition. He will be able to check the number of vacation days still available, and if his balance is at 0, he will have the possibility to request an unpaid vacation. When the manager receives the request, he will be able to consult the planning of his team before making his choice. Finally, if the request is rejected, the employee will be informed, otherwise the HR team will be informed that a new absence request has been accepted.</p>
 </br>
+-->
 
-<h3 id="4.1 To-Be Business Process">4.1 To-Be Business Process</h3>
+<h3 id="4.2 To-Be Business Process">4.2 To-Be Business Process</h3>
+
+<p>After analyzing the current process, its pain points to eliminate and the objectives set, a desired situation was identified. The system must be able to detect the receipt of an absence request made online by the employee. The system has various rules which identify 3 possible outputs:</p>
+<ol>
+  <li>All conditions are accepted and the request is <b>automatically approved</b> by the system.</li>
+  <li>The conditions are partially accepted and the application is given the status of <b>provisionally approved</b>.</li>
+  <li>The conditions are not accepted and the request is <b>automatically rejected</b> by the system.</li>
+</ol>
+
+<h4>Request automatically approved</h4>
+When the request is automatically approved, both the employee and HR are informed by e-mail (separately), and the information is transferred to the team's tracking file.
+
+<h4>Request provisionally approved</h4>
+When the request is provisionally approved, this means that the manager must be involved. The team's capacity is then taken into account, and three thresholds are possible. 
+<ul>
+  <li>Either there are enough people, and the absence is then approved by the system.</li>
+  <li>Or the percentage of people present is limited, in which case it's up to the manager to make the final decision, based on the current situation with ongoing projects.</li>
+  <li>Or no more absences can be accepted for the sake of the work in progress.</li>
+</ul>
+
+When the absence is finally approved, the employee and HR receive an e-mail, in addition the information is transferred to the team's tracking file.
+In the event of refusal, only the employee is informed by e-mail.
+
+<h4>Request automatically rejected</h4>
+When the request is automatically rejected, the employee is informed by e-mail of the refusal.
+</br></br>
+
 <p>The To-Be Business Process looks like this:</p>
 <p>&#129488;// Add pic from our final to-be business process</p>
 </br>
 
-<h3 id="4.2 Decision Tables">4.2 Decision Tables</h3>
+<h3 id="4.3 Decision Tables">4.3 Decision Tables</h3>
 <p>To keep the modeling process as lean as possible, we used two decision tables (DMN).</p>
 <p>In the first DMN it is first checked which type of absence is desired. This can be seen in the first line.</p>
 <p>After that, there are a number of additional specifications that must be met in order for the test to be approved either automatically or provisionally. If a requirement is not met, the request is rejected.</p>
-<p>The second DMN represents the second step to ensure that the capacity of the team is not reached when an emyployee wants to take time off. The current capacity is set to &lt;50% of employees must be available.</p>
+<p>The second DMN represents the second step to ensure that the capacity of the team is not reached when an emyployee wants to take time off. The team capacity is different for each department. For the Administration department the limit is &lt;70% and for the Production &lt;50%. Requests which are over the set capacity will be automatically rejected. Requests which are in the range, are going to the manager. For all departments, if the capacity is under &lt;20% the request is automatically approved.</p>
 <p>In the following subsections, the DRD models and the corresponding DMN models can be viewed.</p>
 </br>
 
-<h4 id="4.2.1 Decision Table Absence from type">4.2.1 Decision Table "Absence from type"</h4>
+<h4 id="4.3.1 Decision Table Absence from type">4.3.1 Decision Table "Absence from type"</h4>
 <p>In the DRD model, the dependencies on the DMN are evident:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DRD_DMNModel.png" alt="DRD model from first DMN">
 </br>
@@ -196,7 +236,7 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DMNModel.png" alt="First DMN">
 </br>
 
-<h4 id="4.2.2 Decision Table Absence from team capacity">4.2.2 Decision Table "Absence from team capacity"</h4>
+<h4 id="4.3.2 Decision Table Absence from team capacity">4.3.2 Decision Table "Absence from team capacity"</h4>
 <p>In the DRD model, the dependencies on the DMN are evident:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DRD_DMNModel2.png" alt="DRD model from second DMN">
 </br>
@@ -204,7 +244,7 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DMNModel2.png" alt="Second DMN">
 </br>
 
-<h3 id="4.3 Improvements">4.3 Improvements</h3>
+<h3 id="4.4 Improvements">4.4 Improvements</h3>
 <p>In the As-Is business process, there were a lot of manual subtasks that had to be paper-based and sent to other departments or processed internally by other people.</p>
 <p>In the To-Be Business Process, the overall process is streamlined and simplified, and involves fewer departments and people. The main improvement, however, is digitization and automation, because there are no more paper-based forms and many sub-process steps are now triggered automatically.</p>
 </br></br>
@@ -232,7 +272,7 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 <p>In case of a rejection, which is what the trigger represents, this Make scenario is triggered. Again, since we were struggling with a variable, we forced it to be a string with the method "toString()". Finally, the system automatically sends the employee an email telling him or her that his or her request has been rejected.</p>
 <p>The following image sets up the make process:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_02_Inform%20the%20employee.png" alt="Inform the employee">
-<p>This is an example of the automatically send mail:</p>
+<p>This is an example of the automatically sent mail:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_02_Inform%20the%20employee_mail%20example.png" alt="Mail example to employee">
 </br>
 
@@ -240,13 +280,18 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 <p>After the first Make scenario was triggered with the main trigger, the entered data went through the first DMN as variables. As described above, the input is checked against predefined rules/criteria and then a decision is made as to whether the request is accepted or rejected automatically or provisionally.</p>
 <p>The following image sets up the make process:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_03_Inform%20the%20manager.png" alt="Inform the manager">
-<p>This is an example of the automatically send mail:</p>
+<p>This is an example of the automatically sent mail:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_03_Inform%20the%20manager_mail%20example.png" alt="Mail example to manager"> 
 </br>
 
-<h3 id="5.4 Make scenario Send data to team schedule">5.4 Make scenario "Send data to team schedule"</h3>
-<p>&#129488; @Charline: Description and pic; In case of a provisional approval, ....
-<p></p>
+<h3 id="5.4 Make scenario Send data to tracker">5.4 Make scenario "Send data to tracker"</h3>
+<p>When an absence request is finally approved, either automatically or by the manager, a new Make scenario is triggered. This one send the information to the Team Tracker file that allows HR to track all approved absences and to analyze them. Then, the employee receives an mail to inform him/her about the validation, and finally, the HR service is informed by mail as well.</p>
+<p>The following image sets up the make process:</p>
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_06_Send%20data%20to%20tracker.png" alt="Send data to tracker">
+<p>This is an example of the automatically sent mail to employee:</p>
+
+<p>This is an example of the automatically sent mail to HR:</p>
+<img src="docs/Make_06_Send data to team schedule_mail example.png" alt="Send data to tracker : mail example to hr">
 </br>
 
 <h3 id="5.5 Make scenario Confirm and sign HR">5.5 Make scenario "Confirm and sign HR"</h3>

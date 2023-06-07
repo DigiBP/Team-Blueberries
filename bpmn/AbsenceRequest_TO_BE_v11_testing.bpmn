@@ -5,15 +5,11 @@
     <bpmn:participant id="Participant_employee" name="Employee" />
     <bpmn:messageFlow id="Flow_1qsd4mg" sourceRef="Participant_employee" targetRef="StartEvent_requestForLeave" />
     <bpmn:messageFlow id="Flow_00wufhy" sourceRef="Activity_informEmployee" targetRef="Participant_employee" />
-    <bpmn:messageFlow id="Flow_17f5gx5" sourceRef="Activity_sendDataTeamSchedule" targetRef="Participant_employee" />
+    <bpmn:messageFlow id="Flow_17f5gx5" sourceRef="Activity_informEmployeeApproval" targetRef="Participant_employee" />
   </bpmn:collaboration>
   <bpmn:process id="Process_0qarcbff" isExecutable="true">
     <bpmn:laneSet id="LaneSet_0p6kvau">
-      <bpmn:lane id="Lane_0pyzh9j" name="Human resource">
-        <bpmn:flowNodeRef>Activity_085p3rb</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_sendDataTeamSchedule</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Event_1p36kz6</bpmn:flowNodeRef>
-      </bpmn:lane>
+      <bpmn:lane id="Lane_0pyzh9j" name="Human resource" />
       <bpmn:lane id="Lane_1nc75pd" name="System">
         <bpmn:flowNodeRef>StartEvent_requestForLeave</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0utyc4j</bpmn:flowNodeRef>
@@ -39,6 +35,7 @@
         <bpmn:flowNodeRef>Gateway_1eh4053</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1l3663q</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_informEmployeeApproval</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1p36kz6</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:userTask id="Activity_signApprovalDocument" name="sign approval document">
@@ -57,6 +54,8 @@
         </camunda:formData>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_15t32k0</bpmn:incoming>
+      <bpmn:incoming>Flow_1olw6rx</bpmn:incoming>
+      <bpmn:incoming>Flow_autoApproved</bpmn:incoming>
       <bpmn:outgoing>Flow_1nzf08t</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:serviceTask id="Activity_createApprovalDocument" name="create approval document" camunda:type="external" camunda:topic="requestConfirmationSignature">
@@ -64,18 +63,6 @@
       <bpmn:incoming>Flow_1nzf08t</bpmn:incoming>
       <bpmn:outgoing>Flow_1utjiy3</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:userTask id="Activity_085p3rb" name="Output automatically approved">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="Output_absenceFromType" label="Output" type="string">
-            <camunda:properties />
-            <camunda:validation />
-          </camunda:formField>
-        </camunda:formData>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_autoApproved</bpmn:incoming>
-      <bpmn:outgoing>Flow_1ng435e</bpmn:outgoing>
-    </bpmn:userTask>
     <bpmn:startEvent id="StartEvent_requestForLeave" name="New request for a leave" camunda:formKey="">
       <bpmn:extensionElements />
       <bpmn:outgoing>Flow_1vlep4r</bpmn:outgoing>
@@ -103,8 +90,8 @@
     <bpmn:exclusiveGateway id="Gateway_requestApprBySys" name="Request approved?">
       <bpmn:incoming>Flow_1cjrrta</bpmn:incoming>
       <bpmn:outgoing>Flow_rejected</bpmn:outgoing>
-      <bpmn:outgoing>Flow_autoApproved</bpmn:outgoing>
       <bpmn:outgoing>Flow_1f6rhus</bpmn:outgoing>
+      <bpmn:outgoing>Flow_autoApproved</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:userTask id="Activity_1114sro" name="Output prov-approved">
       <bpmn:extensionElements>
@@ -217,19 +204,10 @@
       <bpmn:incoming>Flow_rejected_3</bpmn:incoming>
       <bpmn:outgoing>Flow_15mj2fz</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:serviceTask id="Activity_sendDataTeamSchedule" name="Send data to team schedule and inform the employee" camunda:type="external" camunda:topic="sendDataTeamSchedule">
-      <bpmn:incoming>Flow_1ng435e</bpmn:incoming>
-      <bpmn:incoming>Flow_1olw6rx</bpmn:incoming>
-      <bpmn:incoming>Flow_1klxv1q</bpmn:incoming>
-      <bpmn:outgoing>Flow_0liw632</bpmn:outgoing>
-    </bpmn:serviceTask>
     <bpmn:serviceTask id="Activity_informEmployeeApproval" name="Inform HR of approval" camunda:type="external" camunda:topic="informEmployeeApproval">
       <bpmn:incoming>Flow_1nw6tg3</bpmn:incoming>
-      <bpmn:outgoing>Flow_1klxv1q</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1t49m6s</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:endEvent id="Event_1p36kz6" name="Request approved and processed">
-      <bpmn:incoming>Flow_0liw632</bpmn:incoming>
-    </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_1utjiy3" sourceRef="Activity_createApprovalDocument" targetRef="Activity_signApprovalDocument" />
     <bpmn:sequenceFlow id="Flow_1nw6tg3" sourceRef="Activity_signApprovalDocument" targetRef="Activity_informEmployeeApproval" />
     <bpmn:sequenceFlow id="Flow_15t32k0" name="approved" sourceRef="Gateway_1eh4053" targetRef="Activity_0knl9vu">
@@ -240,18 +218,6 @@
         <camunda:executionListener delegateExpression="${notify}" event="take">
           <camunda:field name="URL">
             <camunda:string>https://hook.eu1.make.com/ownpd2btp3dqa4yg3wky1se56qnhkwvh</camunda:string>
-          </camunda:field>
-        </camunda:executionListener>
-      </bpmn:extensionElements>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_autoApproved" name="Automatically approved" sourceRef="Gateway_requestApprBySys" targetRef="Activity_085p3rb">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Output_absenceFromType=="auto-approved"}</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_1ng435e" sourceRef="Activity_085p3rb" targetRef="Activity_sendDataTeamSchedule">
-      <bpmn:extensionElements>
-        <camunda:executionListener delegateExpression="${notify}" event="take">
-          <camunda:field name="URL">
-            <camunda:string>https://hook.eu1.make.com/qx49kq3z8xjgd20i5030qspu3d5cdsce</camunda:string>
           </camunda:field>
         </camunda:executionListener>
       </bpmn:extensionElements>
@@ -288,14 +254,9 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Output_capacity=="rejected"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0l7xjov" sourceRef="Activity_teamSchedule" targetRef="Activity_verifyCapacity" />
-    <bpmn:sequenceFlow id="Flow_1olw6rx" sourceRef="Activity_02es3nq" targetRef="Activity_sendDataTeamSchedule">
-      <bpmn:extensionElements>
-        <camunda:executionListener delegateExpression="${notify}" event="take">
-          <camunda:field name="URL">
-            <camunda:string>https://hook.eu1.make.com/qx49kq3z8xjgd20i5030qspu3d5cdsce</camunda:string>
-          </camunda:field>
-        </camunda:executionListener>
-      </bpmn:extensionElements>
+    <bpmn:sequenceFlow id="Flow_1olw6rx" name="Automatically approved" sourceRef="Activity_02es3nq" targetRef="Activity_0knl9vu">
+      <bpmn:extensionElements />
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Output_capacity=="auto-approved"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_03vmps4" sourceRef="Activity_0h0mtmm" targetRef="Activity_informEmployee">
       <bpmn:extensionElements>
@@ -329,16 +290,13 @@
     <bpmn:sequenceFlow id="Flow_rejected_3" name="rejected" sourceRef="Gateway_1eh4053" targetRef="Activity_1du54s6">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${requestApproved ==false}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_1klxv1q" sourceRef="Activity_informEmployeeApproval" targetRef="Activity_sendDataTeamSchedule">
-      <bpmn:extensionElements>
-        <camunda:executionListener delegateExpression="${notify}" event="take">
-          <camunda:field name="URL">
-            <camunda:string>https://hook.eu1.make.com/qx49kq3z8xjgd20i5030qspu3d5cdsce</camunda:string>
-          </camunda:field>
-        </camunda:executionListener>
-      </bpmn:extensionElements>
+    <bpmn:endEvent id="Event_1p36kz6" name="Request approved and processed">
+      <bpmn:incoming>Flow_1t49m6s</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1t49m6s" sourceRef="Activity_informEmployeeApproval" targetRef="Event_1p36kz6" />
+    <bpmn:sequenceFlow id="Flow_autoApproved" name="Automatically approved" sourceRef="Gateway_requestApprBySys" targetRef="Activity_0knl9vu">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Output_absenceFromType=="auto-approved"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_0liw632" sourceRef="Activity_sendDataTeamSchedule" targetRef="Event_1p36kz6" />
     <bpmn:textAnnotation id="TextAnnotation_1q0h3xb">
       <bpmn:text>Recieves with a google forms</bpmn:text>
     </bpmn:textAnnotation>
@@ -372,10 +330,6 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0hkr4yv_di" bpmnElement="Activity_createApprovalDocument">
         <dc:Bounds x="2111" y="730" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_1u4t331" bpmnElement="Activity_085p3rb">
-        <dc:Bounds x="841" y="880" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0bgyvc8_di" bpmnElement="StartEvent_requestForLeave">
@@ -459,23 +413,19 @@
         <dc:Bounds x="1841" y="340" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1t8rege_di" bpmnElement="Activity_sendDataTeamSchedule">
-        <dc:Bounds x="2521" y="880" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0p3e8f8_di" bpmnElement="Activity_informEmployeeApproval">
         <dc:Bounds x="2391" y="730" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1p36kz6_di" bpmnElement="Event_1p36kz6">
-        <dc:Bounds x="2683" y="902" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="2667" y="945" width="68" height="40" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="TextAnnotation_1q0h3xb_di" bpmnElement="TextAnnotation_1q0h3xb">
         <dc:Bounds x="281" y="410" width="100" height="41" />
         <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1p36kz6_di" bpmnElement="Event_1p36kz6">
+        <dc:Bounds x="2552" y="752" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2525" y="795" width="90" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1utjiy3_di" bpmnElement="Flow_1utjiy3">
         <di:waypoint x="2211" y="770" />
@@ -498,15 +448,12 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1q2a08z_di" bpmnElement="Flow_autoApproved">
         <di:waypoint x="681" y="533" />
-        <di:waypoint x="681" y="920" />
-        <di:waypoint x="841" y="920" />
+        <di:waypoint x="681" y="930" />
+        <di:waypoint x="2060" y="930" />
+        <di:waypoint x="2060" y="810" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="709" y="886" width="65" height="27" />
+          <dc:Bounds x="1170" y="896" width="65" height="27" />
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1ng435e_di" bpmnElement="Flow_1ng435e">
-        <di:waypoint x="941" y="940" />
-        <di:waypoint x="2521" y="940" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1vlep4r_di" bpmnElement="Flow_1vlep4r">
         <di:waypoint x="279" y="508" />
@@ -584,8 +531,12 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1olw6rx_di" bpmnElement="Flow_1olw6rx">
         <di:waypoint x="1481" y="680" />
-        <di:waypoint x="1481" y="920" />
-        <di:waypoint x="2521" y="920" />
+        <di:waypoint x="1481" y="880" />
+        <di:waypoint x="2031" y="880" />
+        <di:waypoint x="2031" y="810" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1724" y="862" width="65" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_03vmps4_di" bpmnElement="Flow_03vmps4">
         <di:waypoint x="941" y="270" />
@@ -619,18 +570,13 @@
           <dc:Bounds x="1901" y="674" width="40" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1klxv1q_di" bpmnElement="Flow_1klxv1q">
-        <di:waypoint x="2441" y="810" />
-        <di:waypoint x="2441" y="900" />
-        <di:waypoint x="2521" y="900" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0liw632_di" bpmnElement="Flow_0liw632">
-        <di:waypoint x="2621" y="920" />
-        <di:waypoint x="2683" y="920" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Association_0gxt34e_di" bpmnElement="Association_0gxt34e">
         <di:waypoint x="273" y="494" />
         <di:waypoint x="309" y="451" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1t49m6s_di" bpmnElement="Flow_1t49m6s">
+        <di:waypoint x="2491" y="770" />
+        <di:waypoint x="2552" y="770" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Participant_1xhy36k_di" bpmnElement="Participant_employee" isHorizontal="true">
         <dc:Bounds x="159" y="80" width="2612" height="60" />
@@ -645,8 +591,8 @@
         <di:waypoint x="1676" y="140" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_17f5gx5_di" bpmnElement="Flow_17f5gx5">
-        <di:waypoint x="2571" y="880" />
-        <di:waypoint x="2571" y="140" />
+        <di:waypoint x="2441" y="730" />
+        <di:waypoint x="2441" y="140" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
