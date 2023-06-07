@@ -291,7 +291,7 @@ When the request is automatically rejected, the employee is informed by e-mail o
 <p>This is an example of the automatically sent mail to employee:</p>
 
 <p>This is an example of the automatically sent mail to HR:</p>
-
+<img src="docs/Make_06_Send data to team schedule_mail example.png" alt="Send data to tracker : mail example to hr">
 </br>
 
 <h3 id="5.5 Make scenario Confirm and sign HR">5.5 Make scenario "Confirm and sign HR"</h3>
