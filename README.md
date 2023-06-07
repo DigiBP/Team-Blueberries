@@ -192,31 +192,28 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 
 <p>After analyzing the current process, its pain points to eliminate and the objectives set, a desired situation was identified. The system must be able to detect the receipt of an absence request made online by the employee. The system has various rules which identify 3 possible outputs:</p>
 <ol>
-  <li>All conditions are accepted and the request is <b>automatically approved</b> by the system.</li>
-  <li>The conditions are partially accepted and the application is given the status of <b>provisionally approved</b>.</li>
   <li>The conditions are not accepted and the request is <b>automatically rejected</b> by the system.</li>
+  <li>The conditions are partially accepted and the application is given the status of <b>provisionally approved</b>.</li>
+  <li>All conditions are accepted and the request is <b>automatically approved</b> by the system.</li>
 </ol>
 
-<h4>Request automatically approved</h4>
-When the request is automatically approved, both the employee and HR are informed by e-mail (separately), and the information is transferred to the team's tracking file.
+<h4>Request automatically rejected</h4>
+When the request is automatically rejected, the employee is informed by mail of the refusal.
 
 <h4>Request provisionally approved</h4>
-When the request is provisionally approved, this means that the manager must be involved. The team's capacity is then taken into account, and three thresholds are possible. 
+When the request is provisionally approved, this means that the manager must be involved. The team's capacity is then taken into account, and three thresholds are possible. This part is managed by new rules. 
 <ul>
   <li>Either there are enough people, and the absence is then approved by the system.</li>
   <li>Or the percentage of people present is limited, in which case it's up to the manager to make the final decision, based on the current situation with ongoing projects.</li>
   <li>Or no more absences can be accepted for the sake of the work in progress.</li>
 </ul>
 
-When the absence is finally approved, the employee and HR receive an e-mail, in addition the information is transferred to the team's tracking file.
-In the event of refusal, only the employee is informed by e-mail.
-
-<h4>Request automatically rejected</h4>
-When the request is automatically rejected, the employee is informed by e-mail of the refusal.
+<h4>Request approved</h4>
+Differents ways lead to an approved request. When this happens, a document is generated and the manager needs to sign in. Then, automatic mails are sent to employee and to HR to inform them of the approval of the absence request. 
 </br></br>
 
 <p>The To-Be Business Process looks like this:</p>
-<p>&#129488;// Add pic from our final to-be business process</p>
+<img src="docs/AbsenceRequest_TO_BE_v13_final version.png" alt="TO-BE Business Process">
 </br>
 
 <h3 id="4.3 Decision Tables">4.3 Decision Tables</h3>
