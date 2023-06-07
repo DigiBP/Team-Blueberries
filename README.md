@@ -346,7 +346,8 @@ Differents ways lead to an approved request. When this happens, a document is ge
 
 <p> The second gmail module in the scenario will send out an email to HR with the request to update the team schedule with the data from the absence request:</p>
 
-![Uploading image.png…]()
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/e7bdfb4b-b7c1-4bef-a815-71dd4cd02fce)
+
 
 
 <!-- Ending Digitalization and Automation -->
