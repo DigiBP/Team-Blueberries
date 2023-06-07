@@ -376,6 +376,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <h3 id="6.3 Google Docs Absence Request Approval Template">6.3 Google Docs "Absence Request Approval" - Template</h3>
 <p>Link to the Google Doc: https://docs.google.com/document/d/1qDqjTzpIWbmvhDCUIVEG0naZlVAzVqYbfHtwpNuZpZ8/edit?usp=sharing </p>
 <p>This Google Doc is used once an absence request has been approved. The scenario "04_Confirm and Sign HR" generates a PDF based on this template and replaces selected variables with the data from the request. The PDF is then moved to Dropbox for a signature.:</p>
+
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/d87d6478-3944-4233-8484-69b6bebeeb6d)
 
 
