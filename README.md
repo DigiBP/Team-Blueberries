@@ -367,12 +367,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <h3 id="6.2 Google Sheet Team Schedule">6.2 Google Sheet "Team Schedule"</h3>
 <p>This Google Sheet is used for the user task "check team schedule". The manager has to check the capacity in the team schedule:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Team_Schedule.png" alt="Google Sheet Team Schedule">
-</br>
 
-<h3 id="6.4 Google Sheet Team Tracker">6.3 Google Sheet "Team Tracker"</h3>
-<p>This Google Sheet is used to Track the requests. As described in the prveious chapter, only the requests which has been approved will be entered in this Google Sheet:</p>
-<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Team%20Tracker.png" alt="Google Sheet Team Tracker">
-</br></br>
 <!-- Ending Other artefacts -->
 
 <!-- Conclusion -->
