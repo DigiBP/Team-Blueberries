@@ -213,7 +213,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 </br></br>
 
 <p>The To-Be Business Process looks like this:</p>
-<img src="docs/AbsenceRequest_TO_BE_v13_final version.png" alt="TO-BE Business Process">
+<img src="docs/AbsenceRequest_TO_BE_v13_final version2.png" alt="TO-BE Business Process">
 </br>
 
 <h3 id="4.3 Decision Tables">4.3 Decision Tables</h3>
