@@ -372,16 +372,20 @@ Differents ways lead to an approved request. When this happens, a document is ge
 
 <!-- Conclusion -->
 <h2 id="7. Conclusion">7. Conclusion</h2>
-<p></p>
-<p>&#129488;// describe it.</p>
+<p>For this project we had a very specific context with the traditional watchmaking company that want to improve its processes, especially the absence request. Pain points were quickly identified (paper-based, non-digitized processes with many time-consuming manual tasks) and objectives were built on them (digitization of the process, offering an automatic scenario and more time for managers). These objectives have been achieved with the TO-Be process presented in chapter 4 and the make scenarios explained in chapter 5.</p>
 </br></br>
 
 <h3 id="7.1 Limitations and Improvements">7.1 Limitations and Improvements</h2>
-<p> While the AS-IS process is very manual and happens mostly on paper, we aimed to automate some steps completely, such as the auto-approve and auto-reject scenarios. Therefore, HR and managers must only handle absence requests that do not fulfil the formal requirements, e.g. taking too many days off or not being eligible for a specific type of absence. </p>
+<p> While the AS-IS process is very manual and happens mostly on paper, we aimed to automate some steps completely, such as the auto-reject scenario. Therefore, managers must only handle absence requests that do not fulfil the formal requirements, e.g. taking too many days off or not being eligible for a specific type of absence. And finally, when an absence is approved, the manager still need to sign the approval document.</p>
 
-<p>The "check team schedule" step remains manual because the Excel sheet containing the yearly team schedule is built quite complex and unsuitable for looking up specific values. We would have had to write a custom query to specify the date range of the absence request, identify the employee number and check the capacity simultaneously. While this would have been a helpful automation step, we needed to gain the knowledge, skills or resources to write a successful query, and, therefore, we left this step up to be done by the manager as a user task.</p>
+<p>The "check team schedule" step remains manual because the Excel sheet containing the yearly team schedule is built quite complex and unsuitable for looking up specific values. We would have had to write a custom query to specify the date range of the absence request, identify the employee number and check the capacity simultaneously. While this would have been a helpful automation step, we needed to gain the knowledge, skills or resources to write a successful query, and, therefore, we left this step up to be done by the manager as a user task. There are two other manual tasks: "check project situation" and "sign approval document". The first one is also explained by the complexity to communicate between that kind of information and make, while the second is for legal reason.</p>
 
+<p>In the interests of continuous improvement, future work could attempt to further reduce the remaining manual tasks, and offer the possibility of tracking all approved requests to enable HR to analyze these absences.</p>
+
+<!--
 <p>Finally, the solution to the step "send data to team schedule" is not quite elegant because a recipient receives the email about their approved absence request twice for a specific scenario. Suppose the employee has applied for an absence, which must be prov-approved and checked with the project schedule. In that case, they will receive an email with a signed approval document and an additional confirmation email separately. We realised that this could have been better, but due to the nature of the TO-BE process, we left this solution as it was with the notion that this would be an improvement step to be done in the future.</p>
+-->
+
 </br></br>
 <!-- Ending Conclusion -->
 
