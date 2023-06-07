@@ -334,7 +334,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <h3 id="5.5 Make scenario Send Confirmation to HR and Employee">5.5 Make scenario "Send Confirmation to HR and Employee"</h3>
 <p> This scenario is triggered once a new PDF file has been moved to the "Signed_Absence_Request" folder on dropbox.</p>
 
-![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/efa7f458-e7ce-4a19-808b-fdae2f5b62a4)
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/a6403986-491c-478b-8ce0-48225c1712bc)
 
 </br> 
 
@@ -343,6 +343,11 @@ Differents ways lead to an approved request. When this happens, a document is ge
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/03a11bf7-bfbe-4ff6-9094-5e3dcd209d86)
 
 </br> 
+
+<p> The second gmail module in the scenario will send out an email to HR with the request to update the team schedule with the data from the absence request:</p>
+
+![Uploading image.png…]()
+
 
 <!-- Ending Digitalization and Automation -->
 
