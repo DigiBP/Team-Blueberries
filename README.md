@@ -72,9 +72,8 @@
 <h4><a href="#5.1 Make scenario Google Forms process trigger">5.1 Make scenario "Google Forms process trigger"</a></h4>
 <h4><a href="#5.2 Make scenario Inform the employee">5.2 Make scenario "Inform the employee"</a></h4>
 <h4><a href="#5.3 Make scenario Inform the manager">5.3 Make scenario "Inform the manager"</a></h4>
-<h4><a href="#5.4 Make scenario Send data to tracker">5.4 Make scenario "Send data to tracker"</a></h4>
-<h4><a href="#5.5 Make scenario Confirm and sign HR">5.5 Make scenario "Confirm and sign HR"</a></h4>
-<h4><a href="#5.6 Make scenario Send Confirmation to HR and Employee">5.6 Make scenario "Send Confirmation to HR and Employee"</a></h4>
+<h4><a href="#5.4 Make scenario Confirm and sign HR">5.4 Make scenario "Confirm and sign HR"</a></h4>
+<h4><a href="#5.5 Make scenario Send Confirmation to HR and Employee">5.5 Make scenario "Send Confirmation to HR and Employee"</a></h4>
 
 
 <h3><a href="#6. Other artefacts">6. Other artefacts</a></h3>
@@ -284,17 +283,7 @@ When the request is automatically rejected, the employee is informed by e-mail o
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_03_Inform%20the%20manager_mail%20example.png" alt="Mail example to manager"> 
 </br>
 
-<h3 id="5.4 Make scenario Send data to tracker">5.4 Make scenario "Send data to tracker"</h3>
-<p>When an absence request is finally approved, either automatically or by the manager, a new Make scenario is triggered. This one send the information to the Team Tracker file that allows HR to track all approved absences and to analyze them. Then, the employee receives an mail to inform him/her about the validation, and finally, the HR service is informed by mail as well.</p>
-<p>The following image sets up the make process:</p>
-<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_06_Send%20data%20to%20tracker.png" alt="Send data to tracker">
-<p>This is an example of the automatically sent mail to employee:</p>
-
-<p>This is an example of the automatically sent mail to HR:</p>
-<img src="docs/Make_06_Send data to team schedule_mail example.png" alt="Send data to tracker : mail example to hr">
-</br>
-
-<h3 id="5.5 Make scenario Confirm and sign HR">5.5 Make scenario "Confirm and sign HR"</h3>
+<h3 id="5.4 Make scenario Confirm and sign HR">5.4 Make scenario "Confirm and sign HR"</h3>
 <p>After an absence request has been definitively approved, the trigger in a new make scenario will make an HTTP request to the camunda workflow. This scenario is the first step of two, which will continue in the following scenario named "Send Confirmation to HR and Employee".</p>
   
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/725491a3-c3df-4f61-9783-898830ed5ad3)
@@ -337,7 +326,7 @@ When the request is automatically rejected, the employee is informed by e-mail o
 
 </br>
 
-<h3 id="5.6 Make scenario Send Confirmation to HR and Employee">5.6 Make scenario "Send Confirmation to HR and Employee"</h3>
+<h3 id="5.5 Make scenario Send Confirmation to HR and Employee">5.5 Make scenario "Send Confirmation to HR and Employee"</h3>
 <p> This scenario is triggered once a new PDF file has been moved to the "Signed_Absence_Request" folder on dropbox.</p>
 
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/efa7f458-e7ce-4a19-808b-fdae2f5b62a4)
@@ -375,11 +364,6 @@ When the request is automatically rejected, the employee is informed by e-mail o
 <p>This Google Sheet is used for the user task "check team schedule". The manager has to check the capacity in the team schedule:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Team_Schedule.png" alt="Google Sheet Team Schedule">
 </br>
-
-<h3 id="6.3 Google Sheet Project Plan">6.3 Google Sheet "Project Plan"</h3>
-<p>This Google Sheet is used for the user task "check project situation". The manager has to check if the request can be approved based on the current project planning:</p>
-<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Project_Plan.png" alt="Google Sheet Project Plan">
-</br></br>
 
 <h3 id="6.4 Google Sheet Team Tracker">6.3 Google Sheet "Team Tracker"</h3>
 <p>This Google Sheet is used to Track the requests. As described in the prveious chapter, only the requests which has been approved will be entered in this Google Sheet:</p>
