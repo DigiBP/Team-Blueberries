@@ -171,8 +171,9 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 <!-- Desired situation -->
 <h2 id="4. Desired situation">4. Desired situation</h2>
 
-<p>In order to improve the process and eliminate pain points, the following objectives have been defined.</p>
 <h3 id="4.1 Objectives">4.1 Objectives</h3>
+
+<p>In order to improve the process based on the identified pain points, the following objectives have been defined.</p>
 <ul>
   <li>Process digitization.</li>
   <li>Provide fully automated scenarios in the new process.</li>
@@ -181,13 +182,45 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 </ul>
 </br></br>
 
+<!--
 <p>&#129488;// Please have a review @Charline. In the meantime, there have probably been some changes.</p>
 <p>Proposed improvement: The implementation of a system that communicates with the ERP. This system is accessible to the HR team and all employees of the company, including managers.</p>
 
 <p>When the employee wants to request a leave of absence, he will be able to log in to the system by fingerprint recognition. He will be able to check the number of vacation days still available, and if his balance is at 0, he will have the possibility to request an unpaid vacation. When the manager receives the request, he will be able to consult the planning of his team before making his choice. Finally, if the request is rejected, the employee will be informed, otherwise the HR team will be informed that a new absence request has been accepted.</p>
 </br>
+-->
 
 <h3 id="4.2 To-Be Business Process">4.2 To-Be Business Process</h3>
+
+<p>After analyzing the current process, its pain points to eliminate and the objectives set, a desired situation was identified. The system must be able to detect the receipt of an absence request made online by the employee. The system has various rules which identify 3 possible outputs:</p>
+<ol>
+  <li>All conditions are accepted and the request is <b>automatically approved</b> by the system.</li>
+  <li>The conditions are partially accepted and the application is given the status of <b>provisionally approved</b>.</li>
+  <li>The conditions are not accepted and the request is <b>automatically rejected</b> by the system.</li>
+</ol>
+
+
+<h4>Request automatically approuved</h4>
+When the request is automatically approved, both the employee and HR are informed by e-mail (separately), and the information is transferred to the team's tracking file.
+
+
+<h4>Request provisionally approuved</h4>
+When the request is provisionally approved, this means that the manager must be involved. The team's capacity is then taken into account, and three thresholds are possible. 
+<ul>
+  <li>Either there are enough people, and the absence is then approved by the system.</li>
+  <li>Or the percentage of people present is limited, in which case it's up to the manager to make the final decision, based on the current situation with ongoing projects.</li>
+  <li>Or no more absences can be accepted for the sake of the work in progress.</li>
+</ul>
+
+When the absence is finally approved, the employee and HR receive an e-mail, in addition the information is transferred to the team's tracking file.
+In the event of refusal, only the employee is informed by e-mail.
+
+
+
+<h4>Request automatically rejected</h4>
+When the request is automatically rejected, the employee is informed by e-mail of the refusal.
+</br></br>
+
 <p>The To-Be Business Process looks like this:</p>
 <p>&#129488;// Add pic from our final to-be business process</p>
 </br>
