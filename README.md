@@ -250,10 +250,10 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 </br>
 
 <h3 id="5.5 Make scenario Confirm and sign HR">5.5 Make scenario "Confirm and sign HR"</h3>
-<p>&#129488;// @Caroline: Description and pic</p>
 <p>After an absence request has been definitively approved, the trigger in a new make scenario will make an HTTP request to the camunda workflow. This scenario is the first step of two, which will continue in the following scenario named "Send Confirmation to HR and Employee".</p>
   
-![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/901d4ef7-774d-4996-9a83-dc3714163af7)
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/725491a3-c3df-4f61-9783-898830ed5ad3)
+
 </br>
 
 <p>Because we require a signature from the manager to finalise the absence request approval, we created a make scenario that generates a document from a google docs template with the following information:</p>
@@ -293,10 +293,9 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 </br>
 
 <h3 id="5.6 Make scenario Send Confirmation to HR and Employee">5.6 Make scenario "Send Confirmation to HR and Employee"</h3>
-<p>&#129488;// @Caroline: Description and pic</p>
 <p> This scenario is triggered once a new PDF file has been moved to the "Signed_Absence_Request" folder on dropbox.</p>
 
-![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/30a13546-4980-4286-b68d-1eac8edc051a)
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/efa7f458-e7ce-4a19-808b-fdae2f5b62a4)
 
 </br> 
 
@@ -327,15 +326,21 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Sheet%20Employee%20Absence%20Request%20Form%20(responses)_few%20examples.png" alt="Google Sheet Employee Absence Request Form (responses)">
 </br>
 
-<h3 id="6.2 Google Sheet Team schedule">6.2 Google Sheet "Team schedule"</h3>
-<p>&#129488;// Description and pic</p>
+<h3 id="6.2 Google Sheet Team Schedule">6.2 Google Sheet "Team Schedule"</h3>
+<p>This Google Sheet is used for the user task "check team schedule". The manager has to check the capacity in the team schedule:</p>
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Team_Schedule.png" alt="Google Sheet Team Schedule">
 </br>
-<p>&#129488;// Are there more other artefacts?</p>
+
+<h3 id="6.3 Google Sheet Project Plan">6.3 Google Sheet "Project Plan"</h3>
+<p>This Google Sheet is used for the user task "check project situation". The manager has to check if the request can be approved based on the current project planning:</p>
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Project_Plan.png" alt="Google Sheet Project Plan">
+</br></br>
+
+<h3 id="6.4 Google Sheet Team Tracker">6.3 Google Sheet "Team Tracker"</h3>
+<p>This Google Sheet is used to Track the requests. As described in the prveious chapter, only the requests which has been approved will be entered in this Google Sheet:</p>
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Team%20Tracker.png" alt="Google Sheet Team Tracker">
 </br></br>
 <!-- Ending Other artefacts -->
-
-
-
 
 <!-- Conclusion -->
 <h2 id="7. Conclusion">7. Conclusion</h2>
@@ -345,13 +350,8 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 
 <h3 id="7.1 Limitations and Improvements">7.1 Limitations and Improvements</h2>
 <p> While the AS-IS process is very manual and happens mostly on paper, we aimed to automate some steps completely, such as the auto-approve and auto-reject scenarios. Therefore, HR and managers must only handle absence requests that do not fulfil the formal requirements, e.g. taking too many days off or not being eligible for a specific type of absence. </p>
-</br></br>
 
 <p>The "check team schedule" step remains manual because the Excel sheet containing the yearly team schedule is built quite complex and unsuitable for looking up specific values. We would have had to write a custom query to specify the date range of the absence request, identify the employee number and check the capacity simultaneously. While this would have been a helpful automation step, we needed to gain the knowledge, skills or resources to write a successful query, and, therefore, we left this step up to be done by the manager as a user task.</p>
-</br></br>
-
-<p>Additionally, we could not add more custom webhooks to the scenarios, as the current Make plan did not allow us to exceed the limit of two webhooks. Otherwise, we recommend that all scenarios have one. </p>
-</br></br>
 
 <p>Finally, the solution to the step "send data to team schedule" is not quite elegant because a recipient receives the email about their approved absence request twice for a specific scenario. Suppose the employee has applied for an absence, which must be prov-approved and checked with the project schedule. In that case, they will receive an email with a signed approval document and an additional confirmation email separately. We realised that this could have been better, but due to the nature of the TO-BE process, we left this solution as it was with the notion that this would be an improvement step to be done in the future.</p>
 </br></br>
