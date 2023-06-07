@@ -199,12 +199,10 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
   <li>The conditions are not accepted and the request is <b>automatically rejected</b> by the system.</li>
 </ol>
 
-
-<h4>Request automatically approuved</h4>
+<h4>Request automatically approved</h4>
 When the request is automatically approved, both the employee and HR are informed by e-mail (separately), and the information is transferred to the team's tracking file.
 
-
-<h4>Request provisionally approuved</h4>
+<h4>Request provisionally approved</h4>
 When the request is provisionally approved, this means that the manager must be involved. The team's capacity is then taken into account, and three thresholds are possible. 
 <ul>
   <li>Either there are enough people, and the absence is then approved by the system.</li>
@@ -214,8 +212,6 @@ When the request is provisionally approved, this means that the manager must be 
 
 When the absence is finally approved, the employee and HR receive an e-mail, in addition the information is transferred to the team's tracking file.
 In the event of refusal, only the employee is informed by e-mail.
-
-
 
 <h4>Request automatically rejected</h4>
 When the request is automatically rejected, the employee is informed by e-mail of the refusal.
@@ -229,7 +225,7 @@ When the request is automatically rejected, the employee is informed by e-mail o
 <p>To keep the modeling process as lean as possible, we used two decision tables (DMN).</p>
 <p>In the first DMN it is first checked which type of absence is desired. This can be seen in the first line.</p>
 <p>After that, there are a number of additional specifications that must be met in order for the test to be approved either automatically or provisionally. If a requirement is not met, the request is rejected.</p>
-<p>The second DMN represents the second step to ensure that the capacity of the team is not reached when an emyployee wants to take time off. The current capacity is set to &lt;50% of employees must be available.</p>
+<p>The second DMN represents the second step to ensure that the capacity of the team is not reached when an emyployee wants to take time off. The team capacity is different for each department. For the Administration department the limit is &lt;70% and for the Production &lt;50%. Requests which are over the set capacity will be automatically rejected. Requests which are in the range, are going to the manager. For all departments, if the capacity is under &lt;20% the request is automatically approved.</p>
 <p>In the following subsections, the DRD models and the corresponding DMN models can be viewed.</p>
 </br>
 
