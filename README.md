@@ -354,28 +354,29 @@ Differents ways lead to an approved request. When this happens, a document is ge
 </br>
 
 <h3 id="6.1 Google Forms">6.1 Google Forms</h3>
+<p>Link to the Google Forms: https://docs.google.com/forms/d/e/1FAIpQLSc6NWxCrLfKNjOS9IdQnKSt4BNcNDK5cS2TJn2C3Kskzl55nQ/viewform?usp=sharing</p>
 <p>The Google Forms indirectly represents the trigger for the overall process. The information is stored in an associated Excel sheet, which ultimately triggers the overall process:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Forms_part%201.png" alt="Employee Absence Request Form_Part 1">
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Forms_part%202.png" alt="Employee Absence Request Form_Part 2">
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Forms_part%203.png" alt="Employee Absence Request Form_Part 3">
 </br>
-<p>Link to the Google Forms: https://docs.google.com/forms/d/e/1FAIpQLSc6NWxCrLfKNjOS9IdQnKSt4BNcNDK5cS2TJn2C3Kskzl55nQ/viewform?usp=sharing</p>
 
 <h4 id="6.1.1 Google Sheet Employee Absence Request Form (responses)">6.1.1 Google Sheet "Employee Absence Request Form (responses)"</h4>
+<p>Link to the Google Sheets: https://docs.google.com/spreadsheets/d/1PYE9goEmtjpcAn_KWRTUztu1fS9Ei3dKRNqSUrIyI1o/edit?usp=sharing </p>
 <p>This Google Sheet is the direct trigger of the overall process. As soon as an employee fills in and submits the Google Forms described in the previous chapter, the data entered is saved in the form of a new row in this Google Sheet:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Sheet%20Employee%20Absence%20Request%20Form%20(responses)_few%20examples.png" alt="Google Sheet Employee Absence Request Form (responses)">
 </br>
-<p>Link to the Google Sheets: https://docs.google.com/spreadsheets/d/1PYE9goEmtjpcAn_KWRTUztu1fS9Ei3dKRNqSUrIyI1o/edit?usp=sharing </p>
 
 <h3 id="6.2 Google Sheet Team Schedule">6.2 Google Sheet "Team Schedule"</h3>
+<p>Link to the Google Sheets: https://docs.google.com/spreadsheets/d/1H-vteAmExBqsVwnJ39TjcLMWcKK1qdwuovWVVpfPXXU/edit?usp=sharing </p>
 <p>This Google Sheet is used for the user task "check team schedule". The manager has to check the capacity in the team schedule:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Team_Schedule.png" alt="Google Sheet Team Schedule">
-<p>Link to the Google Sheets: https://docs.google.com/spreadsheets/d/1H-vteAmExBqsVwnJ39TjcLMWcKK1qdwuovWVVpfPXXU/edit?usp=sharing </p>
+
 
 <h3 id="6.3 Google Docs Absence Request Approval Template">6.3 Google Docs "Absence Request Approval" - Template</h3>
+<p>Link to the Google Doc: https://docs.google.com/document/d/1qDqjTzpIWbmvhDCUIVEG0naZlVAzVqYbfHtwpNuZpZ8/edit?usp=sharing </p>
 <p>This Google Doc is used once an absence request has been approved. The scenario "04_Confirm and Sign HR" generates a PDF based on this template and replaces selected variables with the data from the request. The PDF is then moved to Dropbox for a signature.:</p>
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/d87d6478-3944-4233-8484-69b6bebeeb6d)
-<p>Link to the Google Doc: https://docs.google.com/document/d/1qDqjTzpIWbmvhDCUIVEG0naZlVAzVqYbfHtwpNuZpZ8/edit?usp=sharing </p>
 
 
 <!-- Ending Other artefacts -->
