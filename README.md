@@ -326,15 +326,21 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Sheet%20Employee%20Absence%20Request%20Form%20(responses)_few%20examples.png" alt="Google Sheet Employee Absence Request Form (responses)">
 </br>
 
-<h3 id="6.2 Google Sheet Team schedule">6.2 Google Sheet "Team schedule"</h3>
-<p>&#129488;// Description and pic</p>
+<h3 id="6.2 Google Sheet Team Schedule">6.2 Google Sheet "Team Schedule"</h3>
+<p>This Google Sheet is used for the user task "check team schedule". The manager has to check the capacity in the team schedule:</p>
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Team_Schedule.png" alt="Google Sheet Team Schedule">
 </br>
-<p>&#129488;// Are there more other artefacts?</p>
+
+<h3 id="6.3 Google Sheet Project Plan">6.3 Google Sheet "Project Plan"</h3>
+<p>This Google Sheet is used for the user task "check project situation". The manager has to check if the request can be approved based on the current project planning:</p>
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Project_Plan.png" alt="Google Sheet Project Plan">
+</br></br>
+
+<h3 id="6.4 Google Sheet Team Tracker">6.3 Google Sheet "Team Tracker"</h3>
+<p>This Google Sheet is used to Track the requests. As described in the prveious chapter, only the requests which has been approved will be entered in this Google Sheet:</p>
+<img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Team%20Tracker.png" alt="Google Sheet Team Tracker">
 </br></br>
 <!-- Ending Other artefacts -->
-
-
-
 
 <!-- Conclusion -->
 <h2 id="7. Conclusion">7. Conclusion</h2>
