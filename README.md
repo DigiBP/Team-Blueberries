@@ -160,7 +160,6 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
   <li>Time-consuming and cascading process (several people involved).</li>
   <li>Paper-based process, not digitized.</li>
   <li>The manager does not have the possibility to consult the planning of his team.</li>
-  <li>The manager does not have the possibility to consult the balance of available days of his employees.</li>
 </ul>
 </br></br>
 <!-- Ending Current situation -->
