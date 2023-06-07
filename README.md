@@ -117,6 +117,7 @@ We used the following:
   <li>Git</li>
   <li>Make</li>
   <li>Google</li>
+  <li>Dropbox</li>
 </ul>
 </br>
 
@@ -332,7 +333,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 </br>
 
 <h3 id="5.5 Make scenario Send Confirmation to HR and Employee">5.5 Make scenario "Send Confirmation to HR and Employee"</h3>
-<p> This scenario is triggered once a new PDF file has been moved to the "Signed_Absence_Request" folder on dropbox.</p>
+<p> This scenario is triggered once a new PDF file has been manually moved to the "Signed_Absence_Request" folder on dropbox.</p>
 
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/a6403986-491c-478b-8ce0-48225c1712bc)
 
@@ -381,7 +382,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 
 <h3 id="6.3 Google Docs Absence Request Approval Template">6.3 Google Docs "Absence Request Approval" - Template</h3>
 <p>Link to the Google Doc: https://docs.google.com/document/d/1qDqjTzpIWbmvhDCUIVEG0naZlVAzVqYbfHtwpNuZpZ8/edit?usp=sharing </p>
-<p>This Google Doc is used once an absence request has been approved. The scenario "04_Confirm and Sign HR" generates a PDF based on this template and replaces selected variables with the data from the request. The PDF is then moved to Dropbox for a signature.:</p>
+<p>This Google Doc is used once an absence request has been approved. The scenario "04_Confirm and Sign HR" generates a PDF based on this template and replaces selected variables with the data from the request. The PDF is then moved to Dropbox for a signature:</p>
 
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/d87d6478-3944-4233-8484-69b6bebeeb6d)
 
@@ -413,6 +414,9 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <!-- Retrospective -->
 <h2 id="8. Retrospective">8. Retrospective</h2>
 <p>Modeling the BPMN and DMN in Camunda Modeler went well at the beginning, although we were sometimes irritated by the many IDs and other fields that could potentially have been filled in. But what really caused us a lot of trouble was to understand the correlations with Camunda Modeler and Make. Thanks to successful coaching and the good "hands-on" torturials on GitHub, we understood it better and better and were able to finish our group work successfully.</p>
+
+<p>We did have several issues with make, often struggling with old data being stuck in the pipeline and making it difficult to test properly.</p>
+
 <p>It was a very interesting and instructive module, where we were able to get to know many DevOps and other programs in more detail. We also think that we understood the topic of "digitalization and automation" a lot better. As this is a very topical subject in today's world, we will now be optimally prepared for possible points of contact in our respective companies.</p>
 <p>&#129488;// Review it later on.</p>
 <!-- Ending Retrospective -->
