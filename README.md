@@ -340,7 +340,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 
 <p> The scenario will then download the respective file and send out an email with the following message and the signed PDF file as an attachement:</p>
 
-![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/03a11bf7-bfbe-4ff6-9094-5e3dcd209d86)
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/a29fcc7e-ee2a-4be9-bff5-4605ae2ca299)
 
 </br> 
 
