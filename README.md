@@ -102,8 +102,8 @@ The first step was to analyze and model an existing process. In a second step, t
 We following deliverables were mandatory:
 <ul>
   <li>Link to GitHub repositories containing modelling artefacts and other project artefacts, if required, and a documentation (e.g., Readme and interlinked .md files).</li>
-  <li>Link to a running workflow(s) and/or instatiation(s) of a link to start form(s) and/or cloud-based deployment(s).</li>
-  <li>Link to presentation slides.</li>
+  <li>Link to a running workflow(s) and/or instatiation(s) of a link to start form(s) and/or cloud-based deployment(s): https://eu1.make.com/28131/scenarios?folder=112597&tab=all</li>
+  <li>Link to presentation slides: https://fhnw365.sharepoint.com/:p:/r/teams/w-DigiBP-MSc-BIS-SS23_m365-TeamBlueberries/Freigegebene%20Dokumente/Team%20Blueberries%20%F0%9F%AB%90/Presentation_Blueberries.pptx?d=wf0460f2b345a4f149bbcfc14652af8ea&csf=1&web=1&e=es2Nv0.</li>
 </ul>
 </br>
 
@@ -298,6 +298,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/3ff45f2c-858b-48c4-bae0-6c155d1fb658)
 
+<p>Link to the absence request approval template: https://docs.google.com/document/d/1qDqjTzpIWbmvhDCUIVEG0naZlVAzVqYbfHtwpNuZpZ8/edit?usp=sharing</p>
 </br>
 
 <p>This is a template that can take variables and generate a new document based on the data. All variables indicated as {{value}} can be replaced with data selected in the make scenario. After this document is created, the new document contains the information about the approved absence request and is automatically uploaded to a dropbox location.</p>
@@ -367,6 +368,11 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <h3 id="6.2 Google Sheet Team Schedule">6.2 Google Sheet "Team Schedule"</h3>
 <p>This Google Sheet is used for the user task "check team schedule". The manager has to check the capacity in the team schedule:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Team_Schedule.png" alt="Google Sheet Team Schedule">
+
+<h3 id="6.3 Google Docs Absence Request Approval Template">6.2 Google Docs "Absence Request Approval" - Template</h3>
+<p>This Google Doc is used once an absence request has been approved. The scenario "04_Confirm and Sign HR" generates a PDF based on this template and replaces selected variables with the data from the request. The PDF is then moved to Dropbox for a signature.:</p>
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/d87d6478-3944-4233-8484-69b6bebeeb6d)
+
 
 <!-- Ending Other artefacts -->
 
