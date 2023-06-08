@@ -414,24 +414,15 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <p>In the interests of continuous improvement, future work could attempt to further reduce the remaining manual tasks, and offer the possibility of tracking all approved requests to enable HR to analyze these absences, e.g. in a tool like a team tracker. Lastly another improvement for the future could be to introduce an innovative solution that integrats the coompany's ERP system with a user-friendly interface accessible to all employees, e.g. by incorporating fingerprint recognition for secure login, employees can easily request leaves of absence while conveniently checking their remaining vacation days.</p>
 
 <p>Finally, we encountered problems with the flow of data in the workflow. When testing with data inputs, the scenarios in Make often processed old requests and we had to find out where the data was stuck several times. Often, we had to set up a module again or run the process until everything was up to date. But even with those measures in place, there were still issues that we were not fully able to solve.</p>
-
-<!--
-<p>Finally, the solution to the step "send data to team schedule" is not quite elegant because a recipient receives the email about their approved absence request twice for a specific scenario. Suppose the employee has applied for an absence, which must be prov-approved and checked with the project schedule. In that case, they will receive an email with a signed approval document and an additional confirmation email separately. We realised that this could have been better, but due to the nature of the To-Be process, we left this solution as it was with the notion that this would be an improvement step to be done in the future.</p>
--->
-
 </br></br>
 <!-- Ending Conclusion -->
 
-
-
-
 <!-- Retrospective -->
 <h2 id="8. Retrospective">8. Retrospective</h2>
-<p>Modeling the BPMN and DMN in Camunda Modeler went well at the beginning, although we were sometimes irritated by the many IDs and other fields that could potentially have been filled in. But what really caused us a lot of trouble was to understand the correlations with Camunda Modeler and Make. Thanks to successful coaching and the good "hands-on" torturials on GitHub, we understood it better and better and were able to finish our group work successfully.</p>
+<p>Modeling the BPMN and DMN in Camunda Modeler went well at the beginning, although we were sometimes irritated by the many IDs and other fields that could potentially have been filled in. But what really caused us a lot of trouble was to understand the correlations with Camunda Modeler and Make. Thanks to successful coaching and the good "hands-on" tutorials on GitHub, we understood it better and better and were able to finish our group work successfully.</p>
 
-<p>As mentioned in the section 7.1, we did have several issues with make, often struggling with old data being stuck in the pipeline and making it difficult to test properly. We still struggled with this challenge until the end, even though we have been able to fix this issue several times in the past, it still causes issues up to date.</p>
+<p>As mentioned in the section 7.1, we did have several issues with Make, often struggling with old data being stuck in the pipeline and making it difficult to test properly. We still struggled with this challenge until the end, even though we have been able to fix this issue several times in the past, it still causes issues up to date.</p>
 
 <p>It was a very interesting and instructive module, where we were able to get to know many DevOps and other programs in more detail. We also think that we understood the topic of "digitalization and automation" a lot better. As this is a very topical subject in today's world, we will now be optimally prepared for possible points of contact in our respective companies.</p>
-
 <!-- Ending Retrospective -->
 <!-- Ending Content -->
