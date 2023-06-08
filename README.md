@@ -107,12 +107,13 @@ Following deliverables were mandatory:
   <li>Link to GitHub repositories containing modelling artefacts and other project artefacts, if required, and a documentation (e.g., Readme and interlinked .md files).</li>
   <li>Link to a running workflow(s) and/or instatiation(s) of a link to start form(s) and/or cloud-based deployment(s):
       <li><a href="https://eu1.make.com/28131/scenarios?folder=112597&tab=all"> <b>&rarr; Link to Make</b></a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc6NWxCrLfKNjOS9IdQnKSt4BNcNDK5cS2TJn2C3Kskzl55nQ/viewform"> <b>&rarr; Link to Google Forms (process triger)</b></a></li>
       <li><a href="https://github.com/DigiBP/Team-Blueberries/blob/main/bpmn/AbsenceRequest_TO_BE_v13_final%20version.bpmn"> <b>&rarr; Final BPMN model</b></a></li>
       <li><a href="https://github.com/DigiBP/Team-Blueberries/blob/main/dmn/AbsenceRequest_type-of-absence_v4.dmn"> <b>&rarr; DMN Type of Absence</b></a></li>
       <li><a href="https://github.com/DigiBP/Team-Blueberries/blob/main/dmn/AbsenceRequest_team-capacity_v5.dmn"> <b>&rarr; DMN Team Capacity</b></a></li>
     </li>
   <li>Link to presentation slides: 
-    <a href="https://fhnw365.sharepoint.com/:p:/r/teams/w-DigiBP-MSc-BIS-SS23_m365-TeamBlueberries/Freigegebene%20Dokumente/Team%20Blueberries%20%F0%9F%AB%90/Presentation_Blueberries.pptx?d=wf0460f2b345a4f149bbcfc14652af8ea&csf=1&web=1&e=es2Nv0"> <b>&rarr; Link to presentation slides</b></a>
+    <a href="https://fhnw365.sharepoint.com/:p:/t/w-DigiBP-MSc-BIS-SS23_m365-TeamBlueberries/ESsPRvBaNBRPm7z8FGUq-OoBm1qVVqanm3qJ4v5IGdKnZQ?e=hSIEkF"> <b>&rarr; Link to presentation slides</b></a>
     </li>
 </ul>
 </br>
