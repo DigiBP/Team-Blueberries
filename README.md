@@ -102,7 +102,7 @@ The first step was to analyze and model an existing process. In a second step, t
 </br></br>
 
 <h3 id="1.1 Deliverables and Artefacts">1.1 Deliverables and Artefacts</h3>
-We following deliverables were mandatory:
+Following deliverables were mandatory:
 <ul>
   <li>Link to GitHub repositories containing modelling artefacts and other project artefacts, if required, and a documentation (e.g., Readme and interlinked .md files).</li>
   <li>Link to a running workflow(s) and/or instatiation(s) of a link to start form(s) and/or cloud-based deployment(s):
@@ -142,9 +142,6 @@ To fulfill our tasks, we used several languages:
 </br></br>
 <!-- Ending Introduction -->
 
-
-
-
 <!-- Use Case -->
 <h2 id="2. Introduction of our Use Case">2. Introduction of our Use Case</h2>
 <p>Every company has a human resources department responsible for employee administration. Indeed, employees receive a salary, sometimes social or company benefits, and are sometimes absent for various reasons such as illness, accident or vacation requests. There are as many companies as there are HR processes, and the larger the company, the more varied and complex the processes are likely to be. 
@@ -152,12 +149,9 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 </br></br>
 <!-- Ending Use Case -->
 
-
-
-
 <!-- Current situation -->
 <h2 id="3. Current situation">3. Current situation</h2>
-<p>Currently, when an employee wants to request a leave of absence, the process is time-consuming and almost entirely paper-based. The employee must first ask the secretary to print out a form that he can fill out and send to his manager. The manager can then validate the request, but does not have the possibility to consult the balance of available days or the attendance schedule of all employees in his team. If the manager refuses the request, he announces it to the employee, otherwise the request is forwarded to the HR team. The HR manager must also sign the form before passing it to an HR secretary. The HR secretary then verifies the presence of both signatures as well as the employee's available day balance (in the ERP). If everything is in order, the request is officially accepted.</p>
+<p>Currently, when an employee wants to request a leave of absence, the process is time-consuming and almost entirely paper-based. The employee must first ask the secretary to print out a form that he can fill out and send to his manager. The manager can then validate the request, but cannot consult the attendance schedule of all employees in his team. If the manager refuses the request, he announces it to the employee, otherwise, the request is forwarded to the HR team. The HR manager must also sign the form before passing it to an HR secretary. The HR secretary then verifies the presence of both signatures as well as the employee's available day balance (in the ERP). If everything is in order, the request is officially accepted.</p>
 </br>
 
 <h3 id="3.1 As-Is Business Process">3.1 As-Is Business Process</h3>
@@ -174,14 +168,10 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
 </br></br>
 <!-- Ending Current situation -->
 
-
-
-
 <!-- Desired situation -->
 <h2 id="4. Desired situation">4. Desired situation</h2>
 
 <h3 id="4.1 Objectives">4.1 Objectives</h3>
-
 <p>In order to improve the process based on the identified pain points, the following objectives have been defined.</p>
 <ul>
   <li>Process digitization.</li>
@@ -190,14 +180,6 @@ For our project, we based ourselves on a watchmaking company (whose name we'll k
   <li>Allow managers to consult the team schedule of their employees.</li>
 </ul>
 </br></br>
-
-<!--
-<p>&#129488;// Please have a review @Charline. In the meantime, there have probably been some changes.</p>
-<p>Proposed improvement: The implementation of a system that communicates with the ERP. This system is accessible to the HR team and all employees of the company, including managers.</p>
-
-<p>When the employee wants to request a leave of absence, he will be able to log in to the system by fingerprint recognition. He will be able to check the number of vacation days still available, and if his balance is at 0, he will have the possibility to request an unpaid vacation. When the manager receives the request, he will be able to consult the planning of his team before making his choice. Finally, if the request is rejected, the employee will be informed, otherwise the HR team will be informed that a new absence request has been accepted.</p>
-</br>
--->
 
 <h3 id="4.2 To-Be Business Process">4.2 To-Be Business Process</h3>
 
@@ -220,7 +202,7 @@ When the request is provisionally approved, this means that the manager must be 
 </ul>
 
 <h4>Request approved</h4>
-Differents ways lead to an approved request. When this happens, a document is generated and the manager needs to sign in. Then, automatic mails are sent to employee and to HR to inform them of the approval of the absence request. 
+Differents ways lead to an approved request. When this happens, a document is generated and the manager needs to sign it. Then, automatic mails are sent to the employee and to HR to inform them of the approval of the absence request. 
 </br></br>
 
 <p>The To-Be Business Process looks like this:</p>
@@ -229,9 +211,9 @@ Differents ways lead to an approved request. When this happens, a document is ge
 
 <h3 id="4.3 Decision Tables">4.3 Decision Tables</h3>
 <p>To keep the modeling process as lean as possible, we used two decision tables (DMN).</p>
-<p>In the first DMN it is first checked which type of absence is desired. This can be seen in the first line.</p>
-<p>After that, there are a number of additional specifications that must be met in order for the test to be approved either automatically or provisionally. If a requirement is not met, the request is rejected.</p>
-<p>The second DMN represents the second step to ensure that the capacity of the team is not reached when an emyployee wants to take time off. The team capacity is different for each department. For the Administration department the limit is &lt;70% and for the Production &lt;50%. Requests which are over the set capacity will be automatically rejected. Requests which are in the range, are going to the manager. For all departments, if the capacity is under &lt;20% the request is automatically approved.</p>
+<p>The first DMN, cheks which type of absence is desired. This can be seen in the first column.</p>
+<p>After that, there are a number of additional specifications that must be met in order for the request to be approved either automatically or provisionally. If a requirement is not met, the request is rejected.</p>
+<p>The second DMN, ensures that the capacity of the team is not reached when an emyployee wants to take time off.</p>
 <p>In the following subsections, the DRD models and the corresponding DMN models can be viewed.</p>
 </br>
 
@@ -239,7 +221,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <p>In the DRD model, the dependencies on the DMN are evident:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DRD_DMNModel.png" alt="DRD model from first DMN">
 </br>
-<p>If you click on the blue square in the top box "Absence from Type", you will get to the DMN:</p>
+<p>By clicking on the blue square in the top box "Absence from Type", the DMN will be shown:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DMNModel.png" alt="First DMN">
 <p>Below are some explanations about the rules.</p>
 <ul>
@@ -254,22 +236,27 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <p>In the DRD model, the dependencies on the DMN are evident:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DRD_DMNModel2.png" alt="DRD model from second DMN">
 </br>
-<p>If you click on the blue square in the top box "Absence from Type", you will get to the DMN:</p>
+<p>By clicking on the blue square in the top box "Absence from team capacity", the DMN will be shown:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/AbsenceRequest_TO_BE_DMNModel2.png" alt="Second DMN">
+<p>Below are some explanations about the rules.</p>
+<ul>
+  <li>The team capacity is different for each department.</li>
+  <li>For the Administration department the limit is &lt;70% and for the Production &lt;50%.</li>
+  <li>Requests which are over the set capacity will be automatically rejected. </li>
+  <li>Requests which are in the range, are going to the manager.</li>
+  <li>For all departments, if the capacity is under &lt;20% the request is automatically approved.</li>
+</ul>
 </br>
 
 <h3 id="4.4 Improvements">4.4 Improvements</h3>
 <p>In the As-Is business process, there were a lot of manual subtasks that had to be paper-based and sent to other departments or processed internally by other people.</p>
-<p>In the To-Be Business Process, the overall process is streamlined and simplified, and involves fewer departments and people. The main improvement, however, is digitization and automation, because there are no more paper-based forms and many sub-process steps are now triggered automatically.</p>
+<p>In the To-Be Business Process, the overall process is streamlined and simplified and involves fewer departments and people. The main improvement, however, is digitization and automation, because there are no more paper-based forms and many sub-process steps are now triggered automatically.</p>
 </br></br>
 <!-- Ending Desired situation -->
 
-
-
-
 <!-- Digitalization and Automation -->
 <h2 id="5. Digitalization and Automation">5. Digitalization and Automation</h2>
-<p>The first step was to model the As-Is Business Process in the tool "Camunda Modeler". This quickly made it clear which departments or individuals were involved in the overall process at all and were interdependent. This allowed us to discuss how to proceed, what could be automated and what would remain a manual task. Ultimately, it gave us the basis for the To-Be Business Process and the certainty that paper-based forms could be dispensed with for the time being.</p>
+<p>The first step was to model the As-Is Business Process in the tool "Camunda Modeler". This step quickly made it clear which departments or individuals were involved in the overall process. This allowed us to discuss how to proceed, what could be automated and what would remain a manual task. Ultimately, it gave us the basis for the To-Be Business Process and the certainty that paper-based forms could be dispensed with for the time being.</p>
 <p>In the To-Be Business Process, we defined in a second step which departments or individuals were still needed in the overall process, which dependencies were still there or were new, and how we could possibly streamline the overall process. The results can be found in the previous chapter. The following subsections show our results, which we have worked out with the Make tool in order to automate the To-Be business process.</p>
 </br>
 
@@ -278,7 +265,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 
 <p>The trigger of the overall process is indirectly a Google Form. As soon as the employee fills it out and sends it, the request is saved in a new row of the associated Google Sheet, which ultimately triggers the overall process.</p>
 <p>As a second step, we defined a business key that generates a random number and is unique throughout the process. Since there were some problems with variables from the Google Sheet regarding typing, we forced some of them to become strings with the method "toString()", so that they would be recognized as strings later on.</p>
-<p>The last step saves the received variables of the Google Sheet and sends them to our BPMN model in Camunda. This way the data can be further used in the following process steps. The following image sets up the make process:</p>
+<p>The last step saves the received variables of the Google Sheet and sends them to our BPMN model in Camunda. This way the data can be further used in the following process steps. The following image sets up the Make process:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_01_Google%20Forms%20process%20trigger.png" alt="Google Forms process trigger">
 </br>
 
@@ -286,7 +273,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <a href="https://eu1.make.com/28131/scenarios/1567640/edit"> <b>&rarr; Link to Make scenario 2</b></a>
 
 <p>After the first Make scenario was triggered with the main trigger, the entered data went through the first DMN as variables. As described above, the input is checked against predefined rules/criteria and then a decision is made as to whether the request is accepted or rejected automatically or provisionally.</p>
-<p>In case of a rejection, which is what the trigger represents, this Make scenario is triggered. Again, since we were struggling with a variable, we forced it to be a string with the method "toString()". Finally, the system automatically sends the employee an email telling him or her that his or her request has been rejected.</p>
+<p>In case of a rejection, which is what the trigger represents, this Make scenario is triggered. Again, since we were struggling with a variable, we forced it to be a string with the method "toString()". Finally, the system automatically sends the employee an email telling him or her that the request has been rejected.</p>
 <p>The following image sets up the make process:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_02_Inform%20the%20employee.png" alt="Inform the employee">
 <p>This is an example of the automatically sent mail:</p>
@@ -297,7 +284,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <a href="https://eu1.make.com/28131/scenarios/1567735/edit"> <b>&rarr; Link to Make scenario 3</b></a>
 
 <p>After the first Make scenario was triggered with the main trigger, the entered data went through the first DMN as variables. As described above, the input is checked against predefined rules/criteria and then a decision is made as to whether the request is accepted or rejected automatically or provisionally.</p>
-<p>The following image sets up the make process:</p>
+<p>The following image sets up the Make process:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_03_Inform%20the%20manager.png" alt="Inform the manager">
 <p>This is an example of the automatically sent mail:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_03_Inform%20the%20manager_mail%20example.png" alt="Mail example to manager"> 
@@ -306,13 +293,12 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <h3 id="5.4 Make scenario Confirm and sign HR">5.4 Make scenario "Confirm and sign HR"</h3>
 <a href="https://eu1.make.com/28131/scenarios/1567686/edit"> <b>&rarr; Link to Make scenario 4</b></a>
 
-<p>After an absence request has been definitively approved, the trigger in a new make scenario will make an HTTP request to the camunda workflow. This scenario is the first step of two, which will continue in the following scenario named "Send Confirmation to HR and Employee".</p>
+<p>After an absence request has been definitively approved, the trigger in a new Make scenario will send an HTTP request to the camunda workflow. This scenario is the first step of two, which will continue in the following scenario named "Send Confirmation to HR and Employee".</p>
   
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/725491a3-c3df-4f61-9783-898830ed5ad3)
-
 </br>
 
-<p>Because we require a signature from the manager to finalise the absence request approval, we created a make scenario that generates a document from a google docs template with the following information:</p>
+<p>Because we require a signature from the manager to finalise the absence request approval, we created a Make scenario that generates a document from a google docs template with the following information:</p>
 
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/3ff45f2c-858b-48c4-bae0-6c155d1fb658)
 
@@ -322,13 +308,11 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <p>This is a template that can take variables and generate a new document based on the data. All variables indicated as {{value}} can be replaced with data selected in the make scenario. After this document is created, the new document contains the information about the approved absence request and is automatically uploaded to a dropbox location.</p>
 
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/2d2c753f-09c1-4e63-b8f4-0ba5633af3ba)
-
 </br>
 
-<p>After this document exists on dropbox, the manager has to sign it with an e-signature. For this, we make use of the signing feature of dropbox itself. To accomplish this, the manager has to open the respective pdf and click on "add signature" to sign it.</p>
+<p>After this document exists on dropbox, the manager has to sign it with an e-signature. For this, we are using the signing feature of dropbox itself. To accomplish this, the manager has to open the respective pdf and click on "add signature" to sign it.</p>
 
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/84521cba-9166-4d8f-b43b-f1a7ef95edc8)
-
 </br>
 
 <p>The manager has the option to add a signature by drawing, typing or uploading a picture to the document</p>
@@ -367,16 +351,11 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <p> The second gmail module in the scenario will send out an email to HR with the request to update the team schedule with the data from the absence request:</p>
 
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/e7bdfb4b-b7c1-4bef-a815-71dd4cd02fce)
-
-
-
 <!-- Ending Digitalization and Automation -->
-
-
 
 <!-- Other artefacts -->
 <h2 id="6. Other artefacts">6. Other artefacts</h2>
-<p>In addition to the BMPN and DMN models and the make scenarios, we also developed other artifacts that we needed for automation. They are an integral part of the overall process. They are briefly described and shown in the following subsections.</p>
+<p>In addition to the BMPN and DMN models and the Make scenarios, we also developed other artifacts that are needed for automation. They are an integral part of the overall process. They are briefly described and shown in the following subsections.</p>
 </br>
 
 <h3 id="6.1 Google Forms">6.1 Google Forms</h3>
@@ -418,27 +397,26 @@ Differents ways lead to an approved request. When this happens, a document is ge
 
 <a href="https://fhnw365.sharepoint.com/:v:/r/teams/w-DigiBP-MSc-BIS-SS23_m365-TeamBlueberries/Freigegebene%20Dokumente/Team%20Blueberries%20%F0%9F%AB%90/DigiBP%20Process%20Recordings%20v2%20(team%20blueberries).mp4?csf=1&web=1&e=XcsAWE"> <b>&rarr; Link to the process recordings</b></a>
 <p>This video file contains some recordings of the processes as a back-up for the presentation.</p>
-
-
-
 <!-- Ending Other artefacts -->
 
 <!-- Conclusion -->
 <h2 id="7. Conclusion">7. Conclusion</h2>
-<p>For this project we had a very specific context with the traditional watchmaking company that want to improve its processes, especially the absence request. Pain points were quickly identified (paper-based, non-digitized processes with many time-consuming manual tasks) and objectives were built on them (digitization of the process, offering an automatic scenario and more time for managers). These objectives have been achieved with the TO-Be process presented in chapter 4 and the make scenarios explained in chapter 5.</p>
+<p>For this project we had a very specific context with the traditional watchmaking company that want to improve its processes, especially the absence request. Pain points were quickly identified (paper-based, non-digitized processes with many time-consuming manual tasks) and objectives were built on them (digitization of the process, offering an automatic scenario and more time for managers). These objectives have been achieved with the To-Be process presented in chapter 4 and the Make scenarios explained in chapter 5.</p>
 </br></br>
 
 <h3 id="7.1 Limitations and Improvements">7.1 Limitations and Improvements</h2>
-<p> While the AS-IS process is very manual and happens mostly on paper, we aimed to automate some steps completely, such as the auto-reject scenario. Therefore, managers must only handle absence requests that do not fulfil the formal requirements, e.g. taking too many days off or not being eligible for a specific type of absence. And finally, when an absence is approved, the manager still need to sign the approval document.</p>
+<p> While the As-Is process is very manual and happens mostly on paper, we aimed to automate some steps completely, such as the auto-reject scenario. Therefore, managers must only handle absence requests that do not fulfil the formal requirements, e.g. taking too many days off or not being eligible for a specific type of absence. And finally, when an absence is approved, the manager can sign the approval document electronically.</p>
 
-<p>The "check team schedule" step remains manual because the Excel sheet containing the yearly team schedule is built quite complex and unsuitable for looking up specific values. We would have had to write a custom query to specify the date range of the absence request, identify the employee number and check the capacity simultaneously. While this would have been a helpful automation step, we needed to gain the knowledge, skills or resources to write a successful query, and, therefore, we left this step up to be done by the manager as a user task. There are two other manual tasks: "check project situation" and "sign approval document". The first one is also explained by the complexity to communicate between that kind of information and make, while the second is for legal reason.</p>
+<p>The "check team schedule" step remains manual because the google sheet containing the yearly team schedule is built quite complex and is unsuitable for looking up specific values. Future improvement could be to write a custom query to specify the date range of the absence request, identify the employee number and check the capacity simultaneously.</p>
 
-<p>In the interests of continuous improvement, future work could attempt to further reduce the remaining manual tasks, and offer the possibility of tracking all approved requests to enable HR to analyze these absences, e.g. in a tool like a team tracker.</p>
+<p> Also the "check project situation" step is a user task due to its complexity. While the second user task "sign approval document", has to be done manually due to legal reasons.</p>
 
-<p>Finally, we encountered problems with the flow of data in the workflow. When testing with data inputs, the scnearios in make often processed old requests and we had to find out where the data was stuck several times. Often, we had to set up a module again or run the process until everything was up to date. But even with those measures in place, there were still issues that we were not fully able to solve.</p>
+<p>In the interests of continuous improvement, future work could attempt to further reduce the remaining manual tasks, and offer the possibility of tracking all approved requests to enable HR to analyze these absences, e.g. in a tool like a team tracker. Lastly another improvement for the future could be to introduce an innovative solution that integrats the coompany's ERP system with a user-friendly interface accessible to all employees, e.g. by incorporating fingerprint recognition for secure login, employees can easily request leaves of absence while conveniently checking their remaining vacation days.</p>
+
+<p>Finally, we encountered problems with the flow of data in the workflow. When testing with data inputs, the scenarios in Make often processed old requests and we had to find out where the data was stuck several times. Often, we had to set up a module again or run the process until everything was up to date. But even with those measures in place, there were still issues that we were not fully able to solve.</p>
 
 <!--
-<p>Finally, the solution to the step "send data to team schedule" is not quite elegant because a recipient receives the email about their approved absence request twice for a specific scenario. Suppose the employee has applied for an absence, which must be prov-approved and checked with the project schedule. In that case, they will receive an email with a signed approval document and an additional confirmation email separately. We realised that this could have been better, but due to the nature of the TO-BE process, we left this solution as it was with the notion that this would be an improvement step to be done in the future.</p>
+<p>Finally, the solution to the step "send data to team schedule" is not quite elegant because a recipient receives the email about their approved absence request twice for a specific scenario. Suppose the employee has applied for an absence, which must be prov-approved and checked with the project schedule. In that case, they will receive an email with a signed approval document and an additional confirmation email separately. We realised that this could have been better, but due to the nature of the To-Be process, we left this solution as it was with the notion that this would be an improvement step to be done in the future.</p>
 -->
 
 </br></br>
