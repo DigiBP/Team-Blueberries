@@ -263,8 +263,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <!-- Digitalization and Automation -->
 <h2 id="5. Digitalization and Automation">5. Digitalization and Automation</h2>
 <p>The first step was to model the As-Is Business Process in the tool "Camunda Modeler". This quickly made it clear which departments or individuals were involved in the overall process at all and were interdependent. This allowed us to discuss how to proceed, what could be automated and what would remain a manual task. Ultimately, it gave us the basis for the To-Be Business Process and the certainty that paper-based forms could be dispensed with for the time being.</p>
-<p>In the To-Be Business Process, we defined in a second step which departments or individuals were still needed in the overall process, which dependencies were still there or were new, and how we could possibly streamline the overall process. The results can be found in the previous chapter.</p>
-<p>The following subsections show our results, which we have worked out with the Make tool in order to automate the To-Be business process. It is important to mention that we could only completely automate the two Make scenarios "5.1 Make scenario Google Forms process trigger" and "5.1 Make scenario "Google Forms process trigger" with a so-called "Webhooks Module" (it is no longer necessary to make the trigger in the tool Make itself via button "run once", but hears it via "Listener link with Camunda, when it should be executed automatically), because the Make license of the FHNW allows it only for two scenarios.</p>
+<p>In the To-Be Business Process, we defined in a second step which departments or individuals were still needed in the overall process, which dependencies were still there or were new, and how we could possibly streamline the overall process. The results can be found in the previous chapter. The following subsections show our results, which we have worked out with the Make tool in order to automate the To-Be business process.</p>
 </br>
 
 <h3 id="5.1 Make scenario Google Forms process trigger">5.1 Make scenario "Google Forms process trigger"</h3>
@@ -381,6 +380,10 @@ Differents ways lead to an approved request. When this happens, a document is ge
 <p>Link to the Google Sheets: https://docs.google.com/spreadsheets/d/1H-vteAmExBqsVwnJ39TjcLMWcKK1qdwuovWVVpfPXXU/edit?usp=sharing </p>
 <p>This Google Sheet is used for the user task "check team schedule". The manager has to check the capacity in the team schedule:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Team_Schedule.png" alt="Google Sheet Team Schedule">
+
+<p>If the manager has to additionally check the project schedule (prov-approved request and team capacity is ok but not definite) then they must consult their project plan: </p>
+
+![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/97c60376-5f76-4399-8a4e-a183d51e306b)
 
 
 <h3 id="6.3 Google Docs Absence Request Approval Template">6.3 Google Docs "Absence Request Approval" - Template</h3>
