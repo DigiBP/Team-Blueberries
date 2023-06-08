@@ -106,7 +106,10 @@ We following deliverables were mandatory:
 <ul>
   <li>Link to GitHub repositories containing modelling artefacts and other project artefacts, if required, and a documentation (e.g., Readme and interlinked .md files).</li>
   <li>Link to a running workflow(s) and/or instatiation(s) of a link to start form(s) and/or cloud-based deployment(s):
-    <a href="https://eu1.make.com/28131/scenarios?folder=112597&tab=all"> <b>&rarr; Link to Make</b></a>
+      <li><a href="https://eu1.make.com/28131/scenarios?folder=112597&tab=all"> <b>&rarr; Link to Make</b></a></li>
+      <li><a href="https://github.com/DigiBP/Team-Blueberries/blob/main/bpmn/AbsenceRequest_TO_BE_v13_final%20version.bpmn"> <b>&rarr; Final BPMN model</b></a></li>
+      <li><a href="https://github.com/DigiBP/Team-Blueberries/blob/main/dmn/AbsenceRequest_type-of-absence_v4.dmn"> <b>&rarr; DMN Type of Absence</b></a></li>
+      <li><a href="https://github.com/DigiBP/Team-Blueberries/blob/main/dmn/AbsenceRequest_team-capacity_v5.dmn"> <b>&rarr; DMN Team Capacity</b></a></li>
     </li>
   <li>Link to presentation slides: 
     <a href="https://fhnw365.sharepoint.com/:p:/r/teams/w-DigiBP-MSc-BIS-SS23_m365-TeamBlueberries/Freigegebene%20Dokumente/Team%20Blueberries%20%F0%9F%AB%90/Presentation_Blueberries.pptx?d=wf0460f2b345a4f149bbcfc14652af8ea&csf=1&web=1&e=es2Nv0"> <b>&rarr; Link to presentation slides</b></a>
@@ -271,7 +274,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 </br>
 
 <h3 id="5.1 Make scenario Google Forms process trigger">5.1 Make scenario "Google Forms process trigger"</h3>
-<a href="https://eu1.make.com/28131/scenarios/1567640/edit"> <b>&rarr; Link to Make scenario 1</b></a>
+<a href="https://eu1.make.com/28131/scenarios/1567598/edit"> <b>&rarr; Link to Make scenario 1</b></a>
 
 <p>The trigger of the overall process is indirectly a Google Form. As soon as the employee fills it out and sends it, the request is saved in a new row of the associated Google Sheet, which ultimately triggers the overall process.</p>
 <p>As a second step, we defined a business key that generates a random number and is unique throughout the process. Since there were some problems with variables from the Google Sheet regarding typing, we forced some of them to become strings with the method "toString()", so that they would be recognized as strings later on.</p>
@@ -413,7 +416,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 </br>
 <h3 id="6.4 Back-Up Recording of processes">6.4 Back-Up: Recording of processes</h3>
 
-<a href="[https://docs.google.com/document/d/1qDqjTzpIWbmvhDCUIVEG0naZlVAzVqYbfHtwpNuZpZ8/edit?usp=sharing](https://fhnw365.sharepoint.com/:v:/r/teams/w-DigiBP-MSc-BIS-SS23_m365-TeamBlueberries/Freigegebene%20Dokumente/Team%20Blueberries%20%F0%9F%AB%90/DigiBP%20Process%20Recordings%20v2%20(team%20blueberries).mp4?csf=1&web=1&e=BeJt8x)"> <b>&rarr; Link to the process recordings</b></a>
+<a href="https://fhnw365.sharepoint.com/:v:/r/teams/w-DigiBP-MSc-BIS-SS23_m365-TeamBlueberries/Freigegebene%20Dokumente/Team%20Blueberries%20%F0%9F%AB%90/DigiBP%20Process%20Recordings%20v2%20(team%20blueberries).mp4?csf=1&web=1&e=XcsAWE"> <b>&rarr; Link to the process recordings</b></a>
 <p>This video file contains some recordings of the processes as a back-up for the presentation.</p>
 
 
