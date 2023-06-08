@@ -424,7 +424,7 @@ https://fhnw365.sharepoint.com/:v:/r/teams/w-DigiBP-MSc-BIS-SS23_m365-TeamBluebe
 <h2 id="8. Retrospective">8. Retrospective</h2>
 <p>Modeling the BPMN and DMN in Camunda Modeler went well at the beginning, although we were sometimes irritated by the many IDs and other fields that could potentially have been filled in. But what really caused us a lot of trouble was to understand the correlations with Camunda Modeler and Make. Thanks to successful coaching and the good "hands-on" torturials on GitHub, we understood it better and better and were able to finish our group work successfully.</p>
 
-<p>We did have several issues with make, often struggling with old data being stuck in the pipeline and making it difficult to test properly.</p>
+<p>We did have several issues with make, often struggling with old data being stuck in the pipeline and making it difficult to test properly. We still struggled with this challenge until the end, even though we have been able to fix this issue several times in the past, it still causes issues up to date.</p>
 
 <p>It was a very interesting and instructive module, where we were able to get to know many DevOps and other programs in more detail. We also think that we understood the topic of "digitalization and automation" a lot better. As this is a very topical subject in today's world, we will now be optimally prepared for possible points of contact in our respective companies.</p>
 <p>&#129488;// Review it later on.</p>
