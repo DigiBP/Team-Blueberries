@@ -105,8 +105,12 @@ The first step was to analyze and model an existing process. In a second step, t
 We following deliverables were mandatory:
 <ul>
   <li>Link to GitHub repositories containing modelling artefacts and other project artefacts, if required, and a documentation (e.g., Readme and interlinked .md files).</li>
-  <li>Link to a running workflow(s) and/or instatiation(s) of a link to start form(s) and/or cloud-based deployment(s): https://eu1.make.com/28131/scenarios?folder=112597&tab=all</li>
-  <li>Link to presentation slides: https://fhnw365.sharepoint.com/:p:/r/teams/w-DigiBP-MSc-BIS-SS23_m365-TeamBlueberries/Freigegebene%20Dokumente/Team%20Blueberries%20%F0%9F%AB%90/Presentation_Blueberries.pptx?d=wf0460f2b345a4f149bbcfc14652af8ea&csf=1&web=1&e=es2Nv0.</li>
+  <li>Link to a running workflow(s) and/or instatiation(s) of a link to start form(s) and/or cloud-based deployment(s):
+    <a href="https://eu1.make.com/28131/scenarios?folder=112597&tab=all"> <b>&rarr; Link to Make</b></a>
+    </li>
+  <li>Link to presentation slides: 
+    <a href="https://fhnw365.sharepoint.com/:p:/r/teams/w-DigiBP-MSc-BIS-SS23_m365-TeamBlueberries/Freigegebene%20Dokumente/Team%20Blueberries%20%F0%9F%AB%90/Presentation_Blueberries.pptx?d=wf0460f2b345a4f149bbcfc14652af8ea&csf=1&web=1&e=es2Nv0"> <b>&rarr; Link to presentation slides</b></a>
+    </li>
 </ul>
 </br>
 
@@ -309,7 +313,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/3ff45f2c-858b-48c4-bae0-6c155d1fb658)
 
-<p>Link to the absence request approval template: https://docs.google.com/document/d/1qDqjTzpIWbmvhDCUIVEG0naZlVAzVqYbfHtwpNuZpZ8/edit?usp=sharing</p>
+<a href="https://docs.google.com/document/d/1qDqjTzpIWbmvhDCUIVEG0naZlVAzVqYbfHtwpNuZpZ8/edit?usp=sharing"> <b>&rarr; Link to the absence request approval template</b></a>
 </br>
 
 <p>This is a template that can take variables and generate a new document based on the data. All variables indicated as {{value}} can be replaced with data selected in the make scenario. After this document is created, the new document contains the information about the approved absence request and is automatically uploaded to a dropbox location.</p>
@@ -373,7 +377,8 @@ Differents ways lead to an approved request. When this happens, a document is ge
 </br>
 
 <h3 id="6.1 Google Forms">6.1 Google Forms</h3>
-<p>Link to the Google Forms: https://docs.google.com/forms/d/e/1FAIpQLSc6NWxCrLfKNjOS9IdQnKSt4BNcNDK5cS2TJn2C3Kskzl55nQ/viewform?usp=sharing</p>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSc6NWxCrLfKNjOS9IdQnKSt4BNcNDK5cS2TJn2C3Kskzl55nQ/viewform?usp=sharing"> <b>&rarr; Link to the Google Forms</b></a>
 <p>The Google Forms indirectly represents the trigger for the overall process. The information is stored in an associated Excel sheet, which ultimately triggers the overall process:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Forms_part%201.png" alt="Employee Absence Request Form_Part 1">
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Forms_part%202.png" alt="Employee Absence Request Form_Part 2">
@@ -381,13 +386,15 @@ Differents ways lead to an approved request. When this happens, a document is ge
 </br>
 
 <h4 id="6.1.1 Google Sheet Employee Absence Request Form (responses)">6.1.1 Google Sheet "Employee Absence Request Form (responses)"</h4>
-<p>Link to the Google Sheets: https://docs.google.com/spreadsheets/d/1PYE9goEmtjpcAn_KWRTUztu1fS9Ei3dKRNqSUrIyI1o/edit?usp=sharing </p>
+
+<a href="https://docs.google.com/spreadsheets/d/1PYE9goEmtjpcAn_KWRTUztu1fS9Ei3dKRNqSUrIyI1o/edit?usp=sharing"> <b>&rarr; Link to the Google Sheets</b></a>
 <p>This Google Sheet is the direct trigger of the overall process. As soon as an employee fills in and submits the Google Forms described in the previous chapter, the data entered is saved in the form of a new row in this Google Sheet:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Google%20Sheet%20Employee%20Absence%20Request%20Form%20(responses)_few%20examples.png" alt="Google Sheet Employee Absence Request Form (responses)">
 </br>
 
 <h3 id="6.2 Google Sheet Team Schedule">6.2 Google Sheet "Team Schedule"</h3>
-<p>Link to the Google Sheets: https://docs.google.com/spreadsheets/d/1H-vteAmExBqsVwnJ39TjcLMWcKK1qdwuovWVVpfPXXU/edit?usp=sharing </p>
+
+<a href="https://docs.google.com/spreadsheets/d/1H-vteAmExBqsVwnJ39TjcLMWcKK1qdwuovWVVpfPXXU/edit?usp=sharing"> <b>&rarr; Link to the Google Sheets</b></a>
 <p>This Google Sheet is used for the user task "check team schedule". The manager has to check the capacity in the team schedule:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Team_Schedule.png" alt="Google Sheet Team Schedule">
 
@@ -397,16 +404,18 @@ Differents ways lead to an approved request. When this happens, a document is ge
 
 
 <h3 id="6.3 Google Docs Absence Request Approval Template">6.3 Google Docs "Absence Request Approval" - Template</h3>
-<p>Link to the Google Doc: https://docs.google.com/document/d/1qDqjTzpIWbmvhDCUIVEG0naZlVAzVqYbfHtwpNuZpZ8/edit?usp=sharing </p>
+
+<a href="https://docs.google.com/document/d/1qDqjTzpIWbmvhDCUIVEG0naZlVAzVqYbfHtwpNuZpZ8/edit?usp=sharing"> <b>&rarr; Link to the Google Doc</b></a>
 <p>This Google Doc is used once an absence request has been approved. The scenario "04_Confirm and Sign HR" generates a PDF based on this template and replaces selected variables with the data from the request. The PDF is then moved to Dropbox for a signature:</p>
 
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/d87d6478-3944-4233-8484-69b6bebeeb6d)
 
 </br>
 <h3 id="6.4 Back-Up Recording of processes">6.4 Back-Up: Recording of processes</h3>
-<p>This video file contains some recordings of the processes as a back-up for the presentation:</p>
 
-https://fhnw365.sharepoint.com/:v:/r/teams/w-DigiBP-MSc-BIS-SS23_m365-TeamBlueberries/Freigegebene%20Dokumente/Team%20Blueberries%20%F0%9F%AB%90/DigiBP%20Process%20Recordings%20v2%20(team%20blueberries).mp4?csf=1&web=1&e=BeJt8x
+<a href="[https://docs.google.com/document/d/1qDqjTzpIWbmvhDCUIVEG0naZlVAzVqYbfHtwpNuZpZ8/edit?usp=sharing](https://fhnw365.sharepoint.com/:v:/r/teams/w-DigiBP-MSc-BIS-SS23_m365-TeamBlueberries/Freigegebene%20Dokumente/Team%20Blueberries%20%F0%9F%AB%90/DigiBP%20Process%20Recordings%20v2%20(team%20blueberries).mp4?csf=1&web=1&e=BeJt8x)"> <b>&rarr; Link to the process recordings</b></a>
+<p>This video file contains some recordings of the processes as a back-up for the presentation.</p>
+
 
 
 <!-- Ending Other artefacts -->
