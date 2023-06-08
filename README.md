@@ -81,7 +81,7 @@
 <h5><a href="#6.1.1 Google Sheet Employee Absence Request Form (responses)">6.1.1 Google Sheet "Employee Absence Request Form (responses)"</a></h5>
 <h4><a href="#6.2 Google Sheet Team schedule">6.2 Google Sheet "Team schedule"</a></h4>
 <h4><a href="#6.3 Google Docs Absence Request Approval Template">6.3 Google Docs "Absence Request Approval" - Template</a></h4>
-<h4><a href="#6.4 Back-Up: Recording of processes">6.4 Back-Up: Recording of processes</a></h4>
+<h4><a href="#6.4 Back-Up Recording of processes">6.4 Back-Up: Recording of processes</a></h4>
 
 
 <h3><a href="#7. Conclusion">7. Conclusion</a></h3>
