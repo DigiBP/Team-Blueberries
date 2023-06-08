@@ -267,7 +267,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 </br>
 
 <h3 id="5.1 Make scenario Google Forms process trigger">5.1 Make scenario "Google Forms process trigger"</h3>
-<a href="https://eu1.make.com/28131/scenarios/1567640/edit"> <b>&rarr; Link to Make scenario</b></a>
+<a href="https://eu1.make.com/28131/scenarios/1567640/edit"> <b>&rarr; Link to Make scenario 1</b></a>
 
 <p>The trigger of the overall process is indirectly a Google Form. As soon as the employee fills it out and sends it, the request is saved in a new row of the associated Google Sheet, which ultimately triggers the overall process.</p>
 <p>As a second step, we defined a business key that generates a random number and is unique throughout the process. Since there were some problems with variables from the Google Sheet regarding typing, we forced some of them to become strings with the method "toString()", so that they would be recognized as strings later on.</p>
@@ -276,6 +276,8 @@ Differents ways lead to an approved request. When this happens, a document is ge
 </br>
 
 <h3 id="5.2 Make scenario Inform the employee">5.2 Make scenario "Inform the employee"</h3>
+<a href="https://eu1.make.com/28131/scenarios/1567640/edit"> <b>&rarr; Link to Make scenario 2</b></a>
+
 <p>After the first Make scenario was triggered with the main trigger, the entered data went through the first DMN as variables. As described above, the input is checked against predefined rules/criteria and then a decision is made as to whether the request is accepted or rejected automatically or provisionally.</p>
 <p>In case of a rejection, which is what the trigger represents, this Make scenario is triggered. Again, since we were struggling with a variable, we forced it to be a string with the method "toString()". Finally, the system automatically sends the employee an email telling him or her that his or her request has been rejected.</p>
 <p>The following image sets up the make process:</p>
@@ -285,6 +287,8 @@ Differents ways lead to an approved request. When this happens, a document is ge
 </br>
 
 <h3 id="5.3 Make scenario Inform the manager">5.3 Make scenario "Inform the manager"</h3>
+<a href="https://eu1.make.com/28131/scenarios/1567735/edit"> <b>&rarr; Link to Make scenario 3</b></a>
+
 <p>After the first Make scenario was triggered with the main trigger, the entered data went through the first DMN as variables. As described above, the input is checked against predefined rules/criteria and then a decision is made as to whether the request is accepted or rejected automatically or provisionally.</p>
 <p>The following image sets up the make process:</p>
 <img src="https://github.com/DigiBP/Team-Blueberries/blob/main/docs/Make_03_Inform%20the%20manager.png" alt="Inform the manager">
@@ -293,6 +297,8 @@ Differents ways lead to an approved request. When this happens, a document is ge
 </br>
 
 <h3 id="5.4 Make scenario Confirm and sign HR">5.4 Make scenario "Confirm and sign HR"</h3>
+<a href="https://eu1.make.com/28131/scenarios/1567686/edit"> <b>&rarr; Link to Make scenario 4</b></a>
+
 <p>After an absence request has been definitively approved, the trigger in a new make scenario will make an HTTP request to the camunda workflow. This scenario is the first step of two, which will continue in the following scenario named "Send Confirmation to HR and Employee".</p>
   
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/725491a3-c3df-4f61-9783-898830ed5ad3)
@@ -337,6 +343,8 @@ Differents ways lead to an approved request. When this happens, a document is ge
 </br>
 
 <h3 id="5.5 Make scenario Send Confirmation to HR and Employee">5.5 Make scenario "Send Confirmation to HR and Employee"</h3>
+<a href="https://eu1.make.com/28131/scenarios/1567697/edit"> <b>&rarr; Link to Make scenario 5</b></a>
+
 <p> This scenario is triggered once a new PDF file has been manually moved to the "Signed_Absence_Request" folder on dropbox.</p>
 
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/a6403986-491c-478b-8ce0-48225c1712bc)
