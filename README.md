@@ -389,7 +389,7 @@ Differents ways lead to an approved request. When this happens, a document is ge
 
 ![image](https://github.com/DigiBP/Team-Blueberries/assets/116253747/d87d6478-3944-4233-8484-69b6bebeeb6d)
 
-
+</br>
 <h3 id="6.4 Back-Up: Recording of processes">6.4 Back-Up: Recording of processes</h3>
 <p>This video file contains some recordings of the processes as a back-up for the presentation:</p>
 
